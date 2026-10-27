@@ -1,0 +1,40 @@
+name: Roomlet focused native checks
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native:
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Record exact source and toolchain
+        run: |
+          git rev-parse HEAD
+          sw_vers
+          swift --version
+          xcodebuild -version
+      - name: Check helper syntax and metadata
+        run: |
+          bash -n script/build_and_run.sh script/package_app.sh
+          plutil -lint Resources/Info.plist Resources/Roomlet.entitlements
+          git diff --check
+      - name: Compile the native app
+        run: swift build --product Roomlet
+      - name: Run authored core fixtures
+        run: swift test
+      - name: Package and verify without launching
+        run: |
+          ROOMLET_CHECK_BINARY="$(swift build --show-bin-path)/Roomlet"
+          ./script/package_app.sh "$ROOMLET_CHECK_BINARY"
+          codesign --verify --strict dist/Roomlet.app
+          codesign -d --entitlements - dist/Roomlet.app
+          plutil -lint dist/Roomlet.app/Contents/Info.plist
+          shasum -a 256 dist/Roomlet.app/Contents/MacOS/Roomlet
