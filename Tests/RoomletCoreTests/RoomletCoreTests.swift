@@ -7,7 +7,10 @@ import XCTest
 final class RoomletCoreTests: XCTestCase {
     private func fixture() throws -> Fixture {
         let fixture = try Fixture()
-        addTeardownBlock { try? FileManager.default.removeItem(at: fixture.base) }
+        addTeardownBlock {
+            do { try FileManager.default.removeItem(at: fixture.base) }
+            catch { XCTFail("Could not remove owned fixture \(fixture.base.path): \(error.localizedDescription)") }
+        }
         return fixture
     }
 

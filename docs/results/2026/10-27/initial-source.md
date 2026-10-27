@@ -54,7 +54,8 @@ resolved. No active workflow exists.
 behavior, metadata and unknown values, root/path/package/credential/known-cloud
 rules, stale file/root/ancestor identity, traversal and hard-link selection IDs.
 All filesystem fixtures live beneath unique runner-owned temporary directories;
-the core tests contain no real Trash operation. Static counts are not passing
+the core tests contain no real Trash operation. Fixture teardown failures report
+the owned path and fail the test instead of being suppressed. Static counts are not passing
 test outcomes or performance measurements.
 
 Independent read-only review identified and closed package-descendant root
@@ -87,6 +88,7 @@ Immutable connected source reads matched local Git blobs:
 | Core cleanup guard | `82b135f9827da875a8a45879348e592f969702f0` |
 | App operation store | `0d7c1f61ff4c539a774c9eaccdca829e609919b4` |
 
-A documentation-only follow-up preserves all checked source/test bytes. No
+A documentation-only follow-up recorded delivery; a later fixture-only follow-up
+makes teardown failures visible and passed source parsing. App/core bytes are unchanged. No
 binary, notarized release, active CI, Vercel deployment or Supabase project was
 created. No all-project completion claim is made.
