@@ -1,8 +1,8 @@
 # Roomlet initial source implementation
 
-27 October 2026. Status: initial source implemented and statically checked;
-native build/tests/runtime and source publication are not yet verified. The
-all-project goal is active.
+27 October 2026. Status: initial source implemented, statically checked and
+published to the personal GitHub repository. Native build/tests/runtime remain
+unverified. The all-project goal is active.
 
 ## Intent and decisions
 
@@ -72,5 +72,21 @@ and need explicit user-selected destinations. Native picker/sandbox access,
 Trash semantics, cancellation under real interaction, UI, actual reclaimed
 space, packaging, signing and distribution remain unverified.
 
-GitHub source publication readback is pending. No all-project completion claim
-is made.
+## Publication
+
+The authenticated personal CLI created the public
+[alvarovillalbaa/roomlet](https://github.com/alvarovillalbaa/roomlet) repository.
+Source [f86626312f6c632ff37b28cc98004662d8880b54](https://github.com/alvarovillalbaa/roomlet/commit/f86626312f6c632ff37b28cc98004662d8880b54)
+was pushed to `main`; remote ref readback matched that exact SHA. Connected
+GitHub metadata confirms the separate personal repository and default branch.
+
+Immutable connected source reads matched local Git blobs:
+
+| Source | Git blob |
+| --- | --- |
+| Core cleanup guard | `82b135f9827da875a8a45879348e592f969702f0` |
+| App operation store | `0d7c1f61ff4c539a774c9eaccdca829e609919b4` |
+
+A documentation-only follow-up preserves all checked source/test bytes. No
+binary, notarized release, active CI, Vercel deployment or Supabase project was
+created. No all-project completion claim is made.
