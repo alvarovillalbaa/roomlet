@@ -1,7 +1,7 @@
 # Roomlet icon source
 
-28 October 2026. Original artwork and bundle-resource wiring are prepared for
-source publication. Native build, packaging and distribution remain unverified.
+28 October 2026. Original artwork and bundle-resource wiring are published on
+GitHub. Native build, packaging and distribution remain unverified.
 
 The [editable SVG](../../../../artwork/app-icon.svg) uses differently sized file
 blocks and an open area on a mint tile, with transparent padding. The generated
@@ -49,6 +49,25 @@ authored diagnostics and the read-only Apple-art decode output were removed.
 | PNG | `7372807013ab5c3ed8a683e376f27f9a7193679e591e8aa613f0546745cce2f5` |
 | ICNS | `290d8227f6c1f73845ca11a13a889711f6f44942246a72c43929ffe8842b312c` |
 | Exporter | `d74c7ab9195a9896d9cf2b6483d9cc5877a661f3f4e7308046f68447edac24b6` |
+
+## Source publication
+
+Published [source commit 6f7b437](https://github.com/alvarovillalbaa/roomlet/commit/6f7b4377c8ca5edf33540d059fafdfbca73138ea).
+Immutable GitHub readback matched the local Git blobs below; `main` was identical
+to that source commit at readback. Independent final checks confirmed all ten
+ICNS mappings, embedded PNG checksums and reference bytes, unchanged original
+plist values/packaging commands after removing the icon additions, twelve local
+documentation links and the nine-file change scope. `git diff --check` passed.
+
+| Published file | Git blob |
+| --- | --- |
+| SVG | `427379e146a781c7270d852cca74f3a0598826b9` |
+| PNG | `e31bcf28a4b47a9c7beadd19f3617a3a4f4739a8` |
+| ICNS | `a4e724fd519e232cc6487437879b4d0680dc1c01` |
+| Info.plist | `ae70328d027d6bf979d13c0cd8c77152816ce817` |
+| Packaging helper | `effdde40df9806da2788e5caab6ae17025b6f342` |
+| Python exporter | `e92e08658aa37f57d206665ea14d2d335658393b` |
+| Shell exporter | `d10c23f87148dcc238dca2957e8e897c2819be02` |
 
 There is no built app artifact from this work. No app build, core test, signature,
 launch, scan, file Trash action, permission prompt, CI, signing account or store
