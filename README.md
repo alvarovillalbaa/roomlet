@@ -45,6 +45,20 @@ The Codex Run action uses this helper. Optional modes are `--debug`, `--logs`,
 `--telemetry` (a local unified-log filter) and `--verify`. Packaging is also
 available as `script/package_app.sh /path/to/already-built/Roomlet`.
 
+Original icon artwork is in [artwork/app-icon.svg](artwork/app-icon.svg), with a
+[1024-pixel reference](artwork/app-icon.png) and ten-representation ICNS resource.
+The packager copies that resource before its existing signing step. This source
+wiring has not been verified in an actual built app or Finder/Dock appearance.
+Python 3's standard library exports the editable source without installing a
+package:
+
+```sh
+./script/render_app_icon.sh --check
+```
+
+Omit `--check` to regenerate PNG/ICNS. See the [icon receipt](docs/results/2026/10-28/app-icon.md)
+for format checks and the native-tool encoding limitation observed during setup.
+
 The sandbox permits user-selected read/write access; it has no network
 entitlement. The selected folder's access is retained only for the current app
 session. No full-disk access request or persisted folder bookmark is required.
@@ -62,6 +76,7 @@ verified. No certificate, Apple account or paid enrollment was created.
 - [Architecture](docs/architecture.md)
 - [Native-check proposal](docs/proposals/native-checks.md)
 - [Initial implementation receipt](docs/results/2026/10-27/initial-source.md)
+- [Icon source and resource wiring](docs/results/2026/10-28/app-icon.md)
 
 This native local app needs neither Vercel nor Supabase. Source publication and
 native/runtime proof are separate requirements; the all-project goal remains

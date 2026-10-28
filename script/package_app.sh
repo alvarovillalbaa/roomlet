@@ -25,8 +25,10 @@ cleanup_roomlet_stage() {
 }
 trap cleanup_roomlet_stage EXIT
 mkdir -p "$ROOMLET_STAGE/Roomlet.app/Contents/MacOS"
+mkdir -p "$ROOMLET_STAGE/Roomlet.app/Contents/Resources"
 cp "$ROOMLET_BINARY" "$ROOMLET_STAGE/Roomlet.app/Contents/MacOS/Roomlet"
 cp "$ROOMLET_ROOT/Resources/Info.plist" "$ROOMLET_STAGE/Roomlet.app/Contents/Info.plist"
+cp "$ROOMLET_ROOT/Resources/AppIcon.icns" "$ROOMLET_STAGE/Roomlet.app/Contents/Resources/AppIcon.icns"
 printf 'Roomlet generated build output\n' > "$ROOMLET_STAGE/Roomlet.app/Contents/.roomlet-generated"
 chmod +x "$ROOMLET_STAGE/Roomlet.app/Contents/MacOS/Roomlet"
 /usr/bin/plutil -lint "$ROOMLET_STAGE/Roomlet.app/Contents/Info.plist"

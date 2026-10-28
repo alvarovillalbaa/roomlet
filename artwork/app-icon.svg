@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Roomlet app icon</title>
+  <desc>Three blocks of different sizes and an open space on a mint tile.</desc>
+  <rect x="80" y="80" width="864" height="864" rx="192" fill="#D6EFE6" />
+  <rect x="240" y="240" width="240" height="240" rx="40" fill="#246B5A" />
+  <rect x="512" y="240" width="272" height="240" rx="40" fill="#4D9D83" />
+  <rect x="240" y="512" width="368" height="272" rx="40" fill="#F8FAF4" />
+  <rect x="640" y="512" width="144" height="272" rx="48" fill="#246B5A" />
+  <rect x="672" y="544" width="80" height="208" rx="16" fill="#D6EFE6" />
+</svg>
