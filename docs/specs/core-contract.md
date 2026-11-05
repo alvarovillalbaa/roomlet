@@ -64,3 +64,22 @@ All listed value types need public initializers for authored fixtures and app us
 The app calls `CleanupGuard.validate` immediately before each selected file's Trash boundary. Validation must reject forged/nonmember candidates, traversal/absolute paths, root replacement, ancestor links, protected/package/cloud paths, changed identity/size/time, nonregular files and volume changes. Validation reduces ordinary stale-scan risk; it is not an atomic filesystem transaction or protection against a malicious concurrent filesystem writer. Trash is recoverable and errors remain explicit.
 
 After an attempted batch, invalidate the scan so it cannot be reused as a current cleanup plan; keep a separate outcome containing each success/failure. The user can refresh/rescan intentionally. Do not lose the selected folder's security scope during a scan or cleanup, or accept a stale worker result after folder changes/cancellation.
+
+## Physical paths and lexical normalization
+
+Root validation requires an absolute local file path and rejects decoded `.` or
+`..` components before normalization. Policy comparisons and snapshot identity
+checks use filesystem-independent `URL.standardized`, preserving `/private`.
+Every actual root/ancestor still passes the existing `lstat` no-symlink checks;
+the product does not resolve user paths or exempt operating-system aliases.
+
+Foundation's [file-path standardization](https://developer.apple.com/documentation/foundation/nsurl/standardizingpath)
+and [symlink resolver](https://developer.apple.com/documentation/foundation/nsurl/resolvingsymlinksinpath)
+may strip `/private` when the shortened path exists. The
+[Swift 6.1.2 URL implementation](https://github.com/swiftlang/swift-foundation/blob/swift-6.1.2-RELEASE/Sources/FoundationEssentials/URL/URL.swift#L1867)
+distinguishes lexical `standardized` from filesystem-aware `standardizedFileURL`.
+The authored fixture therefore uses POSIX `realpath` only to establish its
+physical temporary parent; it does not change the paths accepted by the product.
+This source-supported mechanism explains a possible reintroduced alias in the
+first CI failure, but that run did not retain the exact failing ancestor. The
+repair remains unverified until the unchanged 29 named cases run against it.

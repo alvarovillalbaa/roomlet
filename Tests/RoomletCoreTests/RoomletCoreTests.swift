@@ -1,4 +1,5 @@
 import Foundation
+import Darwin
 import XCTest
 @testable import RoomletCore
 
@@ -92,6 +93,10 @@ final class RoomletCoreTests: XCTestCase {
         let link = fixture.base.appendingPathComponent("alias", isDirectory: true)
         try FileManager.default.createSymbolicLink(at: link, withDestinationURL: fixture.root)
         XCTAssertThrowsError(try DiskScanner.scan(root: link.appendingPathComponent("child", isDirectory: true)))
+        for path in [fixture.base.path + "/alias/../selected", fixture.base.path + "/alias/./child"] {
+            let hiddenAncestor = URL(fileURLWithPath: path, isDirectory: true)
+            XCTAssertThrowsError(try DiskScanner.scan(root: hiddenAncestor))
+        }
     }
 
     func testPackagesAndCredentialFilesAreNotCandidates() throws {
@@ -302,6 +307,13 @@ final class RoomletCoreTests: XCTestCase {
             XCTAssertTrue(PathPolicy.isBroadRoot(URL(fileURLWithPath: path)))
         }
         XCTAssertFalse(PathPolicy.isBroadRoot(URL(fileURLWithPath: "/Users/authored-local-folder")))
+        for path in ["/private/var/db", "/private/var/db/authored", "/private/var/vm", "/private/var/root", "/private/var/log"] {
+            XCTAssertTrue(PathPolicy.isExcluded(URL(fileURLWithPath: path)))
+        }
+        for path in ["/private", "/private/var", "/private/tmp", "/var", "/tmp"] {
+            XCTAssertTrue(PathPolicy.isBroadRoot(URL(fileURLWithPath: path)))
+        }
+        XCTAssertEqual(URL(fileURLWithPath: "/private/var/authored", isDirectory: true).standardized.path, "/private/var/authored")
     }
 }
 
@@ -310,7 +322,10 @@ private final class Fixture {
     let root: URL
 
     init() throws {
-        base = FileManager.default.temporaryDirectory.resolvingSymlinksInPath()
+        let physicalTemporaryPath = FileManager.default.temporaryDirectory.path.withCString { Darwin.realpath($0, nil) }
+        guard let physicalTemporaryPath else { throw POSIXError(POSIXErrorCode(rawValue: errno) ?? .EIO) }
+        defer { free(physicalTemporaryPath) }
+        base = URL(fileURLWithPath: String(cString: physicalTemporaryPath), isDirectory: true)
             .appendingPathComponent("roomlet-fixture-" + UUID().uuidString, isDirectory: true)
         root = base.appendingPathComponent("selected", isDirectory: true)
         try FileManager.default.createDirectory(at: root, withIntermediateDirectories: true)

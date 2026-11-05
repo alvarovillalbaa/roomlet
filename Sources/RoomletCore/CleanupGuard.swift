@@ -11,7 +11,7 @@ public enum CleanupGuard {
         }
         let parts = try PathPolicy.components(of: file.relativePath)
         let (root, identity) = try PathPolicy.validatedRoot(snapshot.rootURL)
-        guard root.path == snapshot.rootURL.standardizedFileURL.path, identity == snapshot.rootIdentity else {
+        guard root.path == snapshot.rootURL.standardized.path, identity == snapshot.rootIdentity else {
             throw RoomletError.changed("The selected folder changed after the scan. Scan it again before cleanup.")
         }
         var candidate = root

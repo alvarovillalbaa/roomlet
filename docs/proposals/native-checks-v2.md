@@ -1,6 +1,7 @@
 # First Roomlet native compilation and 29 core cases
 
-5 November 2026. **Prepared, not executed.** Baseline personal main is
+5 November 2026. **First native run failed; a repaired candidate is prepared.**
+The original personal-main baseline is
 `1531c9d8c7806d042b5a9d4c36ec5f03e6044f7f`. The owner's standing
 “I approve everything / Keep going / Do all the work” instructions authorize
 this focused native verification and its necessary temporary public CI. The
@@ -15,10 +16,19 @@ established. This revision uses a normal push to the same owned QA branch,
 preserving the original activation in its ancestry. No native verdict or
 runner usage is inferred from the earlier activation.
 
+The [first result](../results/2026/11-05/native-checks-attempt-1.md) is published
+before repair: real compilation passed, but 19 of 29 core cases failed with
+root-path rejection. The exact rejected ancestor was not retained. The candidate
+uses lexical URL normalization and a physical temporary fixture parent as
+specified in the [core contract](../specs/core-contract.md#physical-paths-and-lexical-normalization).
+It preserves all 29 case names and their original assertions, adding path-policy
+regressions inside two existing cases. The strict symlink checks, UI, icon and
+packager remain unchanged. Rerun only against this changed immutable source;
+each invocation remains one bounded job, with no automatic retry.
+
 The [product brief](../specs/product.md) owns a native local Mac disk-space
-utility. This packet preserves the existing app, 29 authored cases, icon and
-packager. It supplies compilation and fixture/package evidence, not a new
-feature or full product acceptance. Local Storage Guard most recently failed
+utility. This packet supplies compilation and fixture/package evidence, not
+a new feature or full product acceptance. Local Storage Guard most recently failed
 at 21.0 GiB free against 34.0 GiB required; no local build, test or installation
 is proposed.
 

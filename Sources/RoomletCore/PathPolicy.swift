@@ -20,9 +20,9 @@ enum PathPolicy {
     ]
 
     static func isExcluded(_ url: URL) -> Bool {
-        let path = url.standardizedFileURL.path.lowercased()
+        let path = url.standardized.path.lowercased()
         if excludedRoots.contains(where: { path == $0 || path.hasPrefix($0 + "/") }) { return true }
-        let components = url.standardizedFileURL.pathComponents.map { $0.lowercased() }
+        let components = url.standardized.pathComponents.map { $0.lowercased() }
         if components.contains(where: {
             excludedNames.contains($0) || $0.hasPrefix("onedrive")
                 || $0.hasPrefix("dropbox (") || $0.hasSuffix(" dropbox")
@@ -39,15 +39,19 @@ enum PathPolicy {
     }
 
     static func isBroadRoot(_ url: URL) -> Bool {
-        broadRoots.contains(url.standardizedFileURL.path.lowercased())
+        broadRoots.contains(url.standardized.path.lowercased())
     }
 
     static func validatedRoot(_ input: URL) throws -> (URL, RootIdentity) {
+        let inputPath = input.path
         guard input.isFileURL, input.query == nil, input.fragment == nil,
-              !input.path.contains("\0"), input.host == nil || input.host == "" || input.host == "localhost" else {
+              inputPath.hasPrefix("/"), !inputPath.contains("\0"),
+              !inputPath.split(separator: "/").contains(where: { $0 == "." || $0 == ".." }),
+              input.host == nil || input.host == "" || input.host == "localhost" else {
             throw RoomletError.invalidRoot("Choose a local folder on this Mac.")
         }
-        let original = URL(fileURLWithPath: input.path, isDirectory: true).standardizedFileURL
+        // File-path standardization can strip /private and reintroduce an OS symlink alias.
+        let original = URL(fileURLWithPath: inputPath, isDirectory: true).standardized
         let root = original
         guard !isBroadRoot(root), !isExcluded(root) else {
             throw RoomletError.excluded("Choose a specific folder outside protected system, credential and cloud-managed locations.")
