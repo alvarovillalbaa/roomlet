@@ -4,8 +4,10 @@ A native Mac utility for finding large local files, reviewing what to remove,
 and tracking available disk space. SwiftUI, AppKit and Foundation; no account,
 network service, model call, runtime dependency or cloud upload.
 
-**Source implementation; native build, tests, sandbox, UI and
-distribution are not yet verified.** This is not a released Mac application.
+**Native compilation passed; the first core run has 10 passing and 19 failing
+checks.** [The failed result is preserved](docs/results/2026/11-05/native-checks-attempt-1.md).
+Package, sandbox behavior, UI and distribution remain unverified. This is not
+a released Mac application.
 
 ## Workflow
 
