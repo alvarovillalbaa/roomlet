@@ -1,6 +1,9 @@
 # Proposed native source checks
 
-Status: inactive, pending explicit approval. No workflow is installed.
+Historical proposal, superseded by the [v2 native scope](native-checks-v2.md)
+under the user's standing all-project approval on 2026-11-05. The original
+main-branch/manual-dispatch instructions below are retained as history; use the
+v2 immutable-source QA branch instead. No workflow is installed on main.
 
 The local Storage Guard preflight on 2026-10-27 reported 29.9 GiB free against
 34.0 GiB required for the estimated operation. Native build/test/package actions
