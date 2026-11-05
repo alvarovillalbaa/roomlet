@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "roomlet.native-publication.v1",
+  "observedAtUtc": "2026-11-05T02:49:54Z",
+  "checkedSource": {
+    "commit": "d6248b293748bfc1c43f3dd5dc61b37b29f6dc6c",
+    "tree": "95840829c40d183d3df947a02f7b59dc8618063b",
+    "files": 52,
+    "bytes": 373893
+  },
+  "acceptedExecution": {
+    "run": 41956986352,
+    "job": 127014147099,
+    "url": "https://github.com/alvarovillalbaa/roomlet/actions/runs/41956986352",
+    "workflowActivation": "6f692b0c9f4047def26f5d1b1767feaf91aca2ac",
+    "status": "completed",
+    "conclusion": "success",
+    "runAttempt": 1,
+    "controllerStartedAtUtc": "2026-11-05T02:43:01Z",
+    "controllerCompletedAtUtc": "2026-11-05T02:43:34Z",
+    "jobStartedAtUtc": "2026-11-05T02:42:57Z",
+    "jobCompletedAtUtc": "2026-11-05T02:43:37Z",
+    "passedCases": 29,
+    "retries": "No retry or repetition requested; exact29 XML identities and actual CLI0 observed."
+  },
+  "receiptPublication": {
+    "commit": "852ac7fea8c7ea1a6baeb06cbed4fa93bfb52f61",
+    "tree": "b7a0bc4662298e1329ba6dfbc2eaf3ee5d861c7d",
+    "trackedFiles": 54,
+    "trackedBytes": 486559,
+    "nativeHeadAndOriginMainMatch": true,
+    "workingAndIndexModesBlobsBytesVerified": true,
+    "completeNativeRemoteLeafParity": true,
+    "remoteTreeTruncated": false,
+    "activeWorkflows": 0,
+    "changedAfterExecution": [
+      {
+        "path": "AGENTS.md",
+        "status": "modified",
+        "checkedBlob": "b84f9b4080238b16b30cf7956d4023040fb50766",
+        "publishedBlob": "b78fa3673ea5d26e146ff387c303db7d4ba5fc4d",
+        "checkedSha256": "5a8b2976ee0a3fb282f707b197d1226fb907b1c7f9f1d913df6e2242fec96483",
+        "publishedSha256": "e1ef3ccd6d3aed751e795e5b39ea495f65a4070988d1f9d3812c806d06af2036"
+      },
+      {
+        "path": "README.md",
+        "status": "modified",
+        "checkedBlob": "f97932e8c482c2ab4f6ff33c5fce7f159483a7a1",
+        "publishedBlob": "c2487d103788511a1ce9411d2e11788036e63534",
+        "checkedSha256": "be19141cb07584e4e7d62647fc9e17fb08ec470e2af9d42bb66077391d77d42d",
+        "publishedSha256": "f45458b376a87c7a4c6c394481aec42c7e88c28e966d127ba6e250ed7c4cf570"
+      },
+      {
+        "path": "docs/proposals/native-checks-v2.md",
+        "status": "modified",
+        "checkedBlob": "1ec0da672511d7293ed7c9d26b14d3aeb5d3f209",
+        "publishedBlob": "0d195fc67757203db934b8418b1769bf201910a2",
+        "checkedSha256": "1437b1b6603aecf60b1558053f944a96b024970521341aa4682ae1ce3b7d21ae",
+        "publishedSha256": "cc858dec534b685c523dac345fcccb661b2df60b79d4456ea836899efc7f378a"
+      },
+      {
+        "path": "docs/specs/core-contract.md",
+        "status": "modified",
+        "checkedBlob": "4be5e253d5363aa2890ad0d370384a3fab8fffff",
+        "publishedBlob": "444184539945f8f27ec36961d1a2c144cf7e558a",
+        "checkedSha256": "79f14089c40781810c0ba0410f22fdc41a08813947cc0fa1fe3b218a90a51ee0",
+        "publishedSha256": "c965267d96fead242a50f59546412f096dfba3c460a5c2176f6eec5fa57883f0"
+      },
+      {
+        "path": "docs/results/2026/11-05/native-checks.json",
+        "status": "added",
+        "publishedBlob": "417ba1675a44d05817309596954f1af2f1de9ed4",
+        "publishedSha256": "bdd0b067a2800b927175d08ba7ece34f92c49ea63d47a86f294c71e5afdbcce2"
+      },
+      {
+        "path": "docs/results/2026/11-05/native-checks.md",
+        "status": "added",
+        "publishedBlob": "5e843c5ee25fafcea991adb8e6c2e2952b9cc1f4",
+        "publishedSha256": "590c18406484f11cee5d2bfda84684e9f980256760ad9b85355427c23f2690fa"
+      }
+    ],
+    "unchangedCheckedFiles": 48,
+    "qualification": "Four documentation files changed; two result files were added. Product, cases, controller, packager, resources and package manifest are byte-identical to the accepted source."
+  },
+  "retirement": {
+    "branch": "qa/roomlet-native-20261105",
+    "head": "852ac7fea8c7ea1a6baeb06cbed4fa93bfb52f61",
+    "activeWorkflows": 0,
+    "method": "Nonforce fast-forward preserving all activation and failure commits; branch not deleted."
+  },
+  "earlierOutcomes": [
+    {
+      "run": 41955453507,
+      "source": "62f1a163394f9c12f37b363da2201104c506b438",
+      "status": "failed",
+      "corePassed": 10,
+      "coreFailed": 19,
+      "package": "not reached",
+      "receipt": "native-checks-attempt-1.json",
+      "qualification": "Exact rejected ancestor was not logged; source-supported normalization inference remains qualified."
+    },
+    {
+      "run": 41956513444,
+      "source": "02019e68141b295bd4366e2a66bb0e8bd353bd84",
+      "status": "failed",
+      "corePassed": 29,
+      "coreFailed": 0,
+      "package": "unsigned Contents ownership marker rejected",
+      "receipt": "native-checks-attempt-2.json"
+    }
+  ],
+  "triggerHistory": {
+    "firstCreateActivation": "0355f72b1e77cae59e4d655d363fd493f740edbe",
+    "noRunsObservedAtUtc": "2026-11-05T02:26:49Z",
+    "actionsEnabledRead": true,
+    "allowedActionsRead": "all",
+    "settingsChanged": false,
+    "cause": "unestablished",
+    "subsequentNativeRuns": 3,
+    "allTerminal": true,
+    "event": "push"
+  },
+  "boundaries": [
+    "XCTest uses authored filesystem fixtures only. No app launch, permission prompt, real Trash, personal scan or native UI is exercised.",
+    "The package has a local ad-hoc signature, not Developer ID, notarization or an installable release.",
+    "Direct children and their original process groups are checked; separately detached sessions and system tool caches are not inventoried.",
+    "Userspace deadlines cannot interrupt a blocked kernel filesystem call. GitHub owns final runner teardown.",
+    "No app launch, picker/sandbox enforcement, real Trash, personal folder scan, native UI or reclaimed-space acceptance.",
+    "No downloadable artifact, Developer ID, notarization, installer/store release or trusted distribution.",
+    "The first failed run did not retain the exact rejected ancestor; the normalization mechanism is source-supported inference, followed by passing regression checks.",
+    "The packager's legacy-marker recognition/rollback path was source-reviewed; CI packaged only fresh task-owned output.",
+    "A captured-self concurrency warning remains in the package's current Swift language mode; Swift 6 language-mode migration was not attempted."
+  ],
+  "receiptQualification": "This document records the already verified receipt-bearing commit. Adding this publication receipt is a subsequent documentation-only commit; its own hash is not self-embedded."
+}
