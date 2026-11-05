@@ -1,6 +1,6 @@
 # First Roomlet native compilation and 29 core cases
 
-5 November 2026. **First native run failed; a repaired candidate is prepared.**
+5 November 2026. **All 29 core cases passed; the package repair is prepared.**
 The original personal-main baseline is
 `1531c9d8c7806d042b5a9d4c36ec5f03e6044f7f`. The owner's standing
 “I approve everything / Keep going / Do all the work” instructions authorize
@@ -22,8 +22,15 @@ root-path rejection. The exact rejected ancestor was not retained. The candidate
 uses lexical URL normalization and a physical temporary fixture parent as
 specified in the [core contract](../specs/core-contract.md#physical-paths-and-lexical-normalization).
 It preserves all 29 case names and their original assertions, adding path-policy
-regressions inside two existing cases. The strict symlink checks, UI, icon and
-packager remain unchanged. Rerun only against this changed immutable source;
+regressions inside two existing cases. The strict symlink checks, UI and icon
+remain unchanged. The [second result](../results/2026/11-05/native-checks-attempt-2.md)
+passed compilation and all 29 cases, then failed signing the ownership marker
+at `Contents/.roomlet-generated`. The package repair writes that data resource
+under `Contents/Resources` before signing, following
+[Apple's bundle guidance](https://developer.apple.com/library/archive/technotes/tn2206/_index.html).
+Old-marker recognition remains solely for replacing prior generated outputs;
+new bundles contain only the Resources marker. Strict signature verification
+and entitlements are unchanged. Rerun only against changed immutable source;
 each invocation remains one bounded job, with no automatic retry.
 
 The [product brief](../specs/product.md) owns a native local Mac disk-space
@@ -70,7 +77,7 @@ supports the selected installed profile; the controller records actual values.
    at a time; there is no retry or repetition. Require actual CLI exit zero,
    29 unique exact class/method identities, suite tests=29 and zero
    failures/errors/skips. A Swift Testing zero-case line cannot establish a pass.
-4. Run the unchanged packager without launching. Verify its actual strict
+4. Run the real packager without launching. Verify its actual strict
    local ad-hoc signature, exact effective sandbox/user-selected-read-write
    entitlements and no network entitlement. Compare built/signed Mach-O UUIDs
    and architectures. Record their separate executable SHA-256 values: signing
