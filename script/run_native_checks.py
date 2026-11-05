@@ -222,7 +222,7 @@ def command(label, args, seconds=30, cleanup=False, allowed=(0,)):
             except subprocess.TimeoutExpired:
                 pass
     group_absent = absent(process.pid)
-    child["released"] = process.returncode is not None and group_absent
+    child["released"] = process.returncode is not None and group_absent and all(eof) and not forced_drain
     raw = [bytes(value) for value in output]
     row = {"label": label, "args": [clean(arg, 220) for arg in args], "exitCode": process.returncode,
            "stopReason": child["reason"], "exitObservedAndReaped": process.returncode is not None,
@@ -337,7 +337,8 @@ try:
     sdk = command("macos_sdk", ["/usr/bin/xcrun", "--sdk", "macosx", "--show-sdk-version"])[0].decode().strip()
     need(sdk == "15.5", "sdk_profile_changed")
     report["toolchain"] = {"xcode": xcode, "swift": swift.strip(), "sdk": sdk}
-    command("shell_syntax", ["/bin/bash", "-n", "script/build_and_run.sh", "script/package_app.sh"])
+    command("shell_syntax_build", ["/bin/bash", "-n", "script/build_and_run.sh"])
+    command("shell_syntax_package", ["/bin/bash", "-n", "script/package_app.sh"])
     command("plist_syntax", ["/usr/bin/plutil", "-lint", "Resources/Info.plist", "Resources/Roomlet.entitlements"])
     options = ["--scratch-path", str(root / "build"), "--cache-path", str(root / "cache" / "swiftpm"),
                "--config-path", str(root / "config"), "--security-path", str(root / "security"),
