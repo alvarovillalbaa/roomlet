@@ -1,12 +1,13 @@
 # INACTIVE: publish the reviewed prep source first, then replace this immutable pin.
 name: Temporary Roomlet native checks
 on:
-  create:
+  push:
+    branches: [qa/roomlet-native-20261105]
 permissions:
   contents: read
 jobs:
   native:
-    if: github.repository == 'alvarovillalbaa/roomlet' && github.event.repository.private == false && github.event.ref_type == 'branch' && github.event.ref == 'qa/roomlet-native-20261105' && github.ref == 'refs/heads/qa/roomlet-native-20261105'
+    if: github.repository == 'alvarovillalbaa/roomlet' && github.event.repository.private == false && github.ref == 'refs/heads/qa/roomlet-native-20261105'
     runs-on: macos-15
     timeout-minutes: 15
     env:

@@ -7,6 +7,14 @@ this focused native verification and its necessary temporary public CI. The
 [older proposal](native-checks.md) remains historical; its pending-approval and
 manual-dispatch instructions do not override that authorization.
 
+The first QA activation, `0355f72b1e77cae59e4d655d363fd493f740edbe`, used
+`create`. The branch and workflow were present, but at 02:26:49 UTC the Actions
+API still reported zero runs. A separate authenticated read found Actions
+enabled with all actions allowed; no setting was changed. The cause is not
+established. This revision uses a normal push to the same owned QA branch,
+preserving the original activation in its ancestry. No native verdict or
+runner usage is inferred from the earlier activation.
+
 The [product brief](../specs/product.md) owns a native local Mac disk-space
 utility. This packet preserves the existing app, 29 authored cases, icon and
 packager. It supplies compilation and fixture/package evidence, not a new
@@ -19,9 +27,9 @@ is proposed.
 Publish the reviewed preparation source without an active workflow. Root then
 copies the [inactive example](native-checks-v2.workflow.yml.example) into
 `.github/workflows/roomlet-native-checks.yml`, replacing only the source pin
-with that preparation's immutable 40-character commit. Create the task-owned
-`qa/roomlet-native-20261105` branch at the activation commit. The public-repo,
-create-event and exact-branch predicates admit one standard `macos-15` job,
+with that preparation's immutable 40-character commit. Fast-forward the existing
+task-owned `qa/roomlet-native-20261105` branch to the new activation descendant.
+The public-repo, push-event and exact-branch predicates admit one standard `macos-15` job,
 capped at 15 minutes. Checkout is shallow, read-only and does not retain
 credentials. No dependency installation, cache restore, artifact upload, paid
 runner, signing identity or account is used. Root retires only this temporary

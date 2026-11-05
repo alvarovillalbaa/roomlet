@@ -40,7 +40,7 @@ SOURCE = sys.argv[2]
 need(platform.system() == "Darwin" and platform.mac_ver()[0].split(".")[0] == "15"
      and os.environ.get("GITHUB_ACTIONS") == "true"
      and os.environ.get("GITHUB_REPOSITORY") == "alvarovillalbaa/roomlet"
-     and os.environ.get("GITHUB_EVENT_NAME") == "create"
+     and os.environ.get("GITHUB_EVENT_NAME") == "push"
      and os.environ.get("GITHUB_REF") == "refs/heads/" + BRANCH
      and os.environ.get("ROOMLET_PUBLIC_REPOSITORY") == "true", "public_runner_scope_required")
 repo = Path.cwd().resolve()
