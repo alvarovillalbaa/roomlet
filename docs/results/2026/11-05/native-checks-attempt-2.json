@@ -1,0 +1,1677 @@
+{
+  "schemaVersion": "roomlet.native-checks-result.v1",
+  "attempt": 2,
+  "recordedAtUtc": "2026-11-05T02:39:22Z",
+  "sourceTree": "2c4f14345c6d6c9268d8d79b43ce948b36675af9",
+  "activationCommit": "68edbb2bff2c5874bd6d0e2d010734c204683346",
+  "run": {
+    "id": 41956513444,
+    "url": "https://github.com/alvarovillalbaa/roomlet/actions/runs/41956513444",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "failure",
+    "runAttempt": 1,
+    "createdAt": "2026-11-05T02:38:19Z",
+    "updatedAt": "2026-11-05T02:39:10Z"
+  },
+  "job": {
+    "id": 127012593961,
+    "run_id": 41956513444,
+    "workflow_name": "Temporary Roomlet native checks",
+    "head_branch": "qa/roomlet-native-20261105",
+    "run_url": "https://api.github.com/repos/alvarovillalbaa/roomlet/actions/runs/41956513444",
+    "run_attempt": 1,
+    "node_id": "CR_kwDOVZwSbM8AAAAdkophKQ",
+    "head_sha": "68edbb2bff2c5874bd6d0e2d010734c204683346",
+    "url": "https://api.github.com/repos/alvarovillalbaa/roomlet/actions/jobs/127012593961",
+    "html_url": "https://github.com/alvarovillalbaa/roomlet/actions/runs/41956513444/job/127012593961",
+    "status": "completed",
+    "conclusion": "failure",
+    "created_at": "2026-11-05T02:38:20Z",
+    "started_at": "2026-11-05T02:38:23Z",
+    "completed_at": "2026-11-05T02:39:09Z",
+    "name": "native",
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-05T02:38:24Z",
+        "completed_at": "2026-11-05T02:38:25Z"
+      },
+      {
+        "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-05T02:38:25Z",
+        "completed_at": "2026-11-05T02:38:27Z"
+      },
+      {
+        "name": "Compile, check 29 authored cases and verify the local package",
+        "status": "completed",
+        "conclusion": "failure",
+        "number": 3,
+        "started_at": "2026-11-05T02:38:27Z",
+        "completed_at": "2026-11-05T02:39:06Z"
+      },
+      {
+        "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-05T02:39:06Z",
+        "completed_at": "2026-11-05T02:39:06Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-05T02:39:06Z",
+        "completed_at": "2026-11-05T02:39:07Z"
+      }
+    ],
+    "check_run_url": "https://api.github.com/repos/alvarovillalbaa/roomlet/check-runs/127012593961",
+    "labels": [
+      "macos-15"
+    ],
+    "runner_id": 1000005374,
+    "runner_name": "GitHub Actions 1000005374",
+    "runner_group_id": 0,
+    "runner_group_name": "GitHub Actions"
+  },
+  "observation": {
+    "build": "passed",
+    "authoredCaseCount": 29,
+    "passedCases": 29,
+    "failedCases": 0,
+    "xunitErrors": 0,
+    "package": "failed",
+    "failure": "The unchanged packager exited 1 when strict code signing rejected Contents/.roomlet-generated as an unsigned subcomponent.",
+    "interpretation": "The lexical root/physical-fixture repair passes all existing case identities with original assertions retained and added path regressions; this is not native UI or real Trash proof."
+  },
+  "report": {
+    "schemaVersion": "roomlet.native-checks.v2",
+    "sourceCommit": "02019e68141b295bd4366e2a66bb0e8bd353bd84",
+    "status": "failed",
+    "startedAtUtc": "2026-11-05T02:38:27Z",
+    "runtime": {
+      "python": "3.15.2",
+      "macOS": "15.8.2",
+      "architecture": "arm64"
+    },
+    "commands": [
+      {
+        "label": "before_head",
+        "args": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 41,
+            "observedSha256": "59e2c0bec8fbcb6a4ef8e82616d2cbd90f776f1a35a81a6b890b82afd616f6cc",
+            "raw": {
+              "bytes": 41,
+              "sha256": "59e2c0bec8fbcb6a4ef8e82616d2cbd90f776f1a35a81a6b890b82afd616f6cc",
+              "complete": true,
+              "compressedBytes": 58,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wXByQ0AMAgDsH+n4YxgHCLYf4XaYqJ9KA2ldXLDgbMBSLniejq34n2eL5MbKQAAAA=="
+            },
+            "head": "02019e68141b295bd4366e2a66bb0e8bd353bd84\n"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "before_tree",
+        "args": [
+          "git",
+          "ls-tree",
+          "-r",
+          "-z",
+          "HEAD"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 4370,
+            "observedSha256": "a6eec516b10df6e9ccae3c7ea7fe903ddfe53eeafe2ee945e305d76c2852eed0",
+            "raw": {
+              "bytes": 4370,
+              "sha256": "a6eec516b10df6e9ccae3c7ea7fe903ddfe53eeafe2ee945e305d76c2852eed0",
+              "complete": true,
+              "compressedBytes": 1962,
+              "encoding": "gzip-base64",
+              "data": "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"
+            },
+            "head": "100644 blob 62b68ffadb616daf35697ed1b1972458ae316255\t.codex/environments/environment.toml\u0000100644 blob ac9fca921c39318be86c2654b49305df257b6d29\t.gitignore\u0000100644 blob b84f9b4080238b16b30cf7956d4023040fb50766\tAGENTS.md\u0000100644 blob 5fb52b674e5a4d756d26a8fc3619651bb3b28798\tLICENSE\u0000100644 blob 49e88bcc9281473dace7171cd60bfbb9a4eea752\tPackage.swift\u0000100644 blob faba0ca5e6ea3eced789b285a461118bd7fdd30d\tREADME.md\u0000100644 blob a4e724fd519e232cc6487437879b4d0680dc1c01\tResources/AppIcon.icns\u0000100644 blob ae70328d027d6bf979d13c0cd8c77152816ce817\tResources/Info.plist\u0000100644 blob b9e10b03004e8e5e7b0dcf20b09e2560cf4cbe7e\tResources/Roomlet.entitlements\u0000100644 blob f73695d81d8aa1ccb587983c5ad6bbf3ad011cdd\tSources/Roomlet/App/RoomletApp.swift\u0000100644 blob fc1d633980e2157bb1c6cd3272102dff58c61822\tSources/Roomlet/App/RoomletAppDelegate.swift\u0000100644 blob 5d9db93020b750c35b2d1c57f2d0a46a0e97799b\tSources/Roomlet/App/RoomletCommands.swift\u0000100644 blob d6ee2e3d573dd0adbd3d1a3a9d14078b942efabb\tSources/Roomlet/Models"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "before_index",
+        "args": [
+          "git",
+          "ls-files",
+          "--stage",
+          "-z"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 4220,
+            "observedSha256": "e02a1cbf4e6958f15405f7091aa8ab50e54a5dc0409cb07d5581c87491c57e6c",
+            "raw": {
+              "bytes": 4220,
+              "sha256": "e02a1cbf4e6958f15405f7091aa8ab50e54a5dc0409cb07d5581c87491c57e6c",
+              "complete": true,
+              "compressedBytes": 1960,
+              "encoding": "gzip-base64",
+              "data": "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"
+            },
+            "head": "100644 62b68ffadb616daf35697ed1b1972458ae316255 0\t.codex/environments/environment.toml\u0000100644 ac9fca921c39318be86c2654b49305df257b6d29 0\t.gitignore\u0000100644 b84f9b4080238b16b30cf7956d4023040fb50766 0\tAGENTS.md\u0000100644 5fb52b674e5a4d756d26a8fc3619651bb3b28798 0\tLICENSE\u0000100644 49e88bcc9281473dace7171cd60bfbb9a4eea752 0\tPackage.swift\u0000100644 faba0ca5e6ea3eced789b285a461118bd7fdd30d 0\tREADME.md\u0000100644 a4e724fd519e232cc6487437879b4d0680dc1c01 0\tResources/AppIcon.icns\u0000100644 ae70328d027d6bf979d13c0cd8c77152816ce817 0\tResources/Info.plist\u0000100644 b9e10b03004e8e5e7b0dcf20b09e2560cf4cbe7e 0\tResources/Roomlet.entitlements\u0000100644 f73695d81d8aa1ccb587983c5ad6bbf3ad011cdd 0\tSources/Roomlet/App/RoomletApp.swift\u0000100644 fc1d633980e2157bb1c6cd3272102dff58c61822 0\tSources/Roomlet/App/RoomletAppDelegate.swift\u0000100644 5d9db93020b750c35b2d1c57f2d0a46a0e97799b 0\tSources/Roomlet/App/RoomletCommands.swift\u0000100644 d6ee2e3d573dd0adbd3d1a3a9d14078b942efabb 0\tSources/Roomlet/Models/CleanupOutcome.swift\u0000100644 7b332bddaf"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "before_status",
+        "args": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "-z",
+          "--untracked-files=all"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "xcode",
+        "args": [
+          "/usr/bin/xcodebuild",
+          "-version"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 30,
+            "observedSha256": "a8be4f9af0a29137fe7e59b9928056d4a0df297bb46ba40f80eaa6b0ae982f12",
+            "raw": {
+              "bytes": 30,
+              "sha256": "a8be4f9af0a29137fe7e59b9928056d4a0df297bb46ba40f80eaa6b0ae982f12",
+              "complete": true,
+              "compressedBytes": 49,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/4tIzk9JVTA00zPhcirNzElRKEstKs7MzwMKuZlxAQD7rfKHHgAAAA=="
+            },
+            "head": "Xcode 16.4\nBuild version 16F6\n"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "swift",
+        "args": [
+          "/usr/bin/xcrun",
+          "swift",
+          "--version"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 97,
+            "observedSha256": "397d818de37b7a684ba905c1b92230e4534ff4cda0daf8a6eabc2a1fcfd50390",
+            "raw": {
+              "bytes": 97,
+              "sha256": "397d818de37b7a684ba905c1b92230e4534ff4cda0daf8a6eabc2a1fcfd50390",
+              "complete": true,
+              "compressedBytes": 103,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/3MsKMhJVQguz0wrUShLLSrOzM9TMNMz1DNS0CgGCeYk5qXrggXAgslgvqG5gYGegZ6hsZ6pJldIYlF6aomVQmJRrpmJbiLIPN3cxOT84gpDUz0DLgDqRFU2YQAAAA=="
+            },
+            "head": "Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)\nTarget: arm64-apple-macosx15.0\n"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 30,
+            "observedSha256": "c7ad56a9c04acf7eb234f7875b4638c0572f5cd5c6b96bc2a18297489dc922b6",
+            "raw": {
+              "bytes": 30,
+              "sha256": "c7ad56a9c04acf7eb234f7875b4638c0572f5cd5c6b96bc2a18297489dc922b6",
+              "complete": true,
+              "compressedBytes": 48,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/ysuz0wr0U0pyixLLVIA4uLM/DwrBUM9QyMDPVMFAL2vaNUeAAAA"
+            },
+            "head": "swift-driver version: 1.120.5 "
+          }
+        ]
+      },
+      {
+        "label": "macos_sdk",
+        "args": [
+          "/usr/bin/xcrun",
+          "--sdk",
+          "macosx",
+          "--show-sdk-version"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 5,
+            "observedSha256": "521fbd942d19d4f08ee3ac22fe5e1fee54d05fb48db0d8d179461b8195d210eb",
+            "raw": {
+              "bytes": 5,
+              "sha256": "521fbd942d19d4f08ee3ac22fe5e1fee54d05fb48db0d8d179461b8195d210eb",
+              "complete": true,
+              "compressedBytes": 25,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/zM01TPlAgD6LqHtBQAAAA=="
+            },
+            "head": "15.5\n"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "shell_syntax_build",
+        "args": [
+          "/bin/bash",
+          "-n",
+          "script/build_and_run.sh"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "shell_syntax_package",
+        "args": [
+          "/bin/bash",
+          "-n",
+          "script/package_app.sh"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "plist_syntax",
+        "args": [
+          "/usr/bin/plutil",
+          "-lint",
+          "Resources/Info.plist",
+          "Resources/Roomlet.entitlements"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 60,
+            "observedSha256": "5f2ca68a8c4e5473c21d45f4eeb7fd5c41d01d1b7de3de416a5d26ec9bfcf218",
+            "raw": {
+              "bytes": 60,
+              "sha256": "5f2ca68a8c4e5473c21d45f4eeb7fd5c41d01d1b7de3de416a5d26ec9bfcf218",
+              "complete": true,
+              "compressedBytes": 68,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wtKLc4vLUpOLdb3zEvL1yvIySwusVLw9+YKgksE5efn5qSW6KXmlWSW5KTmAulisBIAGyYvczwAAAA="
+            },
+            "head": "Resources/Info.plist: OK\nResources/Roomlet.entitlements: OK\n"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "build_app",
+        "args": [
+          "/usr/bin/xcrun",
+          "swift",
+          "build",
+          "--scratch-path",
+          "[scratch]/build",
+          "--cache-path",
+          "[scratch]/cache/swiftpm",
+          "--config-path",
+          "[scratch]/config",
+          "--security-path",
+          "[scratch]/security",
+          "-Xswiftc",
+          "-module-cache-path",
+          "-Xswiftc",
+          "[scratch]/cache/modules",
+          "--product",
+          "Roomlet"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 9540,
+            "observedSha256": "0e8c01054b8067e51fb4a90af255edeefda966a9a104395874f4e1f252dd2acd",
+            "raw": {
+              "bytes": 9540,
+              "sha256": "0e8c01054b8067e51fb4a90af255edeefda966a9a104395874f4e1f252dd2acd",
+              "complete": true,
+              "compressedBytes": 1056,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/+1abW/qNhT+zq84+9ReCQIJLRCmSuP2ZV9a3ap0ux9QpbnJATycOLIdaHV3//uOTeECI+k2TbrS5CNEiP2cY/u8+BGJP5ZcpDyfwVQqSPG5nM3oLgiCxqTT7j/BZ8UNgpalSlA3JtG3tgcpM4GmhbnhRmBG16AQXJvGpLujueJT01qi0lzmrVY/Ho3ObuK4G12F14P+KDAvhD9vh9ETXMqs4MLO5c30pVQIN1zgHRqWMsMCZ60x6dXgb5maoTZWTW/wfYe/zrgxFp7JtBS4q9WYDGpMXgpkeVn8XDKVbkzGNfgrrhfjhOU5qg087LTDsyr8nUxRbCcbhjXQe2bm91Lw5HULj9pR7wgcxoksML2RIt1Oo/2LpkC0VWmn1l5JtWirNXp7Ha8j3X7Y3Bsadnvr7tbGhmGnMzyLh7BiKqdxh6BwigrzBMFISFhhSoUpLJmCE41iegI8h0TmSakIZcRrC18wKV1EEvLAj2DmXAN9WA6oFOUjKZg5wtiOBz0QLJ+VbIY2gNiAeAB/wKHYldOES2HgAox6hRU38+sXg3mK6S2fouEZnk6dVz7AF7ISH7FixSrvRZKup+QmM4S1elAq0QQ9l6VILxmtWwzhCzwyvQi4XjcIcsDXJhRKzmhS2vaXBWUy0tIa5MCKoa1YOwT/6Y7xfJSQ32GyQrYA68onq25B1epV8lvruwUs7ITvTHhmK8yF0I7fdN/BDMn7zND2ARcUUrnA/K2nmDONttHFxq4JqI6QvKaQ1pLDVxozemdMZ2nJNW1W6XVuFEdNmbOO0kF74z8uoEH8XQsoHPSP+OZRMT0fo1ryBINMLvFU56ygLKe8Jy+n3Dlm09aEqd1od7tcQ5OsHytP5/F/WDGpzLFJLjFMuLIZVFWsm/7/r2zium3Cyr8uGwrv0aKJ3ytUZ8cmx72SlOya1n/h4kR81K3go73E8nzk+ciJ56MD8Xx0kHeej46I56P9ENbw0VkFH/21AjwfeT7yfHQgno8O8s7z0RHxfLQfwho+Oq/gI/vE8kaqjLmHlJ6RPCOtxTPSgXhGOsg7z0hHxDPSfghrGKlXwUhv770+lSaRGf7KceVZybPSWjwrHYhnpYO886x0RDwr7YewhpX69c/tRkWxPQIxeBd6hQJnLuHeVOJ6FerIKBO3hzKizt/iyC08rIB/plLXBUtowagpqs6xW62qoxwPWEhlrl/s97czJdH6TVvFsRbqP2t3w5o5P+CSKH2H1ifReZWGzIn5zB62V4G1/2MfHHPqPXy/Bv/IngXuoQcV6DFP8ZmpI9j1eaNPz79jYnRwy/OFtXzrDiRFsYPYxh1jjUm349opQcTrbsdHeyoK5NTuH2mZGDh56zmh0ssK+oE/wGnYD6Ku/tD4EzIQqmhEJQAA"
+            },
+            "head": "Building for debugging...\n[0/7] Write sources\n[2/7] Write Roomlet-entitlement.plist\n[3/7] Write swift-version--79AA4F9932D1E87A.txt\n[5/12] Compiling RoomletCore FileMetadata.swift\n[6/12] Compiling RoomletCore LargestFiles.swift\n[7/12] Emitting module RoomletCore\n[8/12] Compiling RoomletCore CleanupGuard.swift\n[9/12] Compiling RoomletCore DiskScanner.swift\n[10/14] Compiling RoomletCore Models.swift\n[11/14] Compiling RoomletCore PathPolicy.swift\n[12/26] Compiling Roomlet ScopedFolder.swift\n[repository]/Sources/Roomlet/Stores/RoomletStore.swift:100:49: warning: reference to captured var 'self' in concurrently-executing code; this is an error in the Swift 6 language mode\n 98 |                 let result = try withExtendedLifetime(folder) {\n 99 |                     try DiskScanner.scan(root: folder.url, shouldCancel: { Task.isCancelled }, progress: { update in\n100 |                         Task { @MainActor [weak self] in\n    |                                                 `- warning: re"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "binary_path",
+        "args": [
+          "/usr/bin/xcrun",
+          "swift",
+          "build",
+          "--scratch-path",
+          "[scratch]/build",
+          "--cache-path",
+          "[scratch]/cache/swiftpm",
+          "--config-path",
+          "[scratch]/config",
+          "--security-path",
+          "[scratch]/security",
+          "-Xswiftc",
+          "-module-cache-path",
+          "-Xswiftc",
+          "[scratch]/cache/modules",
+          "--show-bin-path"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 80,
+            "observedSha256": "4df9fb27a8e44b54f3f2ac8b04d0b64e66bfb83f0995f9bb71317a58a2ce66a9",
+            "raw": {
+              "bytes": 80,
+              "sha256": "4df9fb27a8e44b54f3f2ac8b04d0b64e66bfb83f0995f9bb71317a58a2ce66a9",
+              "complete": true,
+              "compressedBytes": 92,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wXBQRKAIAgAwHt/YbhUP+ncYDLlJIKo1fPbxa2xN/RRCju+6jfuncXQVSVzh0I9PQz19ctsqRhGyhHJZZ2BzDKD0KHtw8hhnNMPfUUhXVAAAAA="
+            },
+            "head": "[scratch]/build/arm64-apple-macosx/debug\n"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "core_tests",
+        "args": [
+          "/usr/bin/xcrun",
+          "swift",
+          "test",
+          "--scratch-path",
+          "[scratch]/build",
+          "--cache-path",
+          "[scratch]/cache/swiftpm",
+          "--config-path",
+          "[scratch]/config",
+          "--security-path",
+          "[scratch]/security",
+          "-Xswiftc",
+          "-module-cache-path",
+          "-Xswiftc",
+          "[scratch]/cache/modules",
+          "--parallel",
+          "--num-workers",
+          "1",
+          "--enable-xctest",
+          "--disable-swift-testing",
+          "--filter",
+          "RoomletCoreTests",
+          "--xunit-output",
+          "[scratch]/tests.xml"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 2870,
+            "observedSha256": "c426e6e16eddbdd13c76e1e402d5bbab25cbb342c5704a7e9c809dec590dd90b",
+            "raw": {
+              "bytes": 2870,
+              "sha256": "c426e6e16eddbdd13c76e1e402d5bbab25cbb342c5704a7e9c809dec590dd90b",
+              "complete": true,
+              "compressedBytes": 872,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/51Wy3LbMAy8+yv6BW2dPnN0ZLvxxK+R7Wamnh4QEbHYUIRKUknUry9ASXkdedFBtnYJYHfB4/jD2fnvd3v0QdvTu5yoMhgyciiv/Pu3Lz4Efk5swU9yWQn2hGpPS23vFj7HP1gEVKPjWQLohSNQE6u2jkKE4X8FP3GY423jUV3rUFITZrap0EHQZEfHTwk8GfDpjYkIOYbGWT+xs8fa6EKHLbigwews1L6kMDp+TmHo2jLXBi+woIq/nGrHNZFrX3bpSwL2FOtQZlBPCf2awqVWuC8hrPmnjtFfo8NNpUOk+JpAMavq0M7JKHQ8jl/o6KINKNg5VqDtTzCaob+lQNvgWj79wl+SjUJSa7xHN3ssEBW35m8TC7mgxjLF9wSKHw041fXYz8nxHIZhXpfkcYfmSVwLv7CeG7iF4g5OODqeJ/BdMp3Ifwuh9FeI9VTL50XomFhkC4U26KDRj47jjykUCLUg+yUEXALX5OKkc6ZEx+O3c+18yNE3JghJiqeF5ODRL+mkCzBzMOaG+8ITmmJAxyKWuoo9l9E7cWHvpTB7mhhDRe/IcYr1ryw92MxQo1ZgeRIqNpOtz7owjRIhj1OsviKlb3V3tL2usDPmswVnXIAUs4MKd/ofK2Cc4vc12Qqrm2iXieFmoVphAAUBYnwNfh+nGH5Ty+mjskRqh7pGF+3hJSvJs7DucUkPw1umSTF97wEBzfj8MlgWgaiMS+Cg4dRUmiuKIk6xfo61gQIrRu4N8SoLxyle7xTPecI5zsHkozc4ZRijkqNyMStwd35IgIXlNK4ZRiadYnZJjS3JpsD+7Cv9iCoDjxOj+Tl4IyqNcWMHW460KkqaN2NKAAjty/693LQpXt8VYC26jIxElN9Y0z4J1nJ4ynK8Z+GeGgMxaobDp5i7J+sXFu8VQw+CuXFPS3HXVoYjVBhSbD5kerez9qWj5lT2mMNV5VXPUkz+anG8XBuvkFMcPiDziW9EW7JNuvX0NqeeGnbIl5fa8vXkLMXrEnVvo5ChUly9d8Dr24OR6LvxZBq+KcStu4qJ6Dk3LLEjC6hRimKeFKcfbPF8qYoXEPF3b7YtuluSDXWa2DYzCLapmSfF4Ad7F3cR1MC3wba78Pi1NjzygKA2t3IfGv0HgoGwpjYLAAA="
+            },
+            "head": "[1/29] Testing RoomletCoreTests.RoomletCoreTests/testAncestorChangedToLinkIsRejected\n[2/29] Testing RoomletCoreTests.RoomletCoreTests/testBroadAndProtectedRootsAreRefusedWithoutEnumeration\n[3/29] Testing RoomletCoreTests.RoomletCoreTests/testCancellationReturnsAnExplicitPartialSnapshot\n[4/29] Testing RoomletCoreTests.RoomletCoreTests/testChangedFileBecomingDirectoryIsRejected\n[5/29] Testing RoomletCoreTests.RoomletCoreTests/testDepthCapDoesNotHideThatNestedFilesWereOmitted\n[6/29] Testing RoomletCoreTests.RoomletCoreTests/testEmptyFolderAndZeroByteFileRemainValid\n[7/29] Testing RoomletCoreTests.RoomletCoreTests/testEntryCapIsHonestAndNeverExceedsRequestedBound\n[8/29] Testing RoomletCoreTests.RoomletCoreTests/testGuardRejectsForgedSnapshotWhoseSelectedRootIsInsidePackage\n[9/29] Testing RoomletCoreTests.RoomletCoreTests/testHardLinkPathsKeepDistinctSelectionIdentities\n[10/29] Testing RoomletCoreTests.RoomletCoreTests/testHeapKeepsLateLargerFilesRatherThanFirstResults\n[11/29] Testing Rooml"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 543,
+            "observedSha256": "fb7e44bd770dc29fc7b5afba67e2e75253d463d088b39e600bbedd430a9883d8",
+            "raw": {
+              "bytes": 543,
+              "sha256": "fb7e44bd770dc29fc7b5afba67e2e75253d463d088b39e600bbedd430a9883d8",
+              "complete": true,
+              "compressedBytes": 311,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/3WRy27CMBRE9/4Kd9cubBNeIUtKYYVUVLXqIkKVSS6pix/BdoDPr52AREXZWPL1mTszct5jyRqvJNda6ApvGiFL9BzPeN0ai0vYNFUVbpRSlPfYZI0/rfCAnWlsAQ7lSZyxDwfWMdtoDZYdjd2xLw+qZtYYJcETzb04ANkf7Xddj/astWLcqvGQ8LqWQBQvjDux1pC9dbIVL3a8gndw3tESbFhRnk2oO4qtR3n/n0iDq1mkyCGEE0YTkmbT6XCRZYP+SzKfpFPqT2HHKPIzo2ohY++z+czYzvlmcPEeR91cCe+jTJmykXADozxlSe8ud10R5ZMWvYlyDeG//TtFV/Z18wNFiLcUercQEpbCBSJriTi7s7H7cVwE1/ACD/hxTIepe0K/6yIYAR8CAAA="
+            },
+            "head": "[0/1] Planning build\nBuilding for debugging...\n[0/8] Write sources\n[1/8] [scratch]/build/arm64-apple-macosx/debug/RoomletPackageTests.derived/runner.swift\n[2/8] Write sources\n[3/8] Write swift-version--79AA4F9932D1E87A.txt\n[5/8] Compiling RoomletCoreTests RoomletCoreTests.swift\n[6/8] Emitting module RoomletCoreTests\n[7/10] Emitting module RoomletPackageTests\n[8/10] Compiling RoomletPackageTests runner.swift\n[8/10] Write Objects.LinkFileList\n[9/10] Linking RoomletPackageTests\nBuild complete! (6.47s)\n"
+          }
+        ]
+      },
+      {
+        "label": "package",
+        "args": [
+          "/bin/bash",
+          "script/package_app.sh",
+          "[scratch]/build/arm64-apple-macosx/debug/Roomlet"
+        ],
+        "exitCode": 1,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 98,
+            "observedSha256": "f44f1e29f3520775d340bdb390dfa28283bfbc2d663895799b1bb41b44de0fea",
+            "raw": {
+              "bytes": 98,
+              "sha256": "f44f1e29f3520775d340bdb390dfa28283bfbc2d663895799b1bb41b44de0fea",
+              "complete": true,
+              "compressedBytes": 100,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/9MPLU4tKtYvKs3LSy3SL88vytYvys/PzUktgdMpmcUl+npQnm5xSWJ6ql5UekpRYb5+EERQL7GgQN85P68kNa+kWN8zLy1fryAHqMtKwd+bCwCRcSoYYgAAAA=="
+            },
+            "head": "[repository]/dist/.roomlet-stage.Zgdrqo/Roomlet.app/Contents/Info.plist: OK\n"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 331,
+            "observedSha256": "2ebafc220174ed24c7aa131810c6811fcc4acb2c7094161ab09f11fb0b172e47",
+            "raw": {
+              "bytes": 331,
+              "sha256": "2ebafc220174ed24c7aa131810c6811fcc4acb2c7094161ab09f11fb0b172e47",
+              "complete": true,
+              "compressedBytes": 157,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/62NPQ7CMAxG957CF6DeuzKxIrGwpYkVBVI72K7g+IQfwQU62f70+T08GamhrsykeBe9oooslfw3UzHH8XvtzEOm8ZyT3gSPn3AMrU2g1GqIhTPQo7+8FiuZg69KA27niZIIZL5QdCgGLP72UILgEGodDgy2zlGWJkzsE2wmx72wd6T9q5k6Mzil4Ql7J31CSwEAAA=="
+            },
+            "head": "[repository]/dist/.roomlet-stage.Zgdrqo/Roomlet.app: replacing existing signature\n[repository]/dist/.roomlet-stage.Zgdrqo/Roomlet.app: code object is not signed at all\nIn subcomponent: [repository]/dist/.roomlet-stage.Zgdrqo/Roomlet.app/Contents/.roomlet-generated\n"
+          }
+        ]
+      },
+      {
+        "label": "after_cleanup_head",
+        "args": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 41,
+            "observedSha256": "59e2c0bec8fbcb6a4ef8e82616d2cbd90f776f1a35a81a6b890b82afd616f6cc",
+            "raw": {
+              "bytes": 41,
+              "sha256": "59e2c0bec8fbcb6a4ef8e82616d2cbd90f776f1a35a81a6b890b82afd616f6cc",
+              "complete": true,
+              "compressedBytes": 58,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wXByQ0AMAgDsH+n4YxgHCLYf4XaYqJ9KA2ldXLDgbMBSLniejq34n2eL5MbKQAAAA=="
+            },
+            "head": "02019e68141b295bd4366e2a66bb0e8bd353bd84\n"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "after_cleanup_tree",
+        "args": [
+          "git",
+          "ls-tree",
+          "-r",
+          "-z",
+          "HEAD"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 4370,
+            "observedSha256": "a6eec516b10df6e9ccae3c7ea7fe903ddfe53eeafe2ee945e305d76c2852eed0",
+            "raw": {
+              "bytes": 4370,
+              "sha256": "a6eec516b10df6e9ccae3c7ea7fe903ddfe53eeafe2ee945e305d76c2852eed0",
+              "complete": true,
+              "compressedBytes": 1962,
+              "encoding": "gzip-base64",
+              "data": "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"
+            },
+            "head": "100644 blob 62b68ffadb616daf35697ed1b1972458ae316255\t.codex/environments/environment.toml\u0000100644 blob ac9fca921c39318be86c2654b49305df257b6d29\t.gitignore\u0000100644 blob b84f9b4080238b16b30cf7956d4023040fb50766\tAGENTS.md\u0000100644 blob 5fb52b674e5a4d756d26a8fc3619651bb3b28798\tLICENSE\u0000100644 blob 49e88bcc9281473dace7171cd60bfbb9a4eea752\tPackage.swift\u0000100644 blob faba0ca5e6ea3eced789b285a461118bd7fdd30d\tREADME.md\u0000100644 blob a4e724fd519e232cc6487437879b4d0680dc1c01\tResources/AppIcon.icns\u0000100644 blob ae70328d027d6bf979d13c0cd8c77152816ce817\tResources/Info.plist\u0000100644 blob b9e10b03004e8e5e7b0dcf20b09e2560cf4cbe7e\tResources/Roomlet.entitlements\u0000100644 blob f73695d81d8aa1ccb587983c5ad6bbf3ad011cdd\tSources/Roomlet/App/RoomletApp.swift\u0000100644 blob fc1d633980e2157bb1c6cd3272102dff58c61822\tSources/Roomlet/App/RoomletAppDelegate.swift\u0000100644 blob 5d9db93020b750c35b2d1c57f2d0a46a0e97799b\tSources/Roomlet/App/RoomletCommands.swift\u0000100644 blob d6ee2e3d573dd0adbd3d1a3a9d14078b942efabb\tSources/Roomlet/Models"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "after_cleanup_index",
+        "args": [
+          "git",
+          "ls-files",
+          "--stage",
+          "-z"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 4220,
+            "observedSha256": "e02a1cbf4e6958f15405f7091aa8ab50e54a5dc0409cb07d5581c87491c57e6c",
+            "raw": {
+              "bytes": 4220,
+              "sha256": "e02a1cbf4e6958f15405f7091aa8ab50e54a5dc0409cb07d5581c87491c57e6c",
+              "complete": true,
+              "compressedBytes": 1960,
+              "encoding": "gzip-base64",
+              "data": "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"
+            },
+            "head": "100644 62b68ffadb616daf35697ed1b1972458ae316255 0\t.codex/environments/environment.toml\u0000100644 ac9fca921c39318be86c2654b49305df257b6d29 0\t.gitignore\u0000100644 b84f9b4080238b16b30cf7956d4023040fb50766 0\tAGENTS.md\u0000100644 5fb52b674e5a4d756d26a8fc3619651bb3b28798 0\tLICENSE\u0000100644 49e88bcc9281473dace7171cd60bfbb9a4eea752 0\tPackage.swift\u0000100644 faba0ca5e6ea3eced789b285a461118bd7fdd30d 0\tREADME.md\u0000100644 a4e724fd519e232cc6487437879b4d0680dc1c01 0\tResources/AppIcon.icns\u0000100644 ae70328d027d6bf979d13c0cd8c77152816ce817 0\tResources/Info.plist\u0000100644 b9e10b03004e8e5e7b0dcf20b09e2560cf4cbe7e 0\tResources/Roomlet.entitlements\u0000100644 f73695d81d8aa1ccb587983c5ad6bbf3ad011cdd 0\tSources/Roomlet/App/RoomletApp.swift\u0000100644 fc1d633980e2157bb1c6cd3272102dff58c61822 0\tSources/Roomlet/App/RoomletAppDelegate.swift\u0000100644 5d9db93020b750c35b2d1c57f2d0a46a0e97799b 0\tSources/Roomlet/App/RoomletCommands.swift\u0000100644 d6ee2e3d573dd0adbd3d1a3a9d14078b942efabb 0\tSources/Roomlet/Models/CleanupOutcome.swift\u0000100644 7b332bddaf"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "after_cleanup_status",
+        "args": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "-z",
+          "--untracked-files=all"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      },
+      {
+        "label": "final_ignored",
+        "args": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "-z",
+          "--ignored=matching",
+          "--untracked-files=all"
+        ],
+        "exitCode": 0,
+        "stopReason": null,
+        "exitObservedAndReaped": true,
+        "pipesEOF": [
+          true,
+          true
+        ],
+        "forcedDrain": false,
+        "originalProcessGroupAbsent": true,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "raw": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "complete": true,
+              "compressedBytes": 20,
+              "encoding": "gzip-base64",
+              "data": "H4sIAAAAAAAA/wMAAAAAAAAAAAA="
+            },
+            "head": ""
+          }
+        ]
+      }
+    ],
+    "guards": [
+      {
+        "label": "before",
+        "passed": true,
+        "trackedFiles": 50,
+        "trackedBytes": 291108,
+        "treeSha256": "a6eec516b10df6e9ccae3c7ea7fe903ddfe53eeafe2ee945e305d76c2852eed0",
+        "vectorSha256": "fcdf0991e1a8695f407d9f8ca8e0a2829de429a9cf236b751bf9340f1b13f9b9",
+        "fullHeadIndexWorkingModesAndBytes": true
+      },
+      {
+        "label": "after_cleanup",
+        "passed": true,
+        "trackedFiles": 50,
+        "trackedBytes": 291108,
+        "treeSha256": "a6eec516b10df6e9ccae3c7ea7fe903ddfe53eeafe2ee945e305d76c2852eed0",
+        "vectorSha256": "fcdf0991e1a8695f407d9f8ca8e0a2829de429a9cf236b751bf9340f1b13f9b9",
+        "fullHeadIndexWorkingModesAndBytes": true
+      }
+    ],
+    "errors": [
+      "package_failed"
+    ],
+    "generated": [
+      {
+        "path": "dist",
+        "preAbsent": true,
+        "removed": true
+      }
+    ],
+    "scope": {
+      "expectedCases": 29,
+      "appLaunch": false,
+      "realTrash": false,
+      "userFolders": false,
+      "dependenciesInstalled": false,
+      "accounts": false,
+      "trustedDistribution": false
+    },
+    "proofLimits": [
+      "XCTest uses authored filesystem fixtures only. No app launch, permission prompt, real Trash, personal scan or native UI is exercised.",
+      "The package has a local ad-hoc signature, not Developer ID, notarization or an installable release.",
+      "Direct children and their original process groups are checked; separately detached sessions and system tool caches are not inventoried.",
+      "Userspace deadlines cannot interrupt a blocked kernel filesystem call. GitHub owns final runner teardown."
+    ],
+    "sourceFiles": [
+      {
+        "path": ".codex/environments/environment.toml",
+        "mode": "100644",
+        "gitBlob": "62b68ffadb616daf35697ed1b1972458ae316255",
+        "bytes": 173,
+        "sha256": "3d247796c05767599a5cee80cd53ff5ea9a3f8dc5519d1e1b74551d9507376d5"
+      },
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "gitBlob": "ac9fca921c39318be86c2654b49305df257b6d29",
+        "bytes": 71,
+        "sha256": "6d4b2bb1369d8a72d9e1eb44996b36586201c635b447048aa2b5362d34597e54"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "gitBlob": "b84f9b4080238b16b30cf7956d4023040fb50766",
+        "bytes": 2373,
+        "sha256": "5a8b2976ee0a3fb282f707b197d1226fb907b1c7f9f1d913df6e2242fec96483"
+      },
+      {
+        "path": "LICENSE",
+        "mode": "100644",
+        "gitBlob": "5fb52b674e5a4d756d26a8fc3619651bb3b28798",
+        "bytes": 1072,
+        "sha256": "7edafcd8ebca4ecabedfad6e3c3d4872ce0ef6b49c3658a8b6e644cfb884d32d"
+      },
+      {
+        "path": "Package.swift",
+        "mode": "100644",
+        "gitBlob": "49e88bcc9281473dace7171cd60bfbb9a4eea752",
+        "bytes": 494,
+        "sha256": "02a414cb0520ce328432ea681fbe681940684c48b870c56fbca53170e391cd14"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "gitBlob": "faba0ca5e6ea3eced789b285a461118bd7fdd30d",
+        "bytes": 4063,
+        "sha256": "a98d72f02370a9e63b20ede6e466b323d1fb41b1bb3996263b2c0cd845698947"
+      },
+      {
+        "path": "Resources/AppIcon.icns",
+        "mode": "100644",
+        "gitBlob": "a4e724fd519e232cc6487437879b4d0680dc1c01",
+        "bytes": 36405,
+        "sha256": "290d8227f6c1f73845ca11a13a889711f6f44942246a72c43929ffe8842b312c"
+      },
+      {
+        "path": "Resources/Info.plist",
+        "mode": "100644",
+        "gitBlob": "ae70328d027d6bf979d13c0cd8c77152816ce817",
+        "bytes": 919,
+        "sha256": "174229db48e653e1796b63065c74ed4dfbf35fdc0b4181b488e3258ec5d44f70"
+      },
+      {
+        "path": "Resources/Roomlet.entitlements",
+        "mode": "100644",
+        "gitBlob": "b9e10b03004e8e5e7b0dcf20b09e2560cf4cbe7e",
+        "bytes": 313,
+        "sha256": "0288117aedfa6e05d9af78792ee7fcd89087e94a238d3b57e48f151d4c57ae3a"
+      },
+      {
+        "path": "Sources/Roomlet/App/RoomletApp.swift",
+        "mode": "100644",
+        "gitBlob": "f73695d81d8aa1ccb587983c5ad6bbf3ad011cdd",
+        "bytes": 1847,
+        "sha256": "8f9975ef3da75809b72b95b110003d9b684a14b1a6a43e09894c057125909773"
+      },
+      {
+        "path": "Sources/Roomlet/App/RoomletAppDelegate.swift",
+        "mode": "100644",
+        "gitBlob": "fc1d633980e2157bb1c6cd3272102dff58c61822",
+        "bytes": 1107,
+        "sha256": "580a77bbd4eefd442807b81e7683b564e9099499ea3ebfa82597cfb123452871"
+      },
+      {
+        "path": "Sources/Roomlet/App/RoomletCommands.swift",
+        "mode": "100644",
+        "gitBlob": "5d9db93020b750c35b2d1c57f2d0a46a0e97799b",
+        "bytes": 1449,
+        "sha256": "ca9cb17b093eea325d5e77d68db2d521acf814b3854ebfde71b6c5023ad8b68f"
+      },
+      {
+        "path": "Sources/Roomlet/Models/CleanupOutcome.swift",
+        "mode": "100644",
+        "gitBlob": "d6ee2e3d573dd0adbd3d1a3a9d14078b942efabb",
+        "bytes": 1432,
+        "sha256": "c5b910feccd77b47ff67738016e3496b517962ccfdd7b231bc4c344004c8baf7"
+      },
+      {
+        "path": "Sources/Roomlet/Models/WorkspacePresentation.swift",
+        "mode": "100644",
+        "gitBlob": "7b332bddafd8097e8730ef034d57e1e37593b525",
+        "bytes": 1084,
+        "sha256": "6f06661f3bb5447f8875650912f44e9455bc292c1f0746118e3604f4811d3947"
+      },
+      {
+        "path": "Sources/Roomlet/Services/ReportExporter.swift",
+        "mode": "100644",
+        "gitBlob": "d5f8cf3739d6fe10cb54e2e339d731cc578c8151",
+        "bytes": 1002,
+        "sha256": "656df2f10910351a460558e97e487ba84301312b511b67deae366f36b9163e12"
+      },
+      {
+        "path": "Sources/Roomlet/Services/ScopedFolder.swift",
+        "mode": "100644",
+        "gitBlob": "827f85e6fdfcef9301d4bc7d7e6d127331b5c48c",
+        "bytes": 992,
+        "sha256": "b8c71e67cf3ede7f91f3e592d9a65e7db65d799d991dd0d7b61f3666b7eb2e93"
+      },
+      {
+        "path": "Sources/Roomlet/Services/TrashService.swift",
+        "mode": "100644",
+        "gitBlob": "95d1a043ab2bb82d86a7a44bf73c2abfc83e3f8a",
+        "bytes": 2376,
+        "sha256": "11b583eb37aecd0bccba1216be71f2fc10fd181de21a80d355e99071c2bd61de"
+      },
+      {
+        "path": "Sources/Roomlet/Stores/RoomletStore.swift",
+        "mode": "100644",
+        "gitBlob": "0d7c1f61ff4c539a774c9eaccdca829e609919b4",
+        "bytes": 9266,
+        "sha256": "59c09a8640f2aaaef469b80ac68f7a5ca98b9652235a68b217de6d8f23606f10"
+      },
+      {
+        "path": "Sources/Roomlet/Support/FileFormatting.swift",
+        "mode": "100644",
+        "gitBlob": "76403f7798f8aabb9df4475a2cbb7d34beaacdb3",
+        "bytes": 1652,
+        "sha256": "21bb2577099947b747c017ecd79dd4406d211afb800695cf59db958296c2d1e6"
+      },
+      {
+        "path": "Sources/Roomlet/Views/CleanupOutcomeView.swift",
+        "mode": "100644",
+        "gitBlob": "750509b396dcfbcdb03a20aa0f77cac43b6ad0f5",
+        "bytes": 4868,
+        "sha256": "16244865b079bdb7923cdbfddc540fdc8ed9801eb9ef394ba57cbdf158a0d4b3"
+      },
+      {
+        "path": "Sources/Roomlet/Views/CleanupReviewView.swift",
+        "mode": "100644",
+        "gitBlob": "72a5b9d9787e825c7449109c01102c20e3a62ec0",
+        "bytes": 1975,
+        "sha256": "eb569e4af92e9877cac1d36a4348938a0f9f0f4307a6e9c694a941c6912674fa"
+      },
+      {
+        "path": "Sources/Roomlet/Views/ContentView.swift",
+        "mode": "100644",
+        "gitBlob": "05d45d565218408c142fa74e6b5679e55b8d4f08",
+        "bytes": 3953,
+        "sha256": "47492af2af552de48a475087a587ebca0cdb8316c7451b8f5d8b096262cfa91f"
+      },
+      {
+        "path": "Sources/Roomlet/Views/FileResultsView.swift",
+        "mode": "100644",
+        "gitBlob": "64ba724402f98797b7e56c629a47834e8ac82015",
+        "bytes": 4882,
+        "sha256": "7f9d5b5de47ae2f2eae8b2975f2cf9b7b69bbb39323b2d31feb104bbf6125b65"
+      },
+      {
+        "path": "Sources/Roomlet/Views/FileTableView.swift",
+        "mode": "100644",
+        "gitBlob": "3b1aa0a613aa81ffd5ffd98b06a5dd996ae426e3",
+        "bytes": 1733,
+        "sha256": "4460fbdf819c7e8b35c9bc80161f5a77a85729d5345b7c38a4f9581682746443"
+      },
+      {
+        "path": "Sources/Roomlet/Views/SidebarView.swift",
+        "mode": "100644",
+        "gitBlob": "cf2b6088de02a9652632e9320a2ec5753f413310",
+        "bytes": 1219,
+        "sha256": "a2dcdfab2e522c3501bcaf04a8c8107a79c478ba432335fb9a9278712b7d0334"
+      },
+      {
+        "path": "Sources/RoomletCore/CleanupGuard.swift",
+        "mode": "100644",
+        "gitBlob": "5c1b5b4768639becd7589a5be3dad17c340210da",
+        "bytes": 2407,
+        "sha256": "4fe99083bb4c9e2b278cb8a4b12b5ecf4cfcdc0b9cbdfb0daaf8b65f824f762b"
+      },
+      {
+        "path": "Sources/RoomletCore/DiskScanner.swift",
+        "mode": "100644",
+        "gitBlob": "3942aa54d083fad199aae59df0afb0feb840c949",
+        "bytes": 5386,
+        "sha256": "c63b74c35b66346001ec8f67b25863322d9b54517f910e86caef786921560c07"
+      },
+      {
+        "path": "Sources/RoomletCore/FileMetadata.swift",
+        "mode": "100644",
+        "gitBlob": "075508f5be7d1959d2cbadc7c872de0acd16595b",
+        "bytes": 2499,
+        "sha256": "54c90168a35fcef8346887e6d5b7c8c7ae678d9faa71870eea0adf6eaf726d2e"
+      },
+      {
+        "path": "Sources/RoomletCore/LargestFiles.swift",
+        "mode": "100644",
+        "gitBlob": "281d856bdfdc0681406806ff08a19bcdb2dc05a8",
+        "bytes": 1519,
+        "sha256": "ff1532e00605bdf3da0baa308f26b2aa8d6ee567959ce311780b416a8addf3c2"
+      },
+      {
+        "path": "Sources/RoomletCore/Models.swift",
+        "mode": "100644",
+        "gitBlob": "6fde12093ed816eec5bba8e48998f0afa4734153",
+        "bytes": 3789,
+        "sha256": "01040f739953c7ceac4cb23587fe8084ab899c34d1554dfb910ea565e2ceb25e"
+      },
+      {
+        "path": "Sources/RoomletCore/PathPolicy.swift",
+        "mode": "100644",
+        "gitBlob": "d35390b5f084b3c5cd9c1ddf51fe9ce2eb41b53a",
+        "bytes": 5581,
+        "sha256": "4adb5bbb697b3d25d7318846dcf1d0008933e9c37ebf716531f572bb76830b15"
+      },
+      {
+        "path": "Tests/RoomletCoreTests/RoomletCoreTests.swift",
+        "mode": "100644",
+        "gitBlob": "7947e3b3aeeb42758617fc0d0fec13012119c263",
+        "bytes": 19471,
+        "sha256": "186f71c3082c2051038db87df3487769d9d7837c58e3d1ba8d30b2048d68e8ad"
+      },
+      {
+        "path": "artwork/app-icon.png",
+        "mode": "100644",
+        "gitBlob": "e31bcf28a4b47a9c7beadd19f3617a3a4f4739a8",
+        "bytes": 15966,
+        "sha256": "7372807013ab5c3ed8a683e376f27f9a7193679e591e8aa613f0546745cce2f5"
+      },
+      {
+        "path": "artwork/app-icon.svg",
+        "mode": "100644",
+        "gitBlob": "427379e146a781c7270d852cca74f3a0598826b9",
+        "bytes": 662,
+        "sha256": "7c989b2107100eff55c66a24f5618a39fb354577edc6fb64314398a651e4eccc"
+      },
+      {
+        "path": "docs/architecture.md",
+        "mode": "100644",
+        "gitBlob": "fa7532c8267a5753bf766b84c82eefa87211b73c",
+        "bytes": 2189,
+        "sha256": "71d23023bbca794369c14a01657285060d2a1e9989c4aae9378e86f24177997a"
+      },
+      {
+        "path": "docs/proposals/native-checks-ci.yml.example",
+        "mode": "100644",
+        "gitBlob": "d3f7003690691a745e056c7459d9b921697eb534",
+        "bytes": 1246,
+        "sha256": "524dffae0aabe3a0dc06aae5a7d2d4acdea408b6f451dbe478d4ec4cd6430917"
+      },
+      {
+        "path": "docs/proposals/native-checks-v2.md",
+        "mode": "100644",
+        "gitBlob": "72f720ed8ceface0cb273e902fee9c1e46987867",
+        "bytes": 6901,
+        "sha256": "ff83df23b88a97cf5bce870de286af0f0e3867619ce36f644df76d4d1aba3da3"
+      },
+      {
+        "path": "docs/proposals/native-checks-v2.workflow.yml.example",
+        "mode": "100644",
+        "gitBlob": "c4da26a8a180c9a1680381223cc348e80cbf9924",
+        "bytes": 1018,
+        "sha256": "c1777b7cabbe4c0918f6ffd9f86cc22c0894e49e733a27b3f0a401146a47952e"
+      },
+      {
+        "path": "docs/proposals/native-checks.md",
+        "mode": "100644",
+        "gitBlob": "f46c121e689480b458cf9a50dc19e743cfe4bdef",
+        "bytes": 2610,
+        "sha256": "721f758a347394f06f8dc79dbee25b1f4b0fa696b4ee5d8b6d8943b67f3e32f6"
+      },
+      {
+        "path": "docs/results/2026/10-27/initial-source.md",
+        "mode": "100644",
+        "gitBlob": "038d20771a9b93344afa2e40a76d9f7ff1c109d6",
+        "bytes": 5429,
+        "sha256": "acbbae25819f44bb9e24ead7d3290620f3dcbf4504901a3fb3aed6f5242a7ef2"
+      },
+      {
+        "path": "docs/results/2026/10-28/app-icon.md",
+        "mode": "100644",
+        "gitBlob": "2b5878031be50f4b271808b140d7d7ea4ffe6a3c",
+        "bytes": 4589,
+        "sha256": "28ac33d5b26eaaf2da8ab8f9e62cd5e4d2126e43958480e353efc06c1ce83389"
+      },
+      {
+        "path": "docs/results/2026/11-05/native-checks-attempt-1.json",
+        "mode": "100644",
+        "gitBlob": "2e57ca63e851b6df119b657c61651c333cd97a7e",
+        "bytes": 78644,
+        "sha256": "ae644990dabd8b809a141d0eda15fb3d060033ae6ac1f97ab7847e82a47a4f33"
+      },
+      {
+        "path": "docs/results/2026/11-05/native-checks-attempt-1.md",
+        "mode": "100644",
+        "gitBlob": "56267f8fab18e4e54f5ac7cd0f2524cbdc9409d4",
+        "bytes": 1909,
+        "sha256": "852383b9e72ae8795cd5be9651f76124cec23dd88d569a1a6695e0e6a416edad"
+      },
+      {
+        "path": "docs/specs/core-contract.md",
+        "mode": "100644",
+        "gitBlob": "4be5e253d5363aa2890ad0d370384a3fab8fffff",
+        "bytes": 4939,
+        "sha256": "79f14089c40781810c0ba0410f22fdc41a08813947cc0fa1fe3b218a90a51ee0"
+      },
+      {
+        "path": "docs/specs/product.md",
+        "mode": "100644",
+        "gitBlob": "3d7ad797ba6c1e42c28d101dbdd4fead816e81fe",
+        "bytes": 2353,
+        "sha256": "0523c03b88eb7c516a02751203c25531616605b89f5e96119124a5a25638d284"
+      },
+      {
+        "path": "script/build_and_run.sh",
+        "mode": "100755",
+        "gitBlob": "b8eceae36b47c569e79a6a107427a9cb688eeb8c",
+        "bytes": 1939,
+        "sha256": "118ec1dfe5e612aa4373aa7f6e7e590935eb3ae9394b21770dc4fc7c0ffc885d"
+      },
+      {
+        "path": "script/package_app.sh",
+        "mode": "100755",
+        "gitBlob": "effdde40df9806da2788e5caab6ae17025b6f342",
+        "bytes": 2280,
+        "sha256": "c3f13b8705544545552478dfe55a4c89a86c2a0739dff4f37d6e1d0e1521ac4c"
+      },
+      {
+        "path": "script/render_app_icon.py",
+        "mode": "100644",
+        "gitBlob": "e92e08658aa37f57d206665ea14d2d335658393b",
+        "bytes": 5489,
+        "sha256": "d74c7ab9195a9896d9cf2b6483d9cc5877a661f3f4e7308046f68447edac24b6"
+      },
+      {
+        "path": "script/render_app_icon.sh",
+        "mode": "100755",
+        "gitBlob": "d10c23f87148dcc238dca2957e8e897c2819be02",
+        "bytes": 284,
+        "sha256": "3a4c6d5ce0fa90144ec8131df778df2fd9048596c559fe9ec6a77430a812a13e"
+      },
+      {
+        "path": "script/run_native_checks.py",
+        "mode": "100644",
+        "gitBlob": "cc0e9d5fde908f5dcafe29e46958d4008e9f5f78",
+        "bytes": 25289,
+        "sha256": "9bd43c39bc42de39c18c49de6fe23206a0e061f5eb80f66d8ee751b07b5c53de"
+      }
+    ],
+    "toolchain": {
+      "xcode": "Xcode 16.4\nBuild version 16F6",
+      "swift": "Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)\nTarget: arm64-apple-macosx15.0",
+      "sdk": "15.5"
+    },
+    "expectedCases": [
+      "RoomletCoreTests.RoomletCoreTests/testOptionsKeepHardUpperBoundsAndPositiveLowerBounds",
+      "RoomletCoreTests.RoomletCoreTests/testHeapKeepsLateLargerFilesRatherThanFirstResults",
+      "RoomletCoreTests.RoomletCoreTests/testHeapUsesLogicalFallbackAndDeterministicTiesWithoutInventingAllocation",
+      "RoomletCoreTests.RoomletCoreTests/testScannerCollectsOnlyMetadataAndRelativeRegularFilePaths",
+      "RoomletCoreTests.RoomletCoreTests/testEmptyFolderAndZeroByteFileRemainValid",
+      "RoomletCoreTests.RoomletCoreTests/testScannerDoesNotFollowFileOrDirectorySymlinks",
+      "RoomletCoreTests.RoomletCoreTests/testSelectedSymbolicLinkRootIsRejectedEvenWithDirectoryURLHint",
+      "RoomletCoreTests.RoomletCoreTests/testSelectedFolderThroughSymlinkAncestorIsRejected",
+      "RoomletCoreTests.RoomletCoreTests/testPackagesAndCredentialFilesAreNotCandidates",
+      "RoomletCoreTests.RoomletCoreTests/testKnownCloudManagedPathsAreExcluded",
+      "RoomletCoreTests.RoomletCoreTests/testSelectedRootInsidePackageIsRejected",
+      "RoomletCoreTests.RoomletCoreTests/testGuardRejectsForgedSnapshotWhoseSelectedRootIsInsidePackage",
+      "RoomletCoreTests.RoomletCoreTests/testResultCapRetainsLargestEstimatesAndMarksSnapshotIncomplete",
+      "RoomletCoreTests.RoomletCoreTests/testEntryCapIsHonestAndNeverExceedsRequestedBound",
+      "RoomletCoreTests.RoomletCoreTests/testDepthCapDoesNotHideThatNestedFilesWereOmitted",
+      "RoomletCoreTests.RoomletCoreTests/testCancellationReturnsAnExplicitPartialSnapshot",
+      "RoomletCoreTests.RoomletCoreTests/testUnknownCapacityRemainsNilInsteadOfZero",
+      "RoomletCoreTests.RoomletCoreTests/testUnchangedFileValidatesWithoutPerformingAnyCleanup",
+      "RoomletCoreTests.RoomletCoreTests/testSizeChangeIsRejected",
+      "RoomletCoreTests.RoomletCoreTests/testModificationTimeChangeIsRejectedEvenWithSameSize",
+      "RoomletCoreTests.RoomletCoreTests/testReplacementIdentityIsRejected",
+      "RoomletCoreTests.RoomletCoreTests/testRootReplacementIsRejected",
+      "RoomletCoreTests.RoomletCoreTests/testAncestorChangedToLinkIsRejected",
+      "RoomletCoreTests.RoomletCoreTests/testChangedFileBecomingDirectoryIsRejected",
+      "RoomletCoreTests.RoomletCoreTests/testNonmemberAndAlteredMetadataAreRejected",
+      "RoomletCoreTests.RoomletCoreTests/testTraversalAndAbsoluteForgedMembersCannotEscapeRoot",
+      "RoomletCoreTests.RoomletCoreTests/testHardLinkPathsKeepDistinctSelectionIdentities",
+      "RoomletCoreTests.RoomletCoreTests/testBroadAndProtectedRootsAreRefusedWithoutEnumeration",
+      "RoomletCoreTests.RoomletCoreTests/testRootPoliciesRejectMixedCaseAliasesWithoutChangingFilesystemPaths"
+    ],
+    "xunit": {
+      "raw": {
+        "bytes": 4346,
+        "sha256": "12116ce1601688808868590211365926d766fb71d88c32c52a6bcaeca047d01b",
+        "complete": true,
+        "compressedBytes": 1132,
+        "encoding": "gzip-base64",
+        "data": "H4sIAAAAAAAA/7VYTVPjOBS88yuo3Jf190fVwFQIyZKaJKSSsFTtTdiPRIsseSUZyPz6fZIdxs6yN5uDwSaWmn7vdbf49v2jYJdvIBUV/HrkXjmjS+CZyCnfX48ed7PfktH3m4uLbxqUVhXFbzetm0tOCrge7fB+A6piWuHrUgqprke4kv3c9chLR5cvhLJKQvOcmrfcq8hLk8j3ktSxX96oWTsjCi4zRpSq198IUTDQEyHBbKWuzh+MGiDm5THP8Crk5ED4HvKdWFD+Olcb+BsyDflpd+fKicPECZM4NNv+ftq3Dwi3UpB8zPO1FNpuih/WaixhAy+VgvyJ6oOo9JRXBUiikfoWqsB1HddLvd5RTQgyw5jdbwO6klyN+fSjZDSjek2kpoRtOSnVQeg2ntBP8ZL0j6cu0IwyuIVMFNhyd1QiX0Iev6xXGDo+AvF7R3IHpT5MSHknQK2Evqc57A5Er/BXNT71BBIeCqrPAPlOGMdO/9RMi1IfZ4LlILGN/gIpbo8aDJINFITyPwmjHSBR4qX+AJ085VoekZm5uhfcDle+ApSL6UcGkGOR/qksSbei4nmnaVI/6B3NHxWRed0YaiYkNs+pX58OQsEW2Oe0zdWcK6zjmmSvZA+d+UoCJ/L65+oewRmtWRN9UD8AyjuqNOWZrnHh1M1z4JpqCqpduwAr50Zx/3iAlAaGWhANC4J0SdvLG8QHEhucz6hsCfcnIj/x/HgIghDQowK1EHuaETYjjD1jebCn7kCDRAEwhGU75KdRyDl/M4zx/ZgxkZ0rpZ+4kesMoAc/uHjnEyaqfEk4dk9uS4r6jW3PqrxrIn6UptEA5VuiCb/Q+o/e4W61XP4SxilSY2ja4htb+hM6uhRG3hBysBK8gOLZqtKYYc0gX4ImOdHEutt/JTtB84iiqHckD6XhxY6ZmbvHsgRpRUgZ3xUKp+wNFuL99LSFKUqCIBiiYo3WGAQTZMZ0Lna5GTkkB30FDTinyFVn/CMv9vvv4A2UjGRQIIZGdP7HUoM4SJyg/7BRqwo6ByYNNCxl9Qf9BAe8MAwgR0siX9VJwOcYOosSV+v0cRIO0MTGHtbCpB5oKFnSD8gnuOaYUbye1MdOHIqPLeERba6wOtAG6LphkAxRP8TYruHXtYuCQeLrNiOcg5wIZnxLPXB2/Jxyjv5rIuQbTvu+YsRayjktkQkk8QARtkHW5DQMSEy8GwAP8jM5bo8FQxPuwDGOnw6QYE+Bo05qu4MU1f7QADgdQ74sXRSmUTBI6doRqB2Avj4AOZ7rxKk7GAzk4tlMmolFdSo7d6/Puj1uFveUtw8eqExuNEjZ0C3P3bQTph03HSJW7CQxJ23CjHs+K8EqzPQ2xi6tqSo0CC5QIzNSgqGrc/ZBoxgitT7y7Nc5zJ4rjDw3CrgG+SJMMNuP+XHCgPCq7CpQlAwD6tVGMFISPJse60OPWlGGPa2B5A8v5kzUDvUx4sBof47E/mz/VdG5UTcX/wKlNpIM+hAAAA=="
+      },
+      "accepted": true,
+      "cases": [
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testAncestorChangedToLinkIsRejected",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testBroadAndProtectedRootsAreRefusedWithoutEnumeration",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testCancellationReturnsAnExplicitPartialSnapshot",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testChangedFileBecomingDirectoryIsRejected",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testDepthCapDoesNotHideThatNestedFilesWereOmitted",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testEmptyFolderAndZeroByteFileRemainValid",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testEntryCapIsHonestAndNeverExceedsRequestedBound",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testGuardRejectsForgedSnapshotWhoseSelectedRootIsInsidePackage",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testHardLinkPathsKeepDistinctSelectionIdentities",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testHeapKeepsLateLargerFilesRatherThanFirstResults",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testHeapUsesLogicalFallbackAndDeterministicTiesWithoutInventingAllocation",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testKnownCloudManagedPathsAreExcluded",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testModificationTimeChangeIsRejectedEvenWithSameSize",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testNonmemberAndAlteredMetadataAreRejected",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testOptionsKeepHardUpperBoundsAndPositiveLowerBounds",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testPackagesAndCredentialFilesAreNotCandidates",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testReplacementIdentityIsRejected",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testResultCapRetainsLargestEstimatesAndMarksSnapshotIncomplete",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testRootPoliciesRejectMixedCaseAliasesWithoutChangingFilesystemPaths",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testRootReplacementIsRejected",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testScannerCollectsOnlyMetadataAndRelativeRegularFilePaths",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testScannerDoesNotFollowFileOrDirectorySymlinks",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testSelectedFolderThroughSymlinkAncestorIsRejected",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testSelectedRootInsidePackageIsRejected",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testSelectedSymbolicLinkRootIsRejectedEvenWithDirectoryURLHint",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testSizeChangeIsRejected",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testTraversalAndAbsoluteForgedMembersCannotEscapeRoot",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testUnchangedFileValidatesWithoutPerformingAnyCleanup",
+          "status": "passed"
+        },
+        {
+          "class": "RoomletCoreTests.RoomletCoreTests",
+          "name": "testUnknownCapacityRemainsNilInsteadOfZero",
+          "status": "passed"
+        }
+      ],
+      "total": 29,
+      "passed": 29,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "fixtureCleanup": {
+      "passed": true,
+      "remainingAuthoredFixtures": 0,
+      "basis": "XCTest teardown verdict and owned TMPDIR prefix check"
+    },
+    "processCleanup": {
+      "passed": true,
+      "started": 19
+    },
+    "generatedCleanup": "passed",
+    "ignoredOutput": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    },
+    "scratchCleanup": "passed",
+    "interrupted": false,
+    "completedAtUtc": "2026-11-05T02:39:05Z"
+  }
+}
