@@ -82,4 +82,6 @@ The authored fixture therefore uses POSIX `realpath` only to establish its
 physical temporary parent; it does not change the paths accepted by the product.
 This source-supported mechanism explains a possible reintroduced alias in the
 first CI failure, but that run did not retain the exact failing ancestor. The
-repair remains unverified until the unchanged 29 named cases run against it.
+repair passed all 29 named cases, including added assertions inside existing
+cases, in the [native packet](../results/2026/11-05/native-checks.md). That result
+does not establish native UI, picker/security-scope or real Trash behavior.

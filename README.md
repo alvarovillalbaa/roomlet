@@ -4,10 +4,10 @@ A native Mac utility for finding large local files, reviewing what to remove,
 and tracking available disk space. SwiftUI, AppKit and Foundation; no account,
 network service, model call, runtime dependency or cloud upload.
 
-**Native compilation and all 29 core checks passed; packaging failed at code
-signing.** [Both native outcomes are preserved](docs/results/2026/11-05/native-checks-attempt-2.md).
-Package verification, sandbox behavior, UI and distribution remain unverified.
-This is not a released Mac application.
+**Native compilation, all 29 core checks and strict ad-hoc package verification
+passed.** [Results and both earlier failures](docs/results/2026/11-05/native-checks.md)
+are preserved. Native interaction, sandbox behavior and distribution remain
+unverified. This is not a released Mac application.
 
 ## Workflow
 
@@ -49,8 +49,9 @@ available as `script/package_app.sh /path/to/already-built/Roomlet`.
 
 Original icon artwork is in [artwork/app-icon.svg](artwork/app-icon.svg), with a
 [1024-pixel reference](artwork/app-icon.png) and ten-representation ICNS resource.
-The packager copies that resource before its existing signing step. This source
-wiring has not been verified in an actual built app or Finder/Dock appearance.
+The packager copies that resource before signing. Native checks verified its
+exact bytes and ten representations inside the signed package; Finder/Dock
+appearance remains unverified.
 Python 3's standard library exports the editable source without installing a
 package:
 
@@ -76,7 +77,8 @@ verified. No certificate, Apple account or paid enrollment was created.
 - [Product scope and source brief](docs/specs/product.md)
 - [Core/app contract](docs/specs/core-contract.md)
 - [Architecture](docs/architecture.md)
-- [Native-check proposal](docs/proposals/native-checks.md)
+- [Native-check scope](docs/proposals/native-checks-v2.md)
+- [Native build/core/package results](docs/results/2026/11-05/native-checks.md)
 - [Initial implementation receipt](docs/results/2026/10-27/initial-source.md)
 - [Icon source and resource wiring](docs/results/2026/10-28/app-icon.md)
 

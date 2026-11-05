@@ -23,3 +23,7 @@ commit, preserve failed outcomes, then retire the workflow after its run is
 terminal. Do not launch the app, scan personal folders, use real Trash, install
 dependencies, upload artifacts, enroll in a paid service or publish a release.
 This approval does not override a failed local Storage Guard.
+
+This packet is [verified and retired](docs/results/2026/11-05/native-checks.md).
+Keep its failed outcomes and proof limits; rerun only after a relevant change
+or an explicitly requested new acceptance scope.

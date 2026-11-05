@@ -1,6 +1,8 @@
 # First Roomlet native compilation and 29 core cases
 
-5 November 2026. **All 29 core cases passed; the package repair is prepared.**
+5 November 2026. **Verified and retired.** The accepted
+[native result](../results/2026/11-05/native-checks.md) and both earlier failures
+are preserved. No active workflow remains on main or the owned QA branch.
 The original personal-main baseline is
 `1531c9d8c7806d042b5a9d4c36ec5f03e6044f7f`. The owner's standing
 “I approve everything / Keep going / Do all the work” instructions authorize
