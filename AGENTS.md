@@ -34,9 +34,11 @@ The standing “I approve everything / Keep going / Do all the work” instructi
 authorizes Roomlet's separate [preview packet](docs/proposals/preview-package-checks.md):
 publish reviewed preparation source, one free public macOS 15 job capped at
 20 minutes, then unchanged accepted preview assets at `v0.1.0-preview.1`.
-The owned QA ref is `qa/roomlet-preview-20261108-1`; preparation directly follows
-`a76f38383c4cbd0c9f49a676394252a8d30b4149`. Keep the workflow inactive until
-source review/publication and retire it after the terminal run. Preserve failures.
+The first owned QA ref was `qa/roomlet-preview-20261108-1`; its preparation
+directly followed `a76f38383c4cbd0c9f49a676394252a8d30b4149`. The changed
+second invocation is recorded below. Both temporary workflow controls are now
+disabled and retired. Preserve the failed first outcome and successful second
+receipt; no active workflow belongs on main.
 
 Only current full-app native Release arm64/x86_64 compilation, `lipo`, ad-hoc
 sandbox packaging, source-exact bundled license/guide, per-slice entitlements
@@ -54,8 +56,11 @@ scratch/caches, bounded to 4 GiB storage/RSS, 64 attributable processes and
 900-second work/150-second cleanup budgets. Require complete bounded originals,
 source/index integrity, owned children gone and verified scoped teardown.
 
-The preparation is not a passing receipt. Universal slices and sandbox keys
-do not prove interactive behavior, access enforcement on a user's Mac,
+The [second invocation passed packaging](docs/results/2026/11-08/preview-package-attempt-2.md)
+at source `ee3b98772e150b6c8e9c332954705ee3a49b9ecd`; release publication is
+still pending. This scope is closed: do not repeat unchanged app builds or the
+old 29 cases without a concrete concern or a new scope. Universal slices and
+sandbox keys do not prove interactive behavior, access enforcement on a user's Mac,
 reclaimed space, Intel runtime acceptance, Gatekeeper, fresh installation or
 trusted distribution. No paid signing/account/certificate/notarization is added.
 
@@ -68,7 +73,7 @@ build with four SIGTERM signals and retained exit -15. No preview artifact or
 application verdict exists. Complete streams and verified cleanup do not
 convert that failed run into acceptance.
 
-Standing approval covers one changed source candidate directly following
+Standing approval covered one changed source candidate directly following
 `6a30df478d0401f8722ce606830cba3d538723bf`, then one bounded job on the owned
 `qa/roomlet-preview-20261108-2` ref. Preserve canonical app-input baseline
 `a76f38383c4cbd0c9f49a676394252a8d30b4149` and first-original identity pins.
@@ -85,3 +90,11 @@ Keep app/core/Package/resources/tests, both build helpers and bundled guide
 unchanged. The guide SHA remains
 `29125065669aec2ad3425b71558258a4916d039357c2b852a7f1536d2e66f15a`.
 No local native execution, test rerun, app launch, picker, scan or Trash action.
+
+The actual changed run completed all 22 commands with 44 complete streams and
+verified owned cleanup. Its five periodic storage samples observed zero
+disappearances; nonzero ENOENT and rejection branches were not exercised.
+Preserve the existing captured concurrency warnings; no Swift 6 language-mode
+or runtime race repair was part of this package. The unchanged ZIP, checksum
+and manifest await publication as `v0.1.0-preview.1`; packaging success is not
+download, fresh installation, trusted distribution or full-product acceptance.

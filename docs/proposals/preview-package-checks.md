@@ -2,7 +2,10 @@
 
 Last updated: 2026-11-08
 
-**Attempt 1 failed; changed attempt 2 is prepared, not executed or accepted.**
+**Attempt 2 passed packaging; release publication remains pending.** The
+[actual result](../results/2026/11-08/preview-package-attempt-2.md) preserves
+the failed first observer run and records all 22 fresh commands. The accepted
+preview scope is closed; the old 29 cases were not repeated.
 The user's standing “I approve
 everything / Keep going / Do all the work” authorizes this separate current-app
 preview scope and publication of unchanged accepted assets. It does not reopen
@@ -10,10 +13,11 @@ the [closed 29-case packet](../results/2026/11-05/native-checks.md) or authorize
 native interaction, scanning private folders, permission prompts or real Trash.
 Its failures and acceptance remain preserved.
 
-The immutable preparation must directly descend from baseline
-`a76f38383c4cbd0c9f49a676394252a8d30b4149`. Publish the reviewed controller and
+The original immutable preparation directly descended from baseline
+`a76f38383c4cbd0c9f49a676394252a8d30b4149`. The changed preparation follows
+`6a30df478d0401f8722ce606830cba3d538723bf`, as specified below. Publish the reviewed controller and
 [inactive workflow example](preview-package.workflow.yml.example) before
-activation. The owned ref is **`qa/roomlet-preview-20261108-1`**; only its
+activation. The original owned ref was **`qa/roomlet-preview-20261108-1`**; only its
 temporary `.github/workflows/preview-package.yml` activates one free public
 `macos-15` job with `contents: read`, no persisted checkout credentials and a
 **20-minute** limit. Checkout the exact preparation commit, not a mutable ref.
@@ -127,3 +131,21 @@ the closed 29 cases. Publish originals and changed preparation before workflow
 activation, then preserve the actual outcome and retire the owned control.
 No app launch, picker, private-folder scan, Trash or trusted-distribution proof
 is added, and failed local Storage Guard still blocks native execution here.
+
+## Actual closure
+
+[Run 42474856669](https://github.com/alvarovillalbaa/roomlet/actions/runs/42474856669)
+accepted the full preview packet at source
+`ee3b98772e150b6c8e9c332954705ee3a49b9ecd`, with all 22 command exits zero,
+44 complete original streams, exact metadata/entitlements on both slices and
+verified owned teardown. All three retained artifacts await unchanged
+publication as `v0.1.0-preview.1`. The first failed outcome is not overwritten.
+
+The five live storage samples observed zero disappearances. Neither nonzero
+ENOENT handling nor rejection branches were exercised; periodic samples are
+not an instantaneous quota. Empty bundle xattrs do not prove nonempty forks,
+and fresh outputs do not exercise existing-output replacement/rollback.
+Existing concurrency diagnostics remain; no unrelated source fix or Swift 6
+language-mode acceptance is claimed. Both temporary QA workflows are disabled
+and retired. No native app, picker, scan, Trash, download/fresh installation or
+trusted-distribution acceptance follows from packaging.

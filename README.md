@@ -10,8 +10,10 @@ network service, model call, runtime dependency or cloud upload.
 passed.** [Results and both earlier failures](docs/results/2026/11-05/native-checks.md)
 are preserved. Native interaction and sandbox behavior remain unverified.
 A separate [universal preview packaging scope](docs/proposals/preview-package-checks.md)
-is prepared; fresh compilation/package acceptance and release publication are
-pending. See [distribution status](docs/distribution.md) and the self-contained
+now [passed its fresh packaging run](docs/results/2026/11-08/preview-package-attempt-2.md):
+both Release architectures, signed sandbox metadata and ZIP round-trip checks.
+Publication of `v0.1.0-preview.1` remains pending. See
+[distribution status](docs/distribution.md) and the self-contained
 [preview guide](docs/preview-setup.md).
 
 ## Workflow
@@ -78,8 +80,11 @@ does not prove permissions work.
 
 The preview retains ad-hoc signing and exactly those existing entitlements;
 its bundled guide/license and ownership marker are sealed before signing.
+The successful preview run repeated none of the closed 29 cases and performed
+no app launch, folder scan or Trash action. Existing Swift concurrency warnings
+remain; the build does not establish Swift 6 language-mode readiness.
 Developer ID, notarization, Gatekeeper/fresh-Mac installation and installer/store
-distribution are not provided or verified. A published ad-hoc preview would not
+distribution are not provided or verified. The accepted ad-hoc package does not
 establish those claims. No certificate, Apple account or paid enrollment was created.
 
 ## Ownership and evidence
@@ -90,6 +95,7 @@ establish those claims. No certificate, Apple account or paid enrollment was cre
 - [Native-check scope](docs/proposals/native-checks-v2.md)
 - [Native build/core/package results](docs/results/2026/11-05/native-checks.md)
 - [Universal preview scope and distribution](docs/distribution.md)
+- [Passed universal preview packaging and preserved failure](docs/results/2026/11-08/preview-package-attempt-2.md)
 - [Bundled preview guide](docs/preview-setup.md)
 - [Initial implementation receipt](docs/results/2026/10-27/initial-source.md)
 - [Icon source and resource wiring](docs/results/2026/10-28/app-icon.md)
