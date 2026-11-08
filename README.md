@@ -1,13 +1,18 @@
 # Roomlet
 
+Last updated: 2026-11-08
+
 A native Mac utility for finding large local files, reviewing what to remove,
 and tracking available disk space. SwiftUI, AppKit and Foundation; no account,
 network service, model call, runtime dependency or cloud upload.
 
 **Native compilation, all 29 core checks and strict ad-hoc package verification
 passed.** [Results and both earlier failures](docs/results/2026/11-05/native-checks.md)
-are preserved. Native interaction, sandbox behavior and distribution remain
-unverified. This is not a released Mac application.
+are preserved. Native interaction and sandbox behavior remain unverified.
+A separate [universal preview packaging scope](docs/proposals/preview-package-checks.md)
+is prepared; fresh compilation/package acceptance and release publication are
+pending. See [distribution status](docs/distribution.md) and the self-contained
+[preview guide](docs/preview-setup.md).
 
 ## Workflow
 
@@ -43,6 +48,9 @@ swift test
 
 The build helper stages `dist/Roomlet.app`, applies local ad-hoc sandbox signing
 and launches the bundle for normal Run. `--build-only` never launches the app.
+The separate `--build-preview` mode prepares native Release arm64/x86_64 slices,
+a universal app and bounded ZIP/checksum without launching or quitting Roomlet.
+Python 3's standard library validates preview packaging; no package install.
 The Codex Run action uses this helper. Optional modes are `--debug`, `--logs`,
 `--telemetry` (a local unified-log filter) and `--verify`. Packaging is also
 available as `script/package_app.sh /path/to/already-built/Roomlet`.
@@ -68,9 +76,11 @@ session. No full-disk access request or persisted folder bookmark is required.
 The intended bundle behavior needs native acceptance; an entitlement file alone
 does not prove permissions work.
 
-Ad-hoc signing is for a local development artifact. Developer ID, notarization,
-installer/store distribution and a downloadable release are not provided or
-verified. No certificate, Apple account or paid enrollment was created.
+The preview retains ad-hoc signing and exactly those existing entitlements;
+its bundled guide/license and ownership marker are sealed before signing.
+Developer ID, notarization, Gatekeeper/fresh-Mac installation and installer/store
+distribution are not provided or verified. A published ad-hoc preview would not
+establish those claims. No certificate, Apple account or paid enrollment was created.
 
 ## Ownership and evidence
 
@@ -79,6 +89,8 @@ verified. No certificate, Apple account or paid enrollment was created.
 - [Architecture](docs/architecture.md)
 - [Native-check scope](docs/proposals/native-checks-v2.md)
 - [Native build/core/package results](docs/results/2026/11-05/native-checks.md)
+- [Universal preview scope and distribution](docs/distribution.md)
+- [Bundled preview guide](docs/preview-setup.md)
 - [Initial implementation receipt](docs/results/2026/10-27/initial-source.md)
 - [Icon source and resource wiring](docs/results/2026/10-28/app-icon.md)
 
