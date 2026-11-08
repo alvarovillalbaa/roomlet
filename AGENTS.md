@@ -58,3 +58,30 @@ The preparation is not a passing receipt. Universal slices and sandbox keys
 do not prove interactive behavior, access enforcement on a user's Mac,
 reclaimed space, Intel runtime acceptance, Gatekeeper, fresh installation or
 trusted distribution. No paid signing/account/certificate/notarization is added.
+
+### Changed preview attempt 2 — live storage sampling
+
+The [first preview failure](docs/results/2026/11-08/preview-package-attempt-1.md)
+is preserved with its original JSON/log hashes. A compiler temporary path
+disappeared during the live storage observer; the controller terminated the
+build with four SIGTERM signals and retained exit -15. No preview artifact or
+application verdict exists. Complete streams and verified cleanup do not
+convert that failed run into acceptance.
+
+Standing approval covers one changed source candidate directly following
+`6a30df478d0401f8722ce606830cba3d538723bf`, then one bounded job on the owned
+`qa/roomlet-preview-20261108-2` ref. Preserve canonical app-input baseline
+`a76f38383c4cbd0c9f49a676394252a8d30b4149` and first-original identity pins.
+Only the controller's live compiler-path sample changes: use one `lstat` per
+entry. Admit ENOENT only during `preview-build` under nonfrozen descendants of
+`export/.build/`, `cache/` or `tmp/`, with bounded counts/examples. Keep source,
+frozen outputs and stopped snapshots strict. These samples are periodic
+observations, not an instantaneous storage quota. Preserve all
+storage/RSS/process/stream/deadline/teardown bounds; other errors remain failures.
+
+Publish the failed receipt and reviewed changed scope before activation. Run
+the preview packet fresh; carry no successful package claim from attempt 1.
+Keep app/core/Package/resources/tests, both build helpers and bundled guide
+unchanged. The guide SHA remains
+`29125065669aec2ad3425b71558258a4916d039357c2b852a7f1536d2e66f15a`.
+No local native execution, test rerun, app launch, picker, scan or Trash action.

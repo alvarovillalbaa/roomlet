@@ -5,6 +5,7 @@ import base64
 import ctypes
 import gzip
 import hashlib
+import io
 import json
 import os
 from pathlib import Path, PurePosixPath
@@ -23,10 +24,14 @@ import time
 import zipfile
 
 REPOSITORY = "alvarovillalbaa/roomlet"
-BRANCH = "refs/heads/qa/roomlet-preview-20261108-1"
+BRANCH = "refs/heads/qa/roomlet-preview-20261108-2"
 WORKFLOW = ".github/workflows/preview-package.yml"
 CONTROLLER = "Tests/ci/run-preview-package.py"
-BASE = "a76f38383c4cbd0c9f49a676394252a8d30b4149"
+BASE = "6a30df478d0401f8722ce606830cba3d538723bf"
+PROTECTED_BASE = "a76f38383c4cbd0c9f49a676394252a8d30b4149"
+PRIOR = "docs/results/2026/11-08/preview-package-attempt-1"
+PRIOR_PINS = {".json": (18602, "41eba161a8abf6c1aed1fc14bd431a6611a05ee2d44e4196ff385d308994abd7"),
+              ".log": (35643, "19fd9fc5a1cdce10d34101cb5ef630e2b6f7c07e19520fdf4cb7a4bf92758532")}
 ARCHIVE = "Roomlet-0.1.0-macos-universal.zip"
 PREFIX = b"ROOMLET_PREVIEW_PACKAGE_RESULT="
 MIB = 1024 ** 2
@@ -159,12 +164,57 @@ class Check:
         if first:
             need(self.git("rev-list", "--parents", "-n", "1", self.commit).decode().split() == [self.commit, BASE], "source_parent")
             need(WORKFLOW not in vector and sum(row["bytes"] for row in vector.values()) < 8 * MIB, "inert_source_scope")
-            need(set(self.git("diff", "--name-only", BASE, self.commit, "--", "Package.swift", "Sources", "Resources", "Tests", "script", ".codex/environments/environment.toml").decode().splitlines())
+            need(set(self.git("diff", "--name-only", PROTECTED_BASE, self.commit, "--", "Package.swift", "Sources", "Resources", "Tests", "script", ".codex/environments/environment.toml").decode().splitlines())
                  == {"script/build_and_run.sh", "script/package_app.sh", CONTROLLER}, "accepted_app_inputs_changed")
+            need(self.git("diff", "--name-only", BASE, self.commit, "--", "Package.swift", "Sources", "Resources", "Tests", "script", ".codex/environments/environment.toml").decode().splitlines()
+                 == [CONTROLLER], "prior_app_or_helpers_changed")
             self.source, self.index_sha = vector, index_sha
-            self.report.update(sourceCommit=self.commit, canonicalBaseCommit=BASE, sourceVector=vector, indexSha256=index_sha)
+            self.report.update(sourceCommit=self.commit, canonicalBaseCommit=BASE, protectedApplicationBaseCommit=PROTECTED_BASE,
+                               sourceVector=vector, indexSha256=index_sha)
+            self.prior_attempt()
         else:
             need(vector == self.source and index_sha == self.index_sha, "source_or_index_changed")
+
+    def prior_attempt(self):
+        originals = {}
+        for suffix, (size, digest) in PRIOR_PINS.items():
+            path = self.checkout / (PRIOR + suffix)
+            need(path.is_file() and not path.is_symlink() and path.stat().st_size == size, "prior_original_type_or_size")
+            data = path.read_bytes()
+            need(len(data) == size and sha(data) == digest, "prior_original_sha256")
+            originals[suffix] = data
+        frames = [line.split(PREFIX, 1)[1] for line in originals[".log"].splitlines() if PREFIX in line]
+        need(len(frames) == 1 and frames[0] + b"\n" == originals[".json"], "prior_log_receipt_byte_parity")
+        prior = json.loads(originals[".json"])
+        need(prior["repository"] == REPOSITORY and prior["sourceCommit"] == BASE
+             and prior["canonicalBaseCommit"] == PROTECTED_BASE and prior["status"] == "failed"
+             and all(prior[key] is False for key in ("testsExecuted", "appLaunched", "scanPerformed", "trashPerformed"))
+             and "retainedOriginals" not in prior, "prior_failed_boundary")
+        need(prior["error"].startswith("[Errno 2] No such file or directory:")
+             and "/export/.build/preview-arm64/" in prior["error"] and ".pcm.tmp" in prior["error"], "prior_observed_live_sampling_failure")
+        need([(row["id"], row["exitCode"]) for row in prior["commands"]]
+             == [(key, 0) for key in ("host", "macos", "xcode", "swift", "sdk")] + [("preview-build", -15)]
+             and prior["commands"][-1]["argv"] == ["./script/build_and_run.sh", "--build-preview"], "prior_command_prefix")
+        for command in prior["commands"]:
+            for key in ("stdout", "stderr"):
+                row = command[key]; packed = base64.b64decode(row["gzipBase64"], validate=True)
+                need(len(packed) <= MAX_STREAM + 4096, "prior_stream_gzip_bound")
+                with gzip.GzipFile(fileobj=io.BytesIO(packed)) as source:
+                    data = source.read(MAX_STREAM + 1)
+                need(len(data) <= MAX_STREAM and len(data) == row["bytes"] == row["observedBytes"]
+                     and sha(data) == row["sha256"] == row["observedSha256"]
+                     and all(row[flag] is True for flag in ("complete", "eof", "descriptorClosed")), "prior_stream_integrity")
+        need(prior["cleanup"]["verified"] is True and prior["cleanup"]["rootAbsent"] is True
+             and prior["cleanup"]["ownedProcessesRemaining"] == 0 and prior["cleanup"]["removedEntries"] == 274
+             and len(prior["ownedSignals"]) == 4 and all(row["signal"] == 15 for row in prior["ownedSignals"]), "prior_terminated_owned_cleanup")
+        need(len(prior["sourceVector"]) == 60, "prior_source_count")
+        for name, row in prior["sourceVector"].items():
+            data = self.git("show", BASE + ":" + safe(name))
+            need(len(data) == row["bytes"] and sha(data) == row["sha256"]
+                 and hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest() == row["blob"], "prior_source_binding")
+        self.report["priorAttempt"] = {"importedEvidenceOnly": True, "executedHere": False, "sourceCommit": BASE,
+                                       "pins": PRIOR_PINS, "status": "failed", "commandsExecuted": 6,
+                                       "cleanupVerified": True, "ownedSignals": 4, "acceptedPackagingArtifacts": 0}
 
     def admit(self):
         need(sys.platform == "darwin" and os.environ.get("CI") == "true" and os.environ.get("GITHUB_ACTIONS") == "true", "public_macos_ci_only")
@@ -274,6 +324,32 @@ class Check:
                 time.sleep(0.05)
         need(not self.sample(False), "owned_process_survived")
 
+    def sample_live_storage(self, label):
+        observations = self.report.setdefault("liveStorageSampling", {"intervalSeconds": 5, "entryBound": 60000,
+            "sampleBound": 192, "disappearedEntries": 0, "disappearanceExamples": [], "samples": []})
+        need(len(observations["samples"]) < 192, "live_storage_sample_bound")
+        row = {"command": label, "observedEntries": 0, "regularFiles": 0, "regularBytes": 0, "disappearedEntries": 0}
+        observations["samples"].append(row)
+        for path in self.root.rglob("*"):
+            row["observedEntries"] += 1
+            need(row["observedEntries"] <= 60000, "live_storage_entry_bound")
+            try:
+                value = path.lstat()
+            except FileNotFoundError:
+                relative = path.relative_to(self.root).as_posix()
+                frozen = any(relative == prefix or relative.startswith(prefix + "/") for prefix in self.frozen)
+                if label != "preview-build" or frozen or not relative.startswith(("export/.build/", "cache/", "tmp/")):
+                    raise
+                row["disappearedEntries"] += 1; observations["disappearedEntries"] += 1
+                if len(observations["disappearanceExamples"]) < 8:
+                    observations["disappearanceExamples"].append({"command": label, "relativePath": relative[:512],
+                        "pathTruncated": len(relative) > 512, "relativePathSha256": sha(relative.encode())})
+                continue
+            if stat.S_ISREG(value.st_mode):
+                row["regularFiles"] += 1; row["regularBytes"] += value.st_size
+                need(value.st_size <= 512 * MIB and row["regularBytes"] <= MAX_STORAGE, "storage_sample_bound")
+        self.max_storage = max(self.max_storage, row["regularBytes"])
+
     def run(self, label, args, timeout=60):
         need(not self.interrupted and time.monotonic() < self.work_end, "interrupted_or_work_deadline")
         self.guard(); self.known = self.snapshot()
@@ -307,8 +383,7 @@ class Check:
                 need(not self.interrupted and time.monotonic() < end, "command_timeout_or_interruption:" + label)
                 self.sample(); drain(0.1)
                 if time.monotonic() - sampled >= 5:
-                    total = sum(path.stat().st_size for path in self.root.rglob("*") if path.is_file() and not path.is_symlink())
-                    need(total <= MAX_STORAGE, "storage_sample_bound"); self.max_storage = max(self.max_storage, total); sampled = time.monotonic()
+                    self.sample_live_storage(label); sampled = time.monotonic()
             record["exitCode"] = child.wait(timeout=1)
             need(record["exitCode"] == 0 and not self.sample(), "command_failed_or_left_processes:" + label)
         except BaseException as error:
@@ -501,6 +576,7 @@ class Check:
             self.report["resources"] = {"maxOwnedBytes": self.max_storage, "maxOwnedRSSBytes": self.max_rss, "maxOwnedProcesses": self.max_processes,
                                         "elapsedSeconds": round(time.monotonic() - self.started, 3), "storageBound": MAX_STORAGE,
                                         "sampledRSSBound": 4096 * MIB, "workBudgetSeconds": 900, "cleanupBudgetSeconds": 150,
+                                        "liveStorageIntervalSeconds": 5, "addressSpaceLimitApplied": False,
                                         "compressedOriginalBytes": self.compressed, "processScope": "Attributed children, inherited owner markers and process groups; excludes unrelated Apple/Xcode services."}
             data = PREFIX + canonical(self.report) + b"\n"; need(len(data) <= MAX_REPORT, "receipt_size")
             descriptor = sys.stdout.fileno(); os.set_blocking(descriptor, False); output = memoryview(data)

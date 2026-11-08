@@ -2,7 +2,8 @@
 
 Last updated: 2026-11-08
 
-**Prepared; not executed or accepted.** The user's standing “I approve
+**Attempt 1 failed; changed attempt 2 is prepared, not executed or accepted.**
+The user's standing “I approve
 everything / Keep going / Do all the work” authorizes this separate current-app
 preview scope and publication of unchanged accepted assets. It does not reopen
 the [closed 29-case packet](../results/2026/11-05/native-checks.md) or authorize
@@ -80,3 +81,49 @@ build, app/test/native API execution or install is authorized. This packet
 proves only the observed source-to-universal-package boundary. Picker/security
 scope, UI, scans, private folders, filesystem providers, Trash, reclaimed space,
 Gatekeeper, fresh-Mac installation and full acceptance remain separate.
+
+## Changed attempt 2 — live storage sampling
+
+The [first attempt](../results/2026/11-08/preview-package-attempt-1.md) failed
+when live storage sampling encountered a missing compiler `.pcm.tmp` path.
+The build was terminated (-15); no package or application outcome was accepted.
+The exact temporary-file removal mechanism was not observed. All 12 original
+streams and verified teardown are retained as failure evidence, not a pass.
+
+Standing owner approval covers one changed candidate and one fresh invocation
+of this same bounded preview packet. Its preparation must directly follow
+`6a30df478d0401f8722ce606830cba3d538723bf`; the fixed QA ref becomes
+**`qa/roomlet-preview-20261108-2`**. The active workflow path and 20-minute job
+profile stay unchanged. The controller continues comparing protected app inputs
+against original baseline `a76f38383c4cbd0c9f49a676394252a8d30b4149`, admitting
+only the explicit controller/documentation/failed-receipt additions for this
+changed source. Pin the first JSON's 18,602 bytes/SHA-256
+`41eba161a8abf6c1aed1fc14bd431a6611a05ee2d44e4196ff385d308994abd7`
+and log's 35,643 bytes/SHA-256
+`19fd9fc5a1cdce10d34101cb5ef630e2b6f7c07e19520fdf4cb7a4bf92758532`;
+verify their result parity and retain their failed/zero-artifact state.
+
+The sole execution-policy repair replaces separate `is_file()`/`stat()` probes
+with one `lstat` per observed entry in the existing five-second **live** sample.
+Count regular bytes from that same result. Only during `preview-build`, ENOENT
+under descendants of `export/.build/`, `cache/` or `tmp/` may be counted and
+skipped, with frozen prefixes explicitly excluded. All other paths/errors,
+source reads, frozen package data, stopped snapshots and cleanup stay strict.
+
+Cap each sample at 60,000 entries, 512 MiB per regular file and 4 GiB total;
+retain at most 192 samples and eight global disappearance examples. Each sample
+records command, observed entries, regular files/bytes and disappearances, with
+an aggregate count. Examples contain a relative path capped at 512 characters,
+the complete relative-path SHA-256 and truncation flag. These are periodic
+observations, not an atomic size measurement or instantaneous storage quota.
+Do not replace strict ownership guards with an unbounded best-effort walk.
+
+Keep both build/package helpers, app/core, Package.swift, resources, existing
+tests and bundled guide unchanged. `docs/preview-setup.md` remains frozen at
+SHA-256 `29125065669aec2ad3425b71558258a4916d039357c2b852a7f1536d2e66f15a`.
+All 22 planned commands and 44 streams belong to the fresh invocation; the
+first five metadata successes are not reused as new-run results. Do not rerun
+the closed 29 cases. Publish originals and changed preparation before workflow
+activation, then preserve the actual outcome and retire the owned control.
+No app launch, picker, private-folder scan, Trash or trusted-distribution proof
+is added, and failed local Storage Guard still blocks native execution here.
