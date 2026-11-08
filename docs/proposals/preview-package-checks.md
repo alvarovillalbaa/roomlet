@@ -2,7 +2,7 @@
 
 Last updated: 2026-11-08
 
-**Attempt 2 passed packaging; release publication remains pending.** The
+**Attempt 2 passed packaging; unchanged preview assets are public.** The
 [actual result](../results/2026/11-08/preview-package-attempt-2.md) preserves
 the failed first observer run and records all 22 fresh commands. The accepted
 preview scope is closed; the old 29 cases were not repeated.
@@ -138,8 +138,11 @@ is added, and failed local Storage Guard still blocks native execution here.
 accepted the full preview packet at source
 `ee3b98772e150b6c8e9c332954705ee3a49b9ecd`, with all 22 command exits zero,
 44 complete original streams, exact metadata/entitlements on both slices and
-verified owned teardown. All three retained artifacts await unchanged
-publication as `v0.1.0-preview.1`. The first failed outcome is not overwritten.
+verified owned teardown. All three retained artifacts were published unchanged
+as [`v0.1.0-preview.1`](https://github.com/alvarovillalbaa/roomlet/releases/tag/v0.1.0-preview.1).
+The [publication record](../results/2026/11-08/preview-package-publication.json)
+verifies the actual public/tag state and all three server sizes/digests.
+The first failed outcome is not overwritten.
 
 The five live storage samples observed zero disappearances. Neither nonzero
 ENOENT handling nor rejection branches were exercised; periodic samples are

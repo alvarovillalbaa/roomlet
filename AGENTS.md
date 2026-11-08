@@ -57,8 +57,10 @@ scratch/caches, bounded to 4 GiB storage/RSS, 64 attributable processes and
 source/index integrity, owned children gone and verified scoped teardown.
 
 The [second invocation passed packaging](docs/results/2026/11-08/preview-package-attempt-2.md)
-at source `ee3b98772e150b6c8e9c332954705ee3a49b9ecd`; release publication is
-still pending. This scope is closed: do not repeat unchanged app builds or the
+at source `ee3b98772e150b6c8e9c332954705ee3a49b9ecd`; its
+[public preview record](docs/results/2026/11-08/preview-package-publication.json)
+verifies tag and all three unchanged server digests. This scope is closed:
+do not repeat unchanged app builds or the
 old 29 cases without a concrete concern or a new scope. Universal slices and
 sandbox keys do not prove interactive behavior, access enforcement on a user's Mac,
 reclaimed space, Intel runtime acceptance, Gatekeeper, fresh installation or
@@ -96,5 +98,8 @@ verified owned cleanup. Its five periodic storage samples observed zero
 disappearances; nonzero ENOENT and rejection branches were not exercised.
 Preserve the existing captured concurrency warnings; no Swift 6 language-mode
 or runtime race repair was part of this package. The unchanged ZIP, checksum
-and manifest await publication as `v0.1.0-preview.1`; packaging success is not
-download, fresh installation, trusted distribution or full-product acceptance.
+and manifest are public as `v0.1.0-preview.1`; publication does not establish
+fresh installation, trusted distribution or full-product acceptance. Keep the
+bundled guide byte-exact to the accepted build; all temporary controls remain
+disabled/retired. Preserve the release transport failure and zero-asset draft
+readback before the successful REST uploads; no duplicate release was created.

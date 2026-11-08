@@ -1,7 +1,7 @@
 # Roomlet universal preview packaging passed
 
-8 November 2026. **Passed within the fresh preview packaging scope; release
-publication is pending.** This does not establish native interaction, scans,
+8 November 2026. **Passed within the fresh preview packaging scope; unchanged
+preview assets are public.** This does not establish native interaction, scans,
 Trash behavior, installation, publisher trust or full-product acceptance.
 The [first observer failure](preview-package-attempt-1.md) remains failed,
 with build exit -15, four SIGTERM signals and verified owned cleanup.
@@ -67,8 +67,10 @@ transport. Fresh outputs also leave replacement/rollback branches unexecuted.
 
 ## Retained assets
 
-The target is `v0.1.0-preview.1`; these exact original bytes await publication.
-No downloadable release, fresh download or installation is claimed here.
+These exact original bytes are public at
+[`v0.1.0-preview.1`](https://github.com/alvarovillalbaa/roomlet/releases/tag/v0.1.0-preview.1).
+The [publication record](preview-package-publication.json) verifies the actual
+tag and three server sizes/digests. No fresh download or installation is claimed.
 
 | Payload | Bytes | SHA-256 |
 | --- | ---: | --- |
@@ -108,7 +110,7 @@ caret-line duplicates. Captured-`self` concurrency diagnostics warn about Swift
 
 Workflow controls `407628251` and `411075575` are disabled. QA1 and QA2 were
 retired at `17a7b8f4` and `7b9e6dbe`; main has no active preview workflow.
-Publication remains pending. No app launch, picker/security-scope interaction,
+Public release/tag metadata verifies; no app launch, picker/security-scope interaction,
 scan, private-folder access, real Trash, reclaimed-space, Intel runtime,
 Gatekeeper, trusted signing/notarization or full-product proof was performed.
 All local work for this closure was bounded data/source inspection; no local

@@ -12,7 +12,11 @@ are preserved. Native interaction and sandbox behavior remain unverified.
 A separate [universal preview packaging scope](docs/proposals/preview-package-checks.md)
 now [passed its fresh packaging run](docs/results/2026/11-08/preview-package-attempt-2.md):
 both Release architectures, signed sandbox metadata and ZIP round-trip checks.
-Publication of `v0.1.0-preview.1` remains pending. See
+The [developer preview is public](https://github.com/alvarovillalbaa/roomlet/releases/tag/v0.1.0-preview.1).
+Download the [universal ZIP](https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.0-preview.1/Roomlet-0.1.0-macos-universal.zip),
+[checksum](https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.0-preview.1/Roomlet-0.1.0-macos-universal.zip.sha256)
+and [manifest](https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.0-preview.1/Roomlet-preview-manifest.json).
+All three server sizes/digests match the passing originals. See
 [distribution status](docs/distribution.md) and the self-contained
 [preview guide](docs/preview-setup.md).
 
@@ -96,6 +100,7 @@ establish those claims. No certificate, Apple account or paid enrollment was cre
 - [Native build/core/package results](docs/results/2026/11-05/native-checks.md)
 - [Universal preview scope and distribution](docs/distribution.md)
 - [Passed universal preview packaging and preserved failure](docs/results/2026/11-08/preview-package-attempt-2.md)
+- [Verified public release record](docs/results/2026/11-08/preview-package-publication.json)
 - [Bundled preview guide](docs/preview-setup.md)
 - [Initial implementation receipt](docs/results/2026/10-27/initial-source.md)
 - [Icon source and resource wiring](docs/results/2026/10-28/app-icon.md)

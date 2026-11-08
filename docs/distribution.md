@@ -6,17 +6,20 @@ The target is **`v0.1.0-preview.1`**, app **0.1.0** (build 1), for macOS 15+.
 [Fresh universal preview packaging passed](results/2026/11-08/preview-package-attempt-2.md)
 at source `ee3b98772e150b6c8e9c332954705ee3a49b9ecd`: native Release compilation,
 both slices' sandbox-signature metadata and exact ZIP round-trip checks.
-**Release publication remains pending; no downloadable release is asserted.**
+The [developer preview is public](https://github.com/alvarovillalbaa/roomlet/releases/tag/v0.1.0-preview.1),
+published 8 November at 11:26:12 UTC. The [actual public release record](results/2026/11-08/preview-package-publication.json)
+binds its tag to `71aa2e79115ff9f38f2d9d61786ed075d6702f55` and verifies all
+three unchanged server sizes/SHA-256 digests. This is not fresh installation proof.
 
 ## Artifacts and trust
 
-- `Roomlet-0.1.0-macos-universal.zip`
-- `Roomlet-0.1.0-macos-universal.zip.sha256`
-- `Roomlet-preview-manifest.json`
+- [Roomlet-0.1.0-macos-universal.zip](https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.0-preview.1/Roomlet-0.1.0-macos-universal.zip)
+- [Roomlet-0.1.0-macos-universal.zip.sha256](https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.0-preview.1/Roomlet-0.1.0-macos-universal.zip.sha256)
+- [Roomlet-preview-manifest.json](https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.0-preview.1/Roomlet-preview-manifest.json)
 
 The retained ZIP is 526,053 bytes; all three original payload sizes and full
 SHA-256 values are in the [accepted receipt](results/2026/11-08/preview-package-attempt-2.md#retained-assets).
-Publish those exact bytes. The first preview attempt remains a preserved
+The published assets retain those exact bytes. The first preview attempt remains a preserved
 observer failure with no accepted artifact; none of its successes were carried.
 
 The executable targets arm64 and x86_64. No external runtime, dependency,

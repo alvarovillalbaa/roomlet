@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "kind": "roomlet.current-app-universal-preview-publication",
+  "observedAt": "2026-11-08T11:27:31Z",
+  "executedSourceCommit": "ee3b98772e150b6c8e9c332954705ee3a49b9ecd",
+  "evidenceCommit": "71aa2e79115ff9f38f2d9d61786ed075d6702f55",
+  "evidenceTree": "de26f3f6ca88909e7f8dbe5aed17ddf2a9dd5a1a",
+  "release": {
+    "id": 438199648,
+    "tag_name": "v0.1.0-preview.1",
+    "target_commitish": "71aa2e79115ff9f38f2d9d61786ed075d6702f55",
+    "html_url": "https://github.com/alvarovillalbaa/roomlet/releases/tag/v0.1.0-preview.1",
+    "draft": false,
+    "prerelease": true,
+    "published_at": "2026-11-08T11:26:12Z",
+    "assets": [
+      {
+        "name": "Roomlet-0.1.0-macos-universal.zip",
+        "size": 526053,
+        "digest": "sha256:8f24b5f348d4f8955f9ff8b2ceea3a316ba8fff8d96529dcdf2f0546287aedea",
+        "id": 723725676,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.0-preview.1/Roomlet-0.1.0-macos-universal.zip"
+      },
+      {
+        "name": "Roomlet-0.1.0-macos-universal.zip.sha256",
+        "size": 100,
+        "digest": "sha256:a5cd4ea60173ddd9babb444e1a37811c5c30fc47190e939451afdf8167687830",
+        "id": 723726435,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.0-preview.1/Roomlet-0.1.0-macos-universal.zip.sha256"
+      },
+      {
+        "name": "Roomlet-preview-manifest.json",
+        "size": 2798,
+        "digest": "sha256:d84c5a690d828d87a2611b03986a1fc2a5a1b51580a1fb60dbc44fe4f7a595c4",
+        "id": 723726471,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.0-preview.1/Roomlet-preview-manifest.json"
+      }
+    ]
+  },
+  "tag": {
+    "ref": "refs/tags/v0.1.0-preview.1",
+    "object": {
+      "sha": "71aa2e79115ff9f38f2d9d61786ed075d6702f55",
+      "type": "commit",
+      "url": "https://api.github.com/repos/alvarovillalbaa/roomlet/git/commits/71aa2e79115ff9f38f2d9d61786ed075d6702f55"
+    }
+  },
+  "artifactsUnchangedFromPassingCI": true,
+  "bundledGuideSha256": "29125065669aec2ad3425b71558258a4916d039357c2b852a7f1536d2e66f15a",
+  "ci": {
+    "run": 42474856669,
+    "job": 128713787376,
+    "workflowCommit": "a417c17874e4302a397aed0be3a1d64a915c68b8",
+    "status": "passed",
+    "commands": 22,
+    "completeStreams": 44,
+    "cleanupVerified": true,
+    "testsExecuted": false,
+    "appLaunched": false,
+    "scanPerformed": false,
+    "trashPerformed": false
+  },
+  "effectiveEntitlements": {
+    "com.apple.security.app-sandbox": true,
+    "com.apple.security.files.user-selected.read-write": true
+  },
+  "temporaryControls": {
+    "previewWorkflowId": 411075575,
+    "previewWorkflowState": "disabled_manually",
+    "priorNativeWorkflowId": 407628251,
+    "priorNativeWorkflowState": "disabled_manually",
+    "activeWorkflowFilesInMain": 0,
+    "retiredQA1": "17a7b8f4ddeebc0efafcd69d9bb39bd9841c6715",
+    "retiredQA2": "7b9e6dbef53a88e95381f651ce1c25507b38f427"
+  },
+  "releaseTransport": {
+    "shortcut": "gh release upload",
+    "exitCode": 1,
+    "error": "error connecting to api.github.com",
+    "draftReadBackAfterFailure": {
+      "id": 438199648,
+      "draft": true,
+      "assets": 0
+    },
+    "fallback": "Structured GitHub REST uploads, exact draft readback, single publication and public/tag readback"
+  },
+  "limits": [
+    "Public release/tag and server asset digests verified; no anonymous fresh download/installation",
+    "Ad-hoc seal without Developer ID/notarization/Gatekeeper or fresh-Mac launch acceptance",
+    "No native UI/picker/security-scope/scan/private-folder/Trash/reclaimed-space or Intel runtime acceptance",
+    "Earlier 29-case native evidence retains its original source/profile; no rerun",
+    "First observer attempt remains failed, terminated with four signals; its owned cleanup verified",
+    "Five live storage samples recorded zero disappearances; nonzero ENOENT/rejection branches unexercised",
+    "Observed xattrs empty; no nonempty resource-fork preservation experiment",
+    "Fresh output leaves existing-output replacement/rollback branches unexecuted",
+    "Cleanup final inventory digest-only; storage/RSS observations sampled and exclude unrelated Apple/Xcode services",
+    "Existing Swift 6 language-mode/concurrency warnings retained",
+    "No local build/app/test/native-library execution, new account, payment, provider/model call or hosted resource"
+  ]
+}
