@@ -1,7 +1,7 @@
 name: Temporary Roomlet native workflow
 on:
   push:
-    branches: [qa/roomlet-ui-20261112-ci10]
+    branches: [qa/roomlet-ui-20261112-ci11]
     paths: [.github/workflows/native-ui-acceptance.yml]
 permissions:
   contents: read
@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   acceptance:
-    if: github.repository == 'alvarovillalbaa/roomlet' && github.event.repository.private == false && github.ref == 'refs/heads/qa/roomlet-ui-20261112-ci10'
+    if: github.repository == 'alvarovillalbaa/roomlet' && github.event.repository.private == false && github.ref == 'refs/heads/qa/roomlet-ui-20261112-ci11'
     runs-on: macos-15
     timeout-minutes: 20
     env:

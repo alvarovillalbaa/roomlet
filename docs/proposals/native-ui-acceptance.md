@@ -127,3 +127,10 @@ before opening Review. A bounded lossless capsule of existing named attachments
 selection, then stopped at two nested Review1 toolbar buttons. The continuation
 adds firstMatch to those two queries for the same native action. Preserve the
 one-selected assertion, all remaining actions, app bytes, rights and bounds.
+
+[Activation10](../results/2026/11-12/native-ui-attempt-10.md) passed actual review,
+Keep Files and the authored native Trash action, including exact restoration.
+The continuation changes only the explanatory static-text predicate from label
+to native value with the identical required prefix, and captures cleanup before
+that assertion. Report export, same-folder selection and keyboard rescan remain
+unfinished; repeat only RUI01 with every original guard and assertion retained.

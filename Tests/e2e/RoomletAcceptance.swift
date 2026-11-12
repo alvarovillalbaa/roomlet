@@ -83,8 +83,8 @@ final class RoomletAcceptance: XCTestCase {
         XCTAssertTrue(app.staticTexts["1 files moved to Trash. Scan again before another cleanup."].waitForExistence(timeout: 20))
         XCTAssertFalse(FileManager.default.fileExists(atPath: moved.path))
         XCTAssertEqual(try Data(contentsOf: kept), Data(repeating: 66, count: 64))
-        XCTAssertTrue(app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "Moving files to Trash does not reclaim their space.")).firstMatch.exists)
         record("03-cleanup")
+        XCTAssertTrue(app.staticTexts.matching(NSPredicate(format: "value BEGINSWITH %@", "Moving files to Trash does not reclaim their space.")).firstMatch.exists)
 
         app.buttons["Save Report…"].click()
         app.typeKey("g", modifierFlags: [.command, .shift])
