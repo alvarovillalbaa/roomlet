@@ -9,6 +9,9 @@ network service, model call, runtime dependency or cloud upload.
 **Native compilation, all 29 core checks and strict ad-hoc package verification
 passed.** [Results and both earlier failures](docs/results/2026/11-05/native-checks.md)
 are preserved. Native interaction and sandbox behavior remain unverified.
+Current source also [repairs Files navigation for folder and scan actions](docs/fixes/files-action-navigation.md).
+Its separate [app-only native compilation passed](docs/results/2026/11-12/files-navigation-build.md);
+the public preview below retains its earlier tested bytes.
 A separate [universal preview packaging scope](docs/proposals/preview-package-checks.md)
 now [passed its fresh packaging run](docs/results/2026/11-08/preview-package-attempt-2.md):
 both Release architectures, signed sandbox metadata and ZIP round-trip checks.

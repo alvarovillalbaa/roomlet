@@ -19,5 +19,7 @@ The published preview is the previous tested edition and is not rebuilt here.
 Source parsing and `git diff --check` passed. Storage Guard reported0.2GiB free
 against34GiB required, blocking a local build, app launch and native checks.
 No new mirror test or replay of the closed29-case/preview scopes was added.
-Compilation and actual native multiwindow/picker/keyboard acceptance of this
-small change remain unverified; source review does not establish those claims.
+The [focused native build](../results/2026/11-12/files-navigation-build.md)
+subsequently passed at3be4c1c5 with source/process/scratch verification. Actual
+native multiwindow/picker/keyboard acceptance remains unverified; compilation
+does not establish those claims.
