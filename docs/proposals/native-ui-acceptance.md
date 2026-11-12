@@ -57,3 +57,13 @@ reclaimed space. The public preview is not replaced by this test app build.
 
 Primary framework references: [Apple UI testing](https://developer.apple.com/documentation/xcode/adding-tests-to-your-xcode-project)
 and [XCUIApplication bundle resolution](https://developer.apple.com/documentation/xcuiautomation/xcuiapplication/init(bundleidentifier:)).
+
+## Changed continuation after native build setup failure
+
+[Attempt1](../results/2026/11-12/native-ui-attempt-1.md) failed before UI when the
+new Xcode target requested x86_64 but its local core library built for arm64.
+One changed continuation enables Debug `ONLY_ACTIVE_ARCH` and explicitly
+selects macOS arm64, matching this original scope. Preserve all failure originals;
+carry no UI pass. Application code/resources/Package/entitlements, generated
+data bounds and the RUI01 assertions remain unchanged. Repeat only this
+unfinished native workflow, with all original teardown and evidence controls.

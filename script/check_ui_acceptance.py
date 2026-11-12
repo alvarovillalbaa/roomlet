@@ -22,7 +22,7 @@ SOURCE = os.environ["ROOMLET_SOURCE_COMMIT"]
 assert re.fullmatch(r"[0-9a-f]{40}", SOURCE)
 assert platform.system() == "Darwin" and platform.machine() == "arm64"
 assert os.environ["GITHUB_REPOSITORY"] == "alvarovillalbaa/roomlet"
-assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112"
+assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci2"
 assert os.environ["ROOMLET_PUBLIC_REPOSITORY"] == "true"
 repo = Path.cwd().resolve()
 parent = Path(os.environ["RUNNER_TEMP"]).resolve()
@@ -174,7 +174,7 @@ try:
     report["fixture"] = {"source": str(moved), "sha256": sha(moved_data), "bytes": 4096,
                          "kept": str(kept), "keptSha256": sha(b"B" * 64)}
     common = ["/usr/bin/xcodebuild", "-project", "Tests/RoomletAcceptance.xcodeproj", "-scheme", "RoomletAcceptance",
-              "-configuration", "Debug", "-destination", "platform=macOS", "-derivedDataPath", str(root / "derived")]
+              "-configuration", "Debug", "-destination", "platform=macOS,arch=arm64", "-derivedDataPath", str(root / "derived")]
     run("build-for-testing", common + ["build-for-testing"], seconds=300, cwd=export)
     entitlements = run("app-entitlements", ["/usr/bin/codesign", "-d", "--entitlements", ":-", str(app)])
     assert plistlib.loads(entitlements) == {"com.apple.security.app-sandbox": True, "com.apple.security.files.user-selected.read-write": True}
