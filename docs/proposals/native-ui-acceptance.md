@@ -7,7 +7,7 @@ before activating the exact owned QA branch. Pin immutable source checkout,
 use contents-read permission and retain no checkout credentials.
 
 `Tests/RoomletAcceptance.xcodeproj` compiles the actual current AppKit/SwiftUI
-app and links the existing local RoomletCore product. Source, Package.swift,
+app and links the existing local RoomletCore product. App source, Package.swift,
 resources and the production entitlement file are unchanged. The target disables
 base entitlement injection for the app; require exactly App Sandbox and
 user-selected read/write entitlements before launching. The XCTest runner uses
@@ -43,7 +43,10 @@ build-for-testing and one exact test-without-building; captures native result
 summary, child exits and bounded lossless streams; verifies checkout/export
 hashes; reaps its own exact app/runner paths and child groups; restores the
 fixture; and removes only its owned root. New Xcode result bundles/screenshots
-may be retained in a bounded64MiB evidence packet for two days. Runtime work
+are retained through XCTest attachments in a bounded64MiB exported evidence
+packet for two days. Raw xcresult diagnostics have a separate128MiB/two-day
+artifact, with a lossless file hash manifest. Upload admission checks both
+bounds; an oversized packet is not uploaded or accepted. Runtime work
 budget900seconds, cleanup within the20minute job; hard termination retains
 unproved teardown. Local Storage Guard remains failed, so no local build, app,
 native test, file scan or Trash operation is permitted.
@@ -80,3 +83,16 @@ only the disposable app using the unchanged production entitlement file.
 Keep the exact two-key guard and add an identical post-UI check. Do not accept
 broader test-build rights as production sandbox proof. App source, native
 actions/assertions and all fixture/Trash/teardown bounds remain unchanged.
+
+[Attempt4](../results/2026/11-12/native-ui-attempt-4.md) launched the actual app
+under production entitlements, then failed at an unauthorized recorder write;
+its raw diagnostic bundle also exceeded the old combined evidence limit.
+The continuation uses Apple's standard XCTest string/PNG/JSON attachments,
+without granting additional filesystem rights. The controller consumes the
+actual exported attachment manifest and reads/copies the actual app-saved
+report before teardown. Separate raw and exported bounds are as stated above.
+Only unfinished RUI01 runs again. No app/resource/entitlement or assertion
+relaxation, additional fixture, old core case or preview build is introduced.
+
+Recorder API: [XCTAttachment screenshot initializer](https://developer.apple.com/documentation/xctest/xctattachment/init(screenshot:))
+and [typed data initializer](https://developer.apple.com/documentation/xctest/xctattachment/init(data:uniformtypeidentifier:)).

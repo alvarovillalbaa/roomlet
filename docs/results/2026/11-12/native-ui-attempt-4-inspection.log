@@ -1,0 +1,93 @@
+﻿2026-11-12T02:00:06.8475496Z Current runner version: '2.338.2'
+2026-11-12T02:00:06.8506912Z ##[group]Runner Image Provisioner
+2026-11-12T02:00:06.8507985Z Hosted Compute Agent
+2026-11-12T02:00:06.8508907Z Version: 20261028.624
+2026-11-12T02:00:06.8509749Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-12T02:00:06.8510666Z Build Date: 2026-10-28T21:51:42Z
+2026-11-12T02:00:06.8511508Z Worker ID: {43525129-b6f2-484e-821e-7b35ff70209c}
+2026-11-12T02:00:06.8512577Z Region: eastus
+2026-11-12T02:00:06.8513257Z Cloud: Azure
+2026-11-12T02:00:06.8514088Z ##[endgroup]
+2026-11-12T02:00:06.8515868Z ##[group]Operating System
+2026-11-12T02:00:06.8517157Z Ubuntu
+2026-11-12T02:00:06.8517889Z 24.04.5
+2026-11-12T02:00:06.8518874Z LTS
+2026-11-12T02:00:06.8519537Z ##[endgroup]
+2026-11-12T02:00:06.8520237Z ##[group]Runner Image
+2026-11-12T02:00:06.8521083Z Image: ubuntu-24.04
+2026-11-12T02:00:06.8521805Z Version: 20261101.360.1
+2026-11-12T02:00:06.8523500Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-12T02:00:06.8525632Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-12T02:00:06.8526967Z ##[endgroup]
+2026-11-12T02:00:06.8528746Z ##[group]GITHUB_TOKEN Permissions
+2026-11-12T02:00:06.8531115Z Actions: read
+2026-11-12T02:00:06.8531845Z Contents: read
+2026-11-12T02:00:06.8532654Z Metadata: read
+2026-11-12T02:00:06.8533384Z ##[endgroup]
+2026-11-12T02:00:06.8535867Z Secret source: Actions
+2026-11-12T02:00:06.8537047Z Cache mode: write
+2026-11-12T02:00:06.8538399Z Prepare workflow directory
+2026-11-12T02:00:06.8914636Z Prepare all required actions
+2026-11-12T02:00:06.9032881Z Complete job name: inspect
+2026-11-12T02:00:06.9994492Z ##[group]Run set -euo pipefail
+2026-11-12T02:00:06.9995331Z [36;1mset -euo pipefail[0m
+2026-11-12T02:00:06.9996008Z [36;1mpython3 <<'PY'[0m
+2026-11-12T02:00:06.9996691Z [36;1mimport base64, hashlib, io, json, subprocess, zipfile[0m
+2026-11-12T02:00:06.9997862Z [36;1mresult=subprocess.run(['gh','api','repos/alvarovillalbaa/roomlet/actions/artifacts/13908565179/zip'],capture_output=True,timeout=60)[0m
+2026-11-12T02:00:06.9999164Z [36;1massert result.returncode==0[0m
+2026-11-12T02:00:06.9999802Z [36;1mvalue=result.stdout[0m
+2026-11-12T02:00:07.0000857Z [36;1massert len(value)==89727376 and hashlib.sha256(value).hexdigest()=='576ea1bfe4a29c17fcdd2bef87a33b98f306170cc3688a800f8c669d90372dd3'[0m
+2026-11-12T02:00:07.0002009Z [36;1mwith zipfile.ZipFile(io.BytesIO(value)) as archive:[0m
+2026-11-12T02:00:07.0002691Z [36;1m    rows=archive.infolist()[0m
+2026-11-12T02:00:07.0003408Z [36;1m    assert len(rows)<=4096 and sum(row.file_size for row in rows)<=256*1024*1024[0m
+2026-11-12T02:00:07.0004460Z [36;1m    largest=sorted(rows,key=lambda row:row.file_size,reverse=True)[:20][0m
+2026-11-12T02:00:07.0006592Z [36;1m    print('ROOMLET_ARTIFACT_INDEX='+json.dumps({'id':13908565179,'zipBytes':len(value),'zipSha256':hashlib.sha256(value).hexdigest(),'files':len(rows),'expandedBytes':sum(row.file_size for row in rows),'largest':[{'path':row.filename,'bytes':row.file_size} for row in largest],'pngs':[{'path':row.filename,'bytes':row.file_size} for row in rows if row.filename.endswith('.png')]}),flush=True)[0m
+2026-11-12T02:00:07.0008715Z [36;1m    for row in rows:[0m
+2026-11-12T02:00:07.0009570Z [36;1m        if row.filename.startswith('attachments/') and row.filename.endswith('.json') and row.file_size<=131072:[0m
+2026-11-12T02:00:07.0010669Z [36;1m            print('ROOMLET_ATTACHMENT_MANIFEST_BEGIN '+row.filename,flush=True)[0m
+2026-11-12T02:00:07.0011578Z [36;1m            print(archive.read(row).decode('utf8','strict'),flush=True)[0m
+2026-11-12T02:00:07.0012464Z [36;1m            print('ROOMLET_ATTACHMENT_MANIFEST_END '+row.filename,flush=True)[0m
+2026-11-12T02:00:07.0013688Z [36;1m    images=[row for row in rows if row.filename.startswith('attachments/') and row.filename.endswith('.png')][0m
+2026-11-12T02:00:07.0014611Z [36;1m    assert len(images)<=8[0m
+2026-11-12T02:00:07.0015449Z [36;1m    for index,row in enumerate(images):[0m
+2026-11-12T02:00:07.0016102Z [36;1m        data=archive.read(row)[0m
+2026-11-12T02:00:07.0016681Z [36;1m        assert len(data)<=4*1024*1024[0m
+2026-11-12T02:00:07.0017796Z [36;1m        print('ROOMLET_IMAGE_META='+json.dumps({'index':index,'path':row.filename,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()}),flush=True)[0m
+2026-11-12T02:00:07.0019215Z [36;1m        print('ROOMLET_IMAGE_BEGIN '+str(index),flush=True)[0m
+2026-11-12T02:00:07.0020036Z [36;1m        encoded=base64.b64encode(data).decode('ascii')[0m
+2026-11-12T02:00:07.0020945Z [36;1m        for offset in range(0,len(encoded),4096): print(encoded[offset:offset+4096],flush=True)[0m
+2026-11-12T02:00:07.0021790Z [36;1m        print('ROOMLET_IMAGE_END '+str(index),flush=True)[0m
+2026-11-12T02:00:07.0022491Z [36;1mPY[0m
+2026-11-12T02:00:07.0273885Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-12T02:00:07.0274766Z env:
+2026-11-12T02:00:07.0278289Z   GH_TOKEN: ***
+2026-11-12T02:00:07.0278807Z ##[endgroup]
+2026-11-12T02:00:08.6198513Z ROOMLET_ARTIFACT_INDEX={"id": 13908565179, "zipBytes": 89727376, "zipSha256": "576ea1bfe4a29c17fcdd2bef87a33b98f306170cc3688a800f8c669d90372dd3", "files": 1678, "expandedBytes": 89874819, "largest": [{"path": "ui.xcresult/Data/data.0~tJqryEkkFQhee1SXH5RSno0EoyeDq8vW4baQalxeX-IKGSAv5fzCwSAVnsYDrgJc-BmhyQUnkwMpnvEPsEJ1pQ==", "bytes": 38451978}, {"path": "ui.xcresult/Data/data.0~yek5iENtJ55Pv_QgJn5mw_t7CvJxtYvEzRB5IlfPJ-e8uajoj-kgL_U40Rh2_p93JmyCv67gRPb4J8Oa1vGW8g==", "bytes": 36215458}, {"path": "ui.xcresult/Data/data.0~naBguSvKagukzcT0228pqC7vBeuiAXjDueH9VtkJjB-H-NXZXrQFyGqfrANLutbER0N8jb38cffUYdFaR9LLdg==", "bytes": 2635097}, {"path": "ui.xcresult/Data/data.0~-5H85YQTHRv78U6f09EfGQS1IHSileopTbZMtXAqOH0DoBe-4PbuxWqpDI1yZfiv2HBjr_vDO0aZL1W1IiXspQ==", "bytes": 1178137}, {"path": "ui.xcresult/Data/data.0~PzZsJP3DMbwVhftUsSfSSvtud5ssEulXdS_1uqoK7b4fZ6cwiPf1jtaeJhJMw5V_pcU_kKqKVzuD4OqnTxjzSw==", "bytes": 1141809}, {"path": "ui.xcresult/Data/data.0~FoZIuHNaN2fG6ZTFaqrG0Ww6gqMdmtb65ypzGqbyv_L4dwt-mARMpHMGo1QTKmUJckFG7lkGpKF8lPYKwaBGdQ==", "bytes": 392878}, {"path": "ui.xcresult/Data/data.0~4_yPe3NFdl9oI_4fR6fBD-CGLTrHlErwVX1ZoDvLLsRbDRS5jLMo09Zg4YgNCtLzUlRKmizfmbSyIUQqrwidjQ==", "bytes": 339066}, {"path": "attachments/91A06BB6-A569-4D9D-BE5E-FC589E38397A.mp4", "bytes": 317949}, {"path": "ui.xcresult/Data/data.0~_LfLdmA8_WHTOVgOAg5z3I5mBx2oYZnQvKZuGu8B7IT0eDWrvi29OUGoxfOXE9Y6r07wml3EA3H7MbhVudrGGg==", "bytes": 315455}, {"path": "ui.xcresult/Data/data.0~ILiKpOWZRyqBeEe3jwJ_6Cew4QkQ7avOP3jI5EA7_mTzl9vUo0aWDzx0Hz9H6SJewXd-6K8sBsJumHqPmw2ZHQ==", "bytes": 297335}, {"path": "ui.xcresult/Data/data.0~Ja-7dAUQmHK2x3nxO6v5rVWMqT6Je8Xt7DA24pUm5SbgUr_AnI24xSyhoyzC_ZlsFA69aRdI1yGqtfV5R-DiHg==", "bytes": 261470}, {"path": "ui.xcresult/database.sqlite3", "bytes": 245760}, {"path": "ui.xcresult/Data/data.0~7zEOsMO5aKdaJwf1GeJlQ-Mq_WG_aSQ29Iqf6fEj8n1a4A0E5jDt-BuHtBcWzVhNj7m_5buDxCnNpfAbIzsF8A==", "bytes": 240530}, {"path": "ui.xcresult/Data/data.0~-SzfMPO1AkiVph6UXR4uLEgMXi9KiPM_NFpKHa2hQdlKAHNuHGQzBL8fXAAl2lXb84u8AL5YfPXbBhz9d8YtoQ==", "bytes": 232435}, {"path": "ui.xcresult/Data/data.0~S39fZNYrzN-9vsGtV2lWA9wRqZXmAoYZjig8_XetMK4t8NyFIojcbIJRfytcBgpDIjlt8eZbEoXFKd6wZ2pDPg==", "bytes": 227579}, {"path": "ui.xcresult/Data/data.0~KwxZt8y9UvY9_tkxurUG1rUt9oJess1xBBLNjTk5glb735FBtIkwnA37MnT4TUuh7ssO2jqS3cm3jB_mUHUhqQ==", "bytes": 203883}, {"path": "ui.xcresult/Data/data.0~jB5sakoUd3GYjyHLMhmFD7Ep46B6SVXlfRM7C_-egjrgd_cwlf8RA7ahT_h0FxPZGyGtxlV5Pj5GzHV766NJNw==", "bytes": 179463}, {"path": "ui.xcresult/Data/data.0~o3vkmAbCT4rTmxXHfDZCOrXk4BHOptnXP2Kp3XOrc6BPGo2-f4GnfFc5BGSoekwVYAHUXRl_kpthfShgTCMWZA==", "bytes": 162365}, {"path": "ui.xcresult/Data/data.0~dx6ioNXThoAQBD6AEPQLmj7YiqmtV0btVoFJw_JajmsmtSS7tmszclknWeTiPx1VeU410NN5SK24ThKFrBMmQg==", "bytes": 159622}, {"path": "ui.xcresult/Data/data.0~oaMHy0hbQXpNVMVZ7kXoRKzQJSVj53Ejvs0YKh97ya0asWM_y_B9pVJoWpzfNlmS5UrnkvkaoROYOF7R28edUg==", "bytes": 154490}], "pngs": []}
+2026-11-12T02:00:08.6214131Z ROOMLET_ATTACHMENT_MANIFEST_BEGIN attachments/manifest.json
+2026-11-12T02:00:08.6214862Z [
+2026-11-12T02:00:08.6215144Z   {
+2026-11-12T02:00:08.6215445Z     "attachments" : [
+2026-11-12T02:00:08.6215799Z       {
+2026-11-12T02:00:08.6216156Z         "configurationName" : "Test Scheme Action",
+2026-11-12T02:00:08.6216729Z         "deviceId" : "d358ce0292a1bdaf0d9266400edeecc5ec5cc6b3",
+2026-11-12T02:00:08.6217230Z         "deviceName" : "My Mac",
+2026-11-12T02:00:08.6217734Z         "exportedFileName" : "91A06BB6-A569-4D9D-BE5E-FC589E38397A.mp4",
+2026-11-12T02:00:08.6218443Z         "isAssociatedWithFailure" : false,
+2026-11-12T02:00:08.6219085Z         "suggestedHumanReadableName" : "Screen Recording 2026-11-12 at 01.52.16 AM.mp4",
+2026-11-12T02:00:08.6219726Z         "timestamp" : 1794448336.305
+2026-11-12T02:00:08.6220110Z       },
+2026-11-12T02:00:08.6220468Z       {
+2026-11-12T02:00:08.6220846Z         "configurationName" : "Test Scheme Action",
+2026-11-12T02:00:08.6221375Z         "deviceId" : "d358ce0292a1bdaf0d9266400edeecc5ec5cc6b3",
+2026-11-12T02:00:08.6221882Z         "deviceName" : "My Mac",
+2026-11-12T02:00:08.6222375Z         "exportedFileName" : "48F67C64-A5C5-45B6-B388-9D2EF80C4579.txt",
+2026-11-12T02:00:08.6222930Z         "isAssociatedWithFailure" : true,
+2026-11-12T02:00:08.6223489Z         "suggestedHumanReadableName" : "Complete Issue Description.txt"
+2026-11-12T02:00:08.6224028Z       }
+2026-11-12T02:00:08.6224308Z     ],
+2026-11-12T02:00:08.6224842Z     "testIdentifier" : "RoomletAcceptance/testRUI01FolderScanReviewTrashReport()",
+2026-11-12T02:00:08.6226326Z     "testIdentifierURL" : "test://com.apple.xcode/RoomletAcceptance/RoomletAcceptance/RoomletAcceptance/testRUI01FolderScanReviewTrashReport"
+2026-11-12T02:00:08.6227247Z   }
+2026-11-12T02:00:08.6227528Z ]
+2026-11-12T02:00:08.6227913Z ROOMLET_ATTACHMENT_MANIFEST_END attachments/manifest.json
+2026-11-12T02:00:08.6423432Z Cleaning up orphan processes

@@ -10,7 +10,6 @@ final class RoomletAcceptance: XCTestCase {
         let configURL = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "FixtureConfig", withExtension: "json"))
         let config = try XCTUnwrap(JSONSerialization.jsonObject(with: Data(contentsOf: configURL)) as? [String: String])
         let root = URL(fileURLWithPath: try XCTUnwrap(config["root"]), isDirectory: true)
-        let evidence = URL(fileURLWithPath: try XCTUnwrap(config["evidence"]), isDirectory: true)
         let nonce = try XCTUnwrap(config["nonce"])
         XCTAssertTrue(nonce.range(of: "^[a-f0-9]{32}$", options: .regularExpression) != nil)
         XCTAssertEqual(try String(contentsOf: root.appendingPathComponent("owner"), encoding: .utf8), nonce)
@@ -24,9 +23,21 @@ final class RoomletAcceptance: XCTestCase {
         let app = XCUIApplication(bundleIdentifier: "com.alvarovillalbaa.Roomlet")
         defer { app.terminate() }
 
-        func record(_ phase: String) throws {
-            try Data(app.debugDescription.utf8).write(to: evidence.appendingPathComponent(phase + ".accessibility.txt"), options: .withoutOverwriting)
-            try app.screenshot().pngRepresentation.write(to: evidence.appendingPathComponent(phase + ".png"), options: .withoutOverwriting)
+        func record(_ phase: String) {
+            let hierarchy = XCTAttachment(string: app.debugDescription)
+            hierarchy.name = phase + ".accessibility"
+            hierarchy.lifetime = .keepAlways
+            add(hierarchy)
+            let screenshot = XCTAttachment(screenshot: app.screenshot())
+            screenshot.name = phase
+            screenshot.lifetime = .keepAlways
+            add(screenshot)
+        }
+        func attachJSON(_ value: Any, named name: String) throws {
+            let attachment = XCTAttachment(data: try JSONSerialization.data(withJSONObject: value, options: [.sortedKeys, .prettyPrinted]), uniformTypeIdentifier: "public.json")
+            attachment.name = name
+            attachment.lifetime = .keepAlways
+            add(attachment)
         }
         func chooseFolder() {
             app.typeKey("g", modifierFlags: [.command, .shift])
@@ -45,7 +56,7 @@ final class RoomletAcceptance: XCTestCase {
 
         app.launch()
         XCTAssertTrue(app.windows["Roomlet"].waitForExistence(timeout: 20))
-        try record("01-empty")
+        record("01-empty")
         app.buttons["Choose Folder…"].firstMatch.click()
         chooseFolder()
         let scan = app.buttons["Scan Folder"]
@@ -59,7 +70,7 @@ final class RoomletAcceptance: XCTestCase {
         app.buttons["Review 1"].click()
         XCTAssertTrue(app.staticTexts["Review before moving"].waitForExistence(timeout: 10))
         XCTAssertTrue(app.staticTexts[movedName].firstMatch.exists)
-        try record("02-review")
+        record("02-review")
         app.buttons["Keep Files"].click()
         XCTAssertTrue(FileManager.default.fileExists(atPath: moved.path))
         app.buttons["Review 1"].click()
@@ -68,7 +79,7 @@ final class RoomletAcceptance: XCTestCase {
         XCTAssertFalse(FileManager.default.fileExists(atPath: moved.path))
         XCTAssertEqual(try Data(contentsOf: kept), Data(repeating: 66, count: 64))
         XCTAssertTrue(app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "Moving files to Trash does not reclaim their space.")).firstMatch.exists)
-        try record("03-cleanup")
+        record("03-cleanup")
 
         app.buttons["Save Report…"].click()
         app.typeKey("g", modifierFlags: [.command, .shift])
@@ -95,7 +106,7 @@ final class RoomletAcceptance: XCTestCase {
         XCTAssertEqual(destination.lastPathComponent, movedName)
         XCTAssertTrue(destination.pathComponents.contains(".Trash") || destination.pathComponents.contains(".Trashes"))
         let trashBinding: [String: String] = ["source": moved.path, "destination": destination.path, "nonce": nonce]
-        try JSONSerialization.data(withJSONObject: trashBinding, options: .sortedKeys).write(to: evidence.appendingPathComponent("owned-trash.json"), options: .withoutOverwriting)
+        try attachJSON(trashBinding, named: "owned-trash")
         XCTAssertEqual(try Data(contentsOf: destination), Data(repeating: 65, count: 4096))
 
         app.typeKey("o", modifierFlags: .command)
@@ -107,8 +118,7 @@ final class RoomletAcceptance: XCTestCase {
         XCTAssertTrue(app.tables.tableRows.containing(.staticText, identifier: keptName).firstMatch.waitForExistence(timeout: 20))
         XCTAssertFalse(app.staticTexts["No cleanup yet"].exists)
         XCTAssertTrue(app.staticTexts["1 of 1 collected files · 0 selected"].exists)
-        try record("04-keyboard-rescan")
-        try JSONSerialization.data(withJSONObject: ["caseId": "RUI01", "status": "passed", "nativeReport": report], options: [.sortedKeys, .prettyPrinted])
-            .write(to: evidence.appendingPathComponent("ui-observations.json"), options: .withoutOverwriting)
+        record("04-keyboard-rescan")
+        try attachJSON(["caseId": "RUI01", "status": "passed", "nativeReport": report], named: "ui-observations")
     }
 }

@@ -1,0 +1,74 @@
+name: Temporary Roomlet native workflow
+on:
+  push:
+    branches: [qa/roomlet-ui-20261112-ci5]
+    paths: [.github/workflows/native-ui-acceptance.yml]
+permissions:
+  contents: read
+concurrency:
+  group: roomlet-native-ui-20261112
+  cancel-in-progress: false
+jobs:
+  acceptance:
+    if: github.repository == 'alvarovillalbaa/roomlet' && github.event.repository.private == false && github.ref == 'refs/heads/qa/roomlet-ui-20261112-ci5'
+    runs-on: macos-15
+    timeout-minutes: 20
+    env:
+      ROOMLET_SOURCE_COMMIT: SOURCE_COMMIT
+      ROOMLET_PUBLIC_REPOSITORY: ${{ toJSON(github.event.repository.private == false) }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: SOURCE_COMMIT
+          fetch-depth: 2
+          persist-credentials: false
+          clean: false
+      - name: Run only the authored native workflow
+        shell: bash
+        timeout-minutes: 18
+        run: python3 -I -B -S script/check_ui_acceptance.py
+      - name: Admit only bounded evidence uploads
+        if: always()
+        id: evidence
+        shell: bash
+        env:
+          PACKET: ${{ runner.temp }}/roomlet-ui-evidence-${{ github.run_id }}
+          NATIVE: ${{ runner.temp }}/roomlet-ui-native-result-${{ github.run_id }}
+        run: |
+          python3 -I -B -S - <<'PY'
+          import os
+          from pathlib import Path
+          passed = True
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              for name, key, bound in [('compact', 'PACKET', 64*1024**2), ('native', 'NATIVE', 128*1024**2)]:
+                  root = Path(os.environ[key])
+                  paths = list(root.rglob('*')) if root.is_dir() and not root.is_symlink() else []
+                  files = [p for p in paths if p.is_file()]
+                  size = sum(p.stat().st_size for p in files)
+                  admitted = bool(files) and len(paths) <= 8192 and size <= bound and all(not p.is_symlink() for p in paths)
+                  print(f'{name}: {len(files)} files, {size} bytes, bound {bound}, admitted={admitted}')
+                  output.write(f'{name}={str(admitted).lower()}\n')
+                  passed = passed and admitted
+          raise SystemExit(0 if passed else 1)
+          PY
+      - name: Retain exported native evidence
+        if: always() && steps.evidence.outputs.compact == 'true'
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: roomlet-native-ui-${{ github.run_id }}
+          path: ${{ runner.temp }}/roomlet-ui-evidence-${{ github.run_id }}
+          retention-days: 2
+          if-no-files-found: error
+          overwrite: false
+          compression-level: 6
+      - name: Retain raw native result
+        if: always() && steps.evidence.outputs.native == 'true'
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: roomlet-native-result-${{ github.run_id }}
+          path: ${{ runner.temp }}/roomlet-ui-native-result-${{ github.run_id }}
+          retention-days: 2
+          if-no-files-found: error
+          overwrite: false
+          compression-level: 6
+

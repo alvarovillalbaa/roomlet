@@ -22,7 +22,7 @@ SOURCE = os.environ["ROOMLET_SOURCE_COMMIT"]
 assert re.fullmatch(r"[0-9a-f]{40}", SOURCE)
 assert platform.system() == "Darwin" and platform.machine() == "arm64"
 assert os.environ["GITHUB_REPOSITORY"] == "alvarovillalbaa/roomlet"
-assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci4"
+assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci5"
 assert os.environ["ROOMLET_PUBLIC_REPOSITORY"] == "true"
 repo = Path.cwd().resolve()
 parent = Path(os.environ["RUNNER_TEMP"]).resolve()
@@ -33,6 +33,9 @@ nonce = uuid.uuid4().hex
 evidence = parent / ("roomlet-ui-evidence-" + os.environ["GITHUB_RUN_ID"])
 assert not evidence.exists()
 evidence.mkdir(mode=0o700)
+native_evidence = parent / ("roomlet-ui-native-result-" + os.environ["GITHUB_RUN_ID"])
+assert not native_evidence.exists()
+native_evidence.mkdir(mode=0o700)
 for name in ("source", "fixtures", "derived", "cache", "tmp"):
     (root / name).mkdir(mode=0o700)
 export = root / "source"
@@ -50,7 +53,7 @@ trash_candidates = [home / ".Trash" / moved_name,
                     home / "Library/Containers/com.alvarovillalbaa.Roomlet/Data/.Trash" / moved_name]
 app = root / "derived/Build/Products/Debug/Roomlet.app"
 runner = root / "derived/Build/Products/Debug/RoomletAcceptance-Runner.app"
-result_path = evidence / "ui.xcresult"
+result_path = native_evidence / "ui.xcresult"
 report = {"schemaVersion": "roomlet-native-ui-v1", "source": SOURCE, "status": "failed",
           "tier": "T2", "caseId": "RUI01", "nonce": nonce, "commands": [], "errors": [],
           "cleanup": {}, "coreTestsReplayed": False, "simulatorUsed": False,
@@ -169,7 +172,7 @@ try:
     moved.write_bytes(moved_data)
     kept.write_bytes(b"B" * 64)
     fixture_config = export / "Tests/e2e/FixtureConfig.json"
-    fixture_config.write_text(json.dumps({"root": str(root), "nonce": nonce, "evidence": str(evidence)}))
+    fixture_config.write_text(json.dumps({"root": str(root), "nonce": nonce}))
     report["generatedTestResource"] = {"path": "Tests/e2e/FixtureConfig.json", "sha256": sha(fixture_config.read_bytes())}
     report["fixture"] = {"source": str(moved), "sha256": sha(moved_data), "bytes": 4096,
                          "kept": str(kept), "keptSha256": sha(b"B" * 64)}
@@ -226,8 +229,24 @@ finally:
         try:
             run("failure-attachments", ["/usr/bin/xcrun", "xcresulttool", "export", "attachments", "--path", str(result_path),
                                         "--output-path", str(evidence / "attachments")], seconds=60)
+            manifest = json.loads((evidence / "attachments/manifest.json").read_text())
+            attachments = []
+            for case in manifest:
+                assert case["testIdentifier"] == "RoomletAcceptance/testRUI01FolderScanReviewTrashReport()"
+                for item in case["attachments"]:
+                    filename = item["exportedFileName"]
+                    assert Path(filename).name == filename and filename not in (".", "..")
+                    path = evidence / "attachments" / filename
+                    assert path.is_file() and not path.is_symlink()
+                    data = path.read_bytes()
+                    assert len(data) <= 4 * 1024 * 1024
+                    attachments.append({"file": "attachments/" + filename, "name": item["suggestedHumanReadableName"],
+                                        "bytes": len(data), "sha256": sha(data)})
+            report["attachments"] = attachments
         except BaseException as error:
             report["attachmentExportLimit"] = str(error)
+            if report.get("nativeTestCommandPassed"):
+                report["errors"].append("native attachment evidence: " + str(error))
     try:
         processes = owned_processes("owned-app-processes")
         report["cleanup"]["processesBeforeCleanup"] = processes
@@ -250,11 +269,20 @@ finally:
     try:
         assert (root / "owner").read_text() == nonce
         candidates = [path for path in trash_candidates if os.path.lexists(path)]
-        binding = evidence / "owned-trash.json"
-        if binding.exists():
-            value = json.loads(binding.read_text())
-            assert value["nonce"] == nonce and value["source"] == str(moved)
-            assert Path(value["destination"]) in trash_candidates
+        native_report = root / "cleanup-report.json"
+        if native_report.exists():
+            assert native_report.is_file() and not native_report.is_symlink() and native_report.stat().st_size <= 65536
+            data = native_report.read_bytes()
+            value = json.loads(data)
+            assert value["rootPath"] == str(root / "fixtures") and value["wasCancelled"] is False
+            assert len(value["items"]) == 1
+            item = value["items"][0]
+            assert item["relativePath"] == moved_name and item["logicalBytes"] == 4096 and item["disposition"] == "moved"
+            assert Path(item["destinationPath"]) in trash_candidates
+            (evidence / "cleanup-report.json").write_bytes(data)
+            report["nativeReport"] = {"bytes": len(data), "sha256": sha(data)}
+        elif report.get("nativeTestCommandPassed"):
+            raise RuntimeError("native saved report missing")
         assert len(candidates) <= 1
         if candidates:
             path = candidates[0]
@@ -284,21 +312,39 @@ finally:
     except BaseException as error:
         report["errors"].append("source/root cleanup: " + str(error))
     try:
-        captures = []
-        for path in evidence.glob("*.png"):
-            assert not path.is_symlink()
-            data = path.read_bytes()
-            assert len(data) <= 4 * 1024 * 1024
-            captures.append({"file": path.name, "bytes": len(data), "sha256": sha(data), "visualReview": "pending"})
+        captures = [{**row, "visualReview": "pending"} for row in report.get("attachments", []) if row["file"].endswith(".png")]
         report["screenshots"] = captures
         if report.get("nativeTestCommandPassed"):
-            assert {row["file"] for row in captures} == {"01-empty.png", "02-review.png", "03-cleanup.png", "04-keyboard-rescan.png"}
+            for phase in ("01-empty", "02-review", "03-cleanup", "04-keyboard-rescan"):
+                assert len([row for row in captures if row["name"] == phase + ".png"]) == 1, "missing or ambiguous native phase: " + phase
+            for name in ("owned-trash.json", "ui-observations.json"):
+                assert len([row for row in report["attachments"] if row["name"] == name]) == 1
         packet_files = [path for path in evidence.rglob("*") if path.is_file()]
         packet_bytes = sum(path.stat().st_size for path in packet_files)
         report["evidenceBudget"] = {"files": len(packet_files), "bytesBeforeFinalReceipt": packet_bytes, "maximumBytes": 64 * 1024 * 1024}
         assert packet_bytes <= 63 * 1024 * 1024, "evidence packet exceeds bound; preserve original runner evidence, no acceptance"
     except BaseException as error:
         report["errors"].append("capture/packet evidence: " + str(error))
+    try:
+        vector = []
+        raw_bytes = 0
+        for path in sorted(native_evidence.rglob("*")):
+            assert not path.is_symlink()
+            if not path.is_file(): continue
+            length = path.stat().st_size
+            raw_bytes += length
+            assert raw_bytes <= 127 * 1024 * 1024 and len(vector) < 4096, "raw native result exceeds separate bound"
+            digest = hashlib.sha256()
+            with path.open("rb") as stream:
+                for block in iter(lambda: stream.read(1048576), b""): digest.update(block)
+            vector.append({"file": str(path.relative_to(native_evidence)), "bytes": length, "sha256": digest.hexdigest()})
+        data = (json.dumps(vector, indent=2) + "\n").encode()
+        assert len(data) <= 1048576
+        (native_evidence / "result-manifest.json").write_bytes(data)
+        report["nativeResultBudget"] = {"files": len(vector), "bytesBeforeManifest": raw_bytes, "maximumBytes": 128 * 1024 * 1024,
+                                        "manifestSha256": sha(data), "retentionDays": 2}
+    except BaseException as error:
+        report["errors"].append("raw result evidence: " + str(error))
 report["status"] = "passed_pending_visual_review" if not report["errors"] and report.get("nativeTestCommandPassed") and report.get("testSummary") else "failed"
 report["seconds"] = time.monotonic() - started
 persist()

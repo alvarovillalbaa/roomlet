@@ -1,0 +1,121 @@
+{
+  "artifactIndex": {
+    "id": 13908565179,
+    "zipBytes": 89727376,
+    "zipSha256": "576ea1bfe4a29c17fcdd2bef87a33b98f306170cc3688a800f8c669d90372dd3",
+    "files": 1678,
+    "expandedBytes": 89874819,
+    "largest": [
+      {
+        "path": "ui.xcresult/Data/data.0~tJqryEkkFQhee1SXH5RSno0EoyeDq8vW4baQalxeX-IKGSAv5fzCwSAVnsYDrgJc-BmhyQUnkwMpnvEPsEJ1pQ==",
+        "bytes": 38451978
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~yek5iENtJ55Pv_QgJn5mw_t7CvJxtYvEzRB5IlfPJ-e8uajoj-kgL_U40Rh2_p93JmyCv67gRPb4J8Oa1vGW8g==",
+        "bytes": 36215458
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~naBguSvKagukzcT0228pqC7vBeuiAXjDueH9VtkJjB-H-NXZXrQFyGqfrANLutbER0N8jb38cffUYdFaR9LLdg==",
+        "bytes": 2635097
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~-5H85YQTHRv78U6f09EfGQS1IHSileopTbZMtXAqOH0DoBe-4PbuxWqpDI1yZfiv2HBjr_vDO0aZL1W1IiXspQ==",
+        "bytes": 1178137
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~PzZsJP3DMbwVhftUsSfSSvtud5ssEulXdS_1uqoK7b4fZ6cwiPf1jtaeJhJMw5V_pcU_kKqKVzuD4OqnTxjzSw==",
+        "bytes": 1141809
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~FoZIuHNaN2fG6ZTFaqrG0Ww6gqMdmtb65ypzGqbyv_L4dwt-mARMpHMGo1QTKmUJckFG7lkGpKF8lPYKwaBGdQ==",
+        "bytes": 392878
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~4_yPe3NFdl9oI_4fR6fBD-CGLTrHlErwVX1ZoDvLLsRbDRS5jLMo09Zg4YgNCtLzUlRKmizfmbSyIUQqrwidjQ==",
+        "bytes": 339066
+      },
+      {
+        "path": "attachments/91A06BB6-A569-4D9D-BE5E-FC589E38397A.mp4",
+        "bytes": 317949
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~_LfLdmA8_WHTOVgOAg5z3I5mBx2oYZnQvKZuGu8B7IT0eDWrvi29OUGoxfOXE9Y6r07wml3EA3H7MbhVudrGGg==",
+        "bytes": 315455
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~ILiKpOWZRyqBeEe3jwJ_6Cew4QkQ7avOP3jI5EA7_mTzl9vUo0aWDzx0Hz9H6SJewXd-6K8sBsJumHqPmw2ZHQ==",
+        "bytes": 297335
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~Ja-7dAUQmHK2x3nxO6v5rVWMqT6Je8Xt7DA24pUm5SbgUr_AnI24xSyhoyzC_ZlsFA69aRdI1yGqtfV5R-DiHg==",
+        "bytes": 261470
+      },
+      {
+        "path": "ui.xcresult/database.sqlite3",
+        "bytes": 245760
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~7zEOsMO5aKdaJwf1GeJlQ-Mq_WG_aSQ29Iqf6fEj8n1a4A0E5jDt-BuHtBcWzVhNj7m_5buDxCnNpfAbIzsF8A==",
+        "bytes": 240530
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~-SzfMPO1AkiVph6UXR4uLEgMXi9KiPM_NFpKHa2hQdlKAHNuHGQzBL8fXAAl2lXb84u8AL5YfPXbBhz9d8YtoQ==",
+        "bytes": 232435
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~S39fZNYrzN-9vsGtV2lWA9wRqZXmAoYZjig8_XetMK4t8NyFIojcbIJRfytcBgpDIjlt8eZbEoXFKd6wZ2pDPg==",
+        "bytes": 227579
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~KwxZt8y9UvY9_tkxurUG1rUt9oJess1xBBLNjTk5glb735FBtIkwnA37MnT4TUuh7ssO2jqS3cm3jB_mUHUhqQ==",
+        "bytes": 203883
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~jB5sakoUd3GYjyHLMhmFD7Ep46B6SVXlfRM7C_-egjrgd_cwlf8RA7ahT_h0FxPZGyGtxlV5Pj5GzHV766NJNw==",
+        "bytes": 179463
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~o3vkmAbCT4rTmxXHfDZCOrXk4BHOptnXP2Kp3XOrc6BPGo2-f4GnfFc5BGSoekwVYAHUXRl_kpthfShgTCMWZA==",
+        "bytes": 162365
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~dx6ioNXThoAQBD6AEPQLmj7YiqmtV0btVoFJw_JajmsmtSS7tmszclknWeTiPx1VeU410NN5SK24ThKFrBMmQg==",
+        "bytes": 159622
+      },
+      {
+        "path": "ui.xcresult/Data/data.0~oaMHy0hbQXpNVMVZ7kXoRKzQJSVj53Ejvs0YKh97ya0asWM_y_B9pVJoWpzfNlmS5UrnkvkaoROYOF7R28edUg==",
+        "bytes": 154490
+      }
+    ],
+    "pngs": []
+  },
+  "attachmentManifest": [
+    {
+      "attachments": [
+        {
+          "configurationName": "Test Scheme Action",
+          "deviceId": "d358ce0292a1bdaf0d9266400edeecc5ec5cc6b3",
+          "deviceName": "My Mac",
+          "exportedFileName": "91A06BB6-A569-4D9D-BE5E-FC589E38397A.mp4",
+          "isAssociatedWithFailure": false,
+          "suggestedHumanReadableName": "Screen Recording 2026-11-12 at 01.52.16 AM.mp4",
+          "timestamp": 1794448336.305
+        },
+        {
+          "configurationName": "Test Scheme Action",
+          "deviceId": "d358ce0292a1bdaf0d9266400edeecc5ec5cc6b3",
+          "deviceName": "My Mac",
+          "exportedFileName": "48F67C64-A5C5-45B6-B388-9D2EF80C4579.txt",
+          "isAssociatedWithFailure": true,
+          "suggestedHumanReadableName": "Complete Issue Description.txt"
+        }
+      ],
+      "testIdentifier": "RoomletAcceptance/testRUI01FolderScanReviewTrashReport()",
+      "testIdentifierURL": "test://com.apple.xcode/RoomletAcceptance/RoomletAcceptance/RoomletAcceptance/testRUI01FolderScanReviewTrashReport"
+    }
+  ],
+  "job": 130918875006,
+  "run": 43138304300,
+  "head": "6a4946b7c9548323ad1b285c6235d53480497ad0",
+  "noTestsReplayed": true
+}
