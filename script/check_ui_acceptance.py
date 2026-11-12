@@ -22,7 +22,7 @@ SOURCE = os.environ["ROOMLET_SOURCE_COMMIT"]
 assert re.fullmatch(r"[0-9a-f]{40}", SOURCE)
 assert platform.system() == "Darwin" and platform.machine() == "arm64"
 assert os.environ["GITHUB_REPOSITORY"] == "alvarovillalbaa/roomlet"
-assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci3"
+assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci4"
 assert os.environ["ROOMLET_PUBLIC_REPOSITORY"] == "true"
 repo = Path.cwd().resolve()
 parent = Path(os.environ["RUNNER_TEMP"]).resolve()
@@ -176,6 +176,9 @@ try:
     common = ["/usr/bin/xcodebuild", "-project", "Tests/RoomletAcceptance.xcodeproj", "-scheme", "RoomletAcceptance",
               "-configuration", "Debug", "-destination", "platform=macOS,arch=arm64", "-derivedDataPath", str(root / "derived")]
     run("build-for-testing", common + ["build-for-testing"], seconds=300, cwd=export)
+    # Xcode adds testing exceptions even when base entitlement injection is off.
+    # Exercise the actual app rights, using the same local signing input as packaging.
+    run("production-signature", ["/usr/bin/codesign", "--force", "--sign", "-", "--entitlements", str(export / "Resources/Roomlet.entitlements"), str(app)])
     entitlements = run("app-entitlements", ["/usr/bin/codesign", "-d", "--entitlements", ":-", str(app)])
     assert plistlib.loads(entitlements) == {"com.apple.security.app-sandbox": True, "com.apple.security.files.user-selected.read-write": True}
     run("signature", ["/usr/bin/codesign", "--verify", "--strict", str(app)])
@@ -190,6 +193,13 @@ except BaseException as error:
     report["traceback"] = traceback.format_exc()
 finally:
     cleanup_phase = True
+    if report.get("appEntitlementsMatchProduction"):
+        try:
+            final_entitlements = run("post-ui-entitlements", ["/usr/bin/codesign", "-d", "--entitlements", ":-", str(app)])
+            assert plistlib.loads(final_entitlements) == {"com.apple.security.app-sandbox": True, "com.apple.security.files.user-selected.read-write": True}
+            report["appEntitlementsStillMatchProduction"] = True
+        except BaseException as error:
+            report["errors"].append("post-UI entitlement guard: " + str(error))
     if result_path.exists():
         try:
             value = run("test-summary", ["/usr/bin/xcrun", "xcresulttool", "get", "test-results", "summary", "--path", str(result_path)])

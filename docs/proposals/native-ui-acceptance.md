@@ -72,3 +72,11 @@ unfinished native workflow, with all original teardown and evidence controls.
 then failed three test-query spellings. The changed continuation uses Apple's
 documented `tableRows` property. Preserve that failure and rerun only RUI01;
 the native actions, assertions, data/Trash bounds and teardown are unchanged.
+
+[Attempt3](../results/2026/11-12/native-ui-attempt-3.md) built both app and tests,
+then correctly rejected Xcode's additional test-only app entitlements before
+launch. The continuation applies the existing local ad-hoc signing method to
+only the disposable app using the unchanged production entitlement file.
+Keep the exact two-key guard and add an identical post-UI check. Do not accept
+broader test-build rights as production sandbox proof. App source, native
+actions/assertions and all fixture/Trash/teardown bounds remain unchanged.
