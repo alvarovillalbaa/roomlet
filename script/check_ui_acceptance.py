@@ -22,7 +22,7 @@ SOURCE = os.environ["ROOMLET_SOURCE_COMMIT"]
 assert re.fullmatch(r"[0-9a-f]{40}", SOURCE)
 assert platform.system() == "Darwin" and platform.machine() == "arm64"
 assert os.environ["GITHUB_REPOSITORY"] == "alvarovillalbaa/roomlet"
-assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci8"
+assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci9"
 assert os.environ["ROOMLET_PUBLIC_REPOSITORY"] == "true"
 repo = Path.cwd().resolve()
 parent = Path(os.environ["RUNNER_TEMP"]).resolve()
@@ -262,7 +262,7 @@ finally:
                     data = path.read_bytes()
                     assert len(data) <= 4 * 1024 * 1024
                     name = item["suggestedHumanReadableName"]
-                    match = re.fullmatch(r"(01-empty|02-review|03-cleanup|04-keyboard-rescan|diagnostic-final|owned-trash|ui-observations)_[0-9]+_([A-F0-9-]{36})\.(png|json|accessibility)", name)
+                    match = re.fullmatch(r"(01-empty|02-review|03-cleanup|04-keyboard-rescan|diagnostic-final|diagnostic-selection|owned-trash|ui-observations)_[0-9]+_([A-F0-9-]{36})\.(png|json|accessibility)", name)
                     canonical = None
                     if match:
                         assert str(uuid.UUID(match[2])).upper() == match[2]
@@ -341,6 +341,18 @@ finally:
     try:
         captures = [{**row, "visualReview": "pending"} for row in report.get("attachments", []) if row["file"].endswith(".png")]
         report["screenshots"] = captures
+        capsule = []
+        capsule_bytes = 0
+        omitted = 0
+        for row in report.get("attachments", []):
+            if row.get("canonicalName") is None: continue
+            data = (evidence / row["file"]).read_bytes()
+            if capsule_bytes + len(data) > 2 * 1024 * 1024:
+                omitted += 1
+                continue
+            capsule.append({**row, "gzipBase64": base64.b64encode(gzip.compress(data, mtime=0)).decode()})
+            capsule_bytes += len(data)
+        report["nativeEvidenceCapsule"] = {"entries": capsule, "originalBytes": capsule_bytes, "omitted": omitted, "maximumOriginalBytes": 2 * 1024 * 1024}
         if report.get("nativeTestCommandPassed"):
             for phase in ("01-empty", "02-review", "03-cleanup", "04-keyboard-rescan"):
                 assert len([row for row in captures if row["canonicalName"] == phase + ".png"]) == 1, "missing or ambiguous native phase: " + phase
@@ -359,7 +371,8 @@ finally:
         packet_files = [path for path in evidence.rglob("*") if path.is_file()]
         packet_bytes = sum(path.stat().st_size for path in packet_files)
         report["evidenceBudget"] = {"files": len(packet_files), "bytesBeforeFinalReceipt": packet_bytes, "maximumBytes": 64 * 1024 * 1024}
-        assert packet_bytes <= 63 * 1024 * 1024, "evidence packet exceeds bound; preserve original runner evidence, no acceptance"
+        assert packet_bytes <= 60 * 1024 * 1024, "evidence packet exceeds bound; preserve original runner evidence, no acceptance"
+        assert len(json.dumps(report, indent=2).encode()) <= 4 * 1024 * 1024, "final receipt reserve exceeded"
     except BaseException as error:
         report["errors"].append("capture/packet evidence: " + str(error))
     try:

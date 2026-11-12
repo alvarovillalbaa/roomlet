@@ -115,3 +115,10 @@ the original four phase PNGs/hierarchies plus both native JSON attachments;
 map the observed counter/UUID export suffix strictly, retaining original names.
 Independently cross-check both JSON attachments against the actual saved report.
 No product change, privilege expansion, additional file or weakened assertion.
+
+[Activation8](../results/2026/11-12/native-ui-attempt-8.md) verified both collected
+rows but its center click left zero selected. The changed case clicks the exact
+filename cell, records the resulting native screen/tree and requires one selected
+before opening Review. A bounded lossless capsule of existing named attachments
+(at most2MiB originals) is included in the receipt, reserving4MiB within the same
+64MiB compact bound. No UI state injection, rights change or accepted-case replay.
