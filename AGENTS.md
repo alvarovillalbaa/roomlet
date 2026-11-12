@@ -141,3 +141,9 @@ contains only selected runtime inputs. All original process/storage/deadline/
 stream/hash/teardown controls remain. A failed local guard permits no local
 build, app, scan, Trash or installation. No paid signing, account, dependency,
 SDK/runtime download, model, Gatekeeper bypass or claimed fresh-Mac acceptance.
+
+The [exact-byte publication scope](docs/proposals/preview-refresh-publication.md)
+uses one five-minute public Ubuntu job to publish the three accepted originals,
+verify anonymous downloads/unchanged old release, then disable415450805 and
+retire only the two exact task controls. Publish reviewed helper/evidence first;
+stop uncertain/rejected writes without retries or credential changes.

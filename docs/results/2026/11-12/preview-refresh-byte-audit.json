@@ -1,0 +1,27 @@
+{
+  "kind": "roomlet.preview-byte-audit",
+  "source": "d7ba615aae33cb8a2d06a9c878278c6df59137a1",
+  "status": "passed",
+  "archiveBytes": 528861,
+  "archiveSha256": "80d6562af841510c095acd5541c55aa70fea21c988c5864689777272dbd71c20",
+  "zipEntries": 12,
+  "regularFiles": 7,
+  "allPayloadsAndModesMatchNativeManifest": true,
+  "guideLicensePlistSourceExact": true,
+  "appVersion": "0.1.1",
+  "buildNumber": "2",
+  "fatHeaderSlices": [
+    {
+      "cpuType": 16777223,
+      "offset": 16384,
+      "bytes": 945680
+    },
+    {
+      "cpuType": 16777228,
+      "offset": 966656,
+      "bytes": 965648
+    }
+  ],
+  "codeSignatureNativeVerification": "carried from exact-hash native packet; no local native signing call",
+  "appLaunched": false
+}

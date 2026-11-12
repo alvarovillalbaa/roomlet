@@ -1,0 +1,33 @@
+# Inactive publication preparation; replace only the REVIEWED_COMMIT value.
+name: Temporary Roomlet preview refresh
+on:
+  push:
+    branches: [qa/roomlet-preview-refresh-20261112-1]
+    paths: [.github/workflows/preview-refresh.yml]
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: roomlet-preview-refresh-20261112
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.repository == 'alvarovillalbaa/roomlet' && github.event.repository.private == false && github.ref == 'refs/heads/qa/roomlet-preview-refresh-20261112-1'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      SOURCE_COMMIT: REVIEWED_COMMIT
+      ROOMLET_PUBLIC_REPOSITORY: ${{ toJSON(github.event.repository.private == false) }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ env.SOURCE_COMMIT }}
+          fetch-depth: 2
+          persist-credentials: false
+          clean: false
+      - name: Publish exact accepted bytes and retire controls
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 -I -B -S script/publish_preview_refresh.py
+
