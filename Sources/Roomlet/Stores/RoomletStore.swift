@@ -7,6 +7,7 @@ import RoomletCore
 @Observable
 final class RoomletStore {
     var rootURL: URL?
+    private(set) var filesPresentationID = UUID()
     var snapshot: ScanSnapshot?
     var capacity: CapacityReading?
     var selectedIDs: Set<String> = []
@@ -75,6 +76,7 @@ final class RoomletStore {
         foundFiles = 0
         searchText = ""
         scanWasStopped = false
+        filesPresentationID = UUID()
         refreshSpace()
     }
 
@@ -93,6 +95,7 @@ final class RoomletStore {
         scanWasStopped = false
         visitedEntries = 0
         foundFiles = 0
+        filesPresentationID = UUID()
         operation = Task.detached(priority: .userInitiated) { [weak self, folder] in
             do {
                 let result = try withExtendedLifetime(folder) {

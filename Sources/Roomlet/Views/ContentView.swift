@@ -41,7 +41,7 @@ struct ContentView: View {
                 Button { store.chooseFolder() } label: { Label("Choose Folder", systemImage: "folder.badge.plus") }
                     .help("Choose a local folder (⌘O)")
                     .disabled(!store.canChooseFolder)
-                Button { section = .files; store.startScan() } label: { Label("Scan", systemImage: "arrow.clockwise") }
+                Button { store.startScan() } label: { Label("Scan", systemImage: "arrow.clockwise") }
                     .help("Scan the selected folder (⌘R)")
                     .disabled(!store.canScan)
                 Button { store.stop() } label: { Label("Stop", systemImage: "stop.fill") }
@@ -58,6 +58,9 @@ struct ContentView: View {
         }
         .sheet(item: $store.review) { review in
             CleanupReviewView(review: review, cancel: { store.review = nil }, move: { store.moveReviewedFiles(review) })
+        }
+        .onChange(of: store.filesPresentationID) { _, _ in
+            section = .files
         }
         .onChange(of: store.lastOutcome?.id) { _, value in
             if value != nil { section = .cleanup }

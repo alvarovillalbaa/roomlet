@@ -12,6 +12,13 @@ older workers cannot replace a newer folder/session. A selected folder's
 security scope outlives every worker using it. Selection starts empty, cleanup
 review is explicit, and an attempted batch invalidates its scan.
 
+Each window keeps its own sidebar selection. Successful folder selection and
+scan admission refresh the store's transient `filesPresentationID`; open windows
+observe that event and present Files. This includes selecting the same folder
+again and scans started from commands or the menu bar. Cancelled folder panels
+and rejected scan actions emit no presentation request. Completed cleanup still
+presents Last Cleanup through its existing outcome identity observation.
+
 Root device/inode and regular-file device/inode/size/nanosecond modification
 fingerprints catch ordinary stale snapshots. Ancestor/path/package/known-cloud rules
 are reapplied immediately before Trash. This is not an atomic filesystem
