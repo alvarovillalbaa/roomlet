@@ -103,3 +103,21 @@ fresh installation, trusted distribution or full-product acceptance. Keep the
 bundled guide byte-exact to the accepted build; all temporary controls remain
 disabled/retired. Preserve the release transport failure and zero-asset draft
 readback before the successful REST uploads; no duplicate release was created.
+
+## Actual native UI scope — 2026-11-12
+
+Standing all-project approval covers the [native workflow proposal](docs/proposals/native-ui-acceptance.md).
+RUI01 [passed](docs/results/2026/11-12/native-ui-acceptance.md) atcdb66c7a under
+exact production app entitlements: generated-folder panel/scan/selection,
+review/Keep Files, authored Trash/restoration, actual report and same-folder
+keyboard rescan. Four required PNGs were inspected; preserve all ten failed
+activations and immutable originals. This is one T2 workflow, not full product,
+multiwindow, denied-access, physical-device or trusted-distribution acceptance.
+Do not replay unchanged accepted cases or the older29/preview scopes.
+
+The [retirement-only scope](docs/proposals/native-ui-retirement.md) permits one
+three-minute public Ubuntu job to disable only workflow415362445 and delete
+its exact owned controls, with head/terminal/readback guards. The connected API
+cannot perform those lifecycle writes and local Git transport failed DNS.
+Publish reviewed source before activating the owned control; retain the actual
+retirement outcome. No app/data action, credential copying or paid service.

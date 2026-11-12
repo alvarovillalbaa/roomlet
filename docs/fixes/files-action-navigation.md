@@ -20,6 +20,9 @@ Source parsing and `git diff --check` passed. Storage Guard reported0.2GiB free
 against34GiB required, blocking a local build, app launch and native checks.
 No new mirror test or replay of the closed29-case/preview scopes was added.
 The [focused native build](../results/2026/11-12/files-navigation-build.md)
-subsequently passed at3be4c1c5 with source/process/scratch verification. Actual
-native multiwindow/picker/keyboard acceptance remains unverified; compilation
-does not establish those claims.
+subsequently passed at3be4c1c5 with source/process/scratch verification. The
+[actual native RUI01 workflow](../results/2026/11-12/native-ui-acceptance.md)
+then passed atcdb66c7a: same-folder selection opens Files, and Command-R from
+cleared Last Cleanup opens Files and rescans with empty selection. Its inspected
+PNG shows only the kept64byte file. Multiwindow/menu-bar paths, physical devices
+and fresh installation remain unverified.

@@ -1,6 +1,6 @@
 # Roomlet
 
-Last updated: 2026-11-08
+Last updated: 2026-11-12
 
 A native Mac utility for finding large local files, reviewing what to remove,
 and tracking available disk space. SwiftUI, AppKit and Foundation; no account,
@@ -8,7 +8,12 @@ network service, model call, runtime dependency or cloud upload.
 
 **Native compilation, all 29 core checks and strict ad-hoc package verification
 passed.** [Results and both earlier failures](docs/results/2026/11-05/native-checks.md)
-are preserved. Native interaction and sandbox behavior remain unverified.
+are preserved. One [actual native macOS workflow now passed](docs/results/2026/11-12/native-ui-acceptance.md):
+folder panel, scan/selection, review/Keep Files, authored Trash/restoration,
+native report export, same-folder selection and keyboard rescan. Both app
+entitlement guards match production. All four required PNGs were inspected.
+This generated-folder case does not establish complete access enforcement or
+fresh installation; all ten failed activations remain preserved.
 Current source also [repairs Files navigation for folder and scan actions](docs/fixes/files-action-navigation.md).
 Its separate [app-only native compilation passed](docs/results/2026/11-12/files-navigation-build.md);
 the public preview below retains its earlier tested bytes.
@@ -82,8 +87,8 @@ for format checks and the native-tool encoding limitation observed during setup.
 The sandbox permits user-selected read/write access; it has no network
 entitlement. The selected folder's access is retained only for the current app
 session. No full-disk access request or persisted folder bookmark is required.
-The intended bundle behavior needs native acceptance; an entitlement file alone
-does not prove permissions work.
+The generated-folder workflow passed under those exact entitlements;
+denied/protected access, other volumes and fresh installation remain unverified.
 
 The preview retains ad-hoc signing and exactly those existing entitlements;
 its bundled guide/license and ownership marker are sealed before signing.
@@ -101,6 +106,7 @@ establish those claims. No certificate, Apple account or paid enrollment was cre
 - [Architecture](docs/architecture.md)
 - [Native-check scope](docs/proposals/native-checks-v2.md)
 - [Native build/core/package results](docs/results/2026/11-05/native-checks.md)
+- [Actual native workflow, inspected screenshots and retained failures](docs/results/2026/11-12/native-ui-acceptance.md)
 - [Universal preview scope and distribution](docs/distribution.md)
 - [Passed universal preview packaging and preserved failure](docs/results/2026/11-08/preview-package-attempt-2.md)
 - [Verified public release record](docs/results/2026/11-08/preview-package-publication.json)

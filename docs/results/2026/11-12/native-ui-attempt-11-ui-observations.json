@@ -1,0 +1,30 @@
+{
+  "caseId" : "RUI01",
+  "nativeReport" : {
+    "after" : {
+      "availableBytes" : 48934293504,
+      "recordedAt" : "2026-11-12T02:49:18Z",
+      "totalBytes" : 343073095680
+    },
+    "before" : {
+      "availableBytes" : 48934293504,
+      "recordedAt" : "2026-11-12T02:49:18Z",
+      "totalBytes" : 343073095680
+    },
+    "finishedAt" : "2026-11-12T02:49:18Z",
+    "id" : "9C12A341-A01E-4A28-B9F2-54736302F822",
+    "items" : [
+      {
+        "destinationPath" : "\/Users\/runner\/.Trash\/roomlet-ui-28aeb8c35b7b439a9c7640b4b3ed46d9-move.bin",
+        "disposition" : "moved",
+        "id" : "16777226:3505752:roomlet-ui-28aeb8c35b7b439a9c7640b4b3ed46d9-move.bin",
+        "logicalBytes" : 4096,
+        "relativePath" : "roomlet-ui-28aeb8c35b7b439a9c7640b4b3ed46d9-move.bin"
+      }
+    ],
+    "rootPath" : "\/Users\/runner\/work\/_temp\/roomlet-ui-yaaz0wqc\/fixtures",
+    "startedAt" : "2026-11-12T02:49:18Z",
+    "wasCancelled" : false
+  },
+  "status" : "passed"
+}
