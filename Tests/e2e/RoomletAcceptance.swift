@@ -21,7 +21,6 @@ final class RoomletAcceptance: XCTestCase {
         XCTAssertEqual(try Data(contentsOf: moved), Data(repeating: 65, count: 4096))
         XCTAssertEqual(try Data(contentsOf: kept), Data(repeating: 66, count: 64))
         let app = XCUIApplication(bundleIdentifier: "com.alvarovillalbaa.Roomlet")
-        defer { app.terminate() }
 
         func record(_ phase: String) {
             let hierarchy = XCTAttachment(string: app.debugDescription)
@@ -53,6 +52,10 @@ final class RoomletAcceptance: XCTestCase {
             }, object: nil)
             XCTAssertEqual(XCTWaiter.wait(for: [check], timeout: 15), .completed)
         }
+        defer {
+            if app.state == .runningForeground { record("diagnostic-final") }
+            app.terminate()
+        }
 
         app.launch()
         XCTAssertTrue(app.windows["Roomlet"].waitForExistence(timeout: 20))
@@ -62,9 +65,9 @@ final class RoomletAcceptance: XCTestCase {
         let scan = app.buttons["Scan Folder"]
         XCTAssertTrue(scan.waitForExistence(timeout: 15))
         scan.click()
-        let row = app.tables.tableRows.containing(.staticText, identifier: movedName).firstMatch
+        let row = app.outlines.outlineRows.containing(.staticText, identifier: movedName).firstMatch
         XCTAssertTrue(row.waitForExistence(timeout: 20))
-        XCTAssertTrue(app.tables.tableRows.containing(.staticText, identifier: keptName).firstMatch.exists)
+        XCTAssertTrue(app.outlines.outlineRows.containing(.staticText, identifier: keptName).firstMatch.exists)
         XCTAssertTrue(app.staticTexts["2 of 2 collected files · 0 selected"].exists)
         row.click()
         app.buttons["Review 1"].click()
@@ -115,7 +118,7 @@ final class RoomletAcceptance: XCTestCase {
         app.staticTexts["Last Cleanup"].click()
         XCTAssertTrue(app.staticTexts["No cleanup yet"].waitForExistence(timeout: 10))
         app.typeKey("r", modifierFlags: .command)
-        XCTAssertTrue(app.tables.tableRows.containing(.staticText, identifier: keptName).firstMatch.waitForExistence(timeout: 20))
+        XCTAssertTrue(app.outlines.outlineRows.containing(.staticText, identifier: keptName).firstMatch.waitForExistence(timeout: 20))
         XCTAssertFalse(app.staticTexts["No cleanup yet"].exists)
         XCTAssertTrue(app.staticTexts["1 of 1 collected files · 0 selected"].exists)
         record("04-keyboard-rescan")

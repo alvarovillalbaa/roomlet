@@ -1,0 +1,273 @@
+Application, 0x141707d60, pid: 2769, title: 'Roomlet', Disabled <App element pid: 2769>
+  Window (Main), 0x141709080, {{0.0, 25.0}, {1024.0, 681.0}}, identifier: 'main-AppWindow-1', title: 'Roomlet', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jKwAAAAAAAAA=>
+    Group, 0x14172a7d0, {{0.0, 25.0}, {1024.0, 681.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jLgAAAAAAAAA=>
+      SplitGroup, 0x141706c60, {{0.0, 25.0}, {1024.0, 681.0}}, identifier: 'main-AppWindow-1, SidebarNavigationSplitView', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jQAAAAAAAAAA=>
+        Group, 0x141729680, {{0.0, 25.0}, {210.0, 681.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jRgAAAAAAAAA=>
+          ScrollView, 0x14172af50, {{0.0, 77.0}, {210.0, 576.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jVQAAAAAAAAA=>
+            Outline, 0x14172b090, {{-1.0, 76.0}, {212.0, 578.0}}, label: 'Sidebar', Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAA=>
+              OutlineRow, 0x141726b20, {{0.0, 77.0}, {210.0, 19.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAD//////////w==>
+                Cell, 0x141726c60, {{10.0, 77.0}, {190.0, 19.0}}, Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAD//////////1gAAAAAAAAA>
+                  Group, 0x141736e50, {{14.0, 77.0}, {194.0, 19.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAD//////////1gAAAAAAAAAAAAAAAAAAAA=>
+                    StaticText, 0x141736f90, {{14.0, 79.5}, {61.0, 14.0}}, label: 'Workspace' <AX element pid: 2769, token: 0QoAAAAAAABvY29jXQAAAAAAAAA=>
+              OutlineRow, 0x141736610, {{0.0, 96.0}, {210.0, 28.0}}, Selected, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAD+/////////w==>
+                Cell, 0x141736750, {{10.0, 96.0}, {190.0, 28.0}}, Keyboard Focused, Selected <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAD+/////////1gAAAAAAAAA>
+                  StaticText, 0x141735480, {{20.0, 102.0}, {48.0, 16.1}}, value: Files <AX element pid: 2769, token: 0QoAAAAAAABvY29jWgAAAAAAAAA=>
+              OutlineRow, 0x1417355c0, {{0.0, 124.0}, {210.0, 28.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAD9/////////w==>
+                Cell, 0x141735dd0, {{10.0, 124.0}, {190.0, 28.0}}, Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAD9/////////1gAAAAAAAAA>
+                  StaticText, 0x141735f10, {{18.0, 130.0}, {102.0, 16.0}}, value: Last Cleanup <AX element pid: 2769, token: 0QoAAAAAAABvY29jWQAAAAAAAAA=>
+              OutlineRow, 0x14172ab30, {{0.0, 165.0}, {210.0, 19.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAD8/////////w==>
+                Cell, 0x14172ac70, {{10.0, 165.0}, {190.0, 19.0}}, Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAD8/////////1gAAAAAAAAA>
+                  Group, 0x141736a30, {{14.0, 165.0}, {194.0, 19.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAD8/////////1gAAAAAAAAAAAAAAAAAAAA=>
+                    StaticText, 0x141736b70, {{14.0, 167.5}, {86.0, 14.0}}, label: 'Selected Folder' <AX element pid: 2769, token: 0QoAAAAAAABvY29jXAAAAAAAAAA=>
+              OutlineRow, 0x1417361f0, {{0.0, 184.0}, {210.0, 53.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAD6/////////w==>
+                Cell, 0x141736330, {{10.0, 184.0}, {190.0, 53.0}}, Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jVwAAAAAAAAD6/////////1gAAAAAAAAA>
+                  StaticText, 0x141737270, {{19.0, 188.0}, {67.0, 16.0}}, value: fixtures <AX element pid: 2769, token: 0QoAAAAAAABvY29jdgAAAAAAAAA=>
+                  StaticText, 0x1417373b0, {{16.0, 207.0}, {171.0, 26.0}}, value: /Users/runner/work... <AX element pid: 2769, token: 0QoAAAAAAABvY29jdwAAAAAAAAA=>
+              TableColumn, 0x14172d2d0, {{10.0, 77.0}, {190.0, 576.0}}, identifier: 'ListColumn', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jWAAAAAAAAAA=>
+          StaticText, 0x14172d410, {{40.5, 677.0}, {129.0, 13.0}}, value: Local files. Your ... <AX element pid: 2769, token: 0QoAAAAAAABvY29jVgAAAAAAAAA=>
+        Splitter, 0x14172d6f0, {{210.0, 77.0}, {1.0, 629.0}}, value: 210, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jRwAAAAAAAAA=>
+        Group, 0x14172d830, {{211.0, 25.0}, {813.0, 681.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jSAAAAAAAAAA=>
+          StaticText, 0x14172f2d0, {{235.0, 101.0}, {94.0, 31.0}}, value: fixtures <AX element pid: 2769, token: 0QoAAAAAAABvY29jYgAAAAAAAAA=>
+          StaticText, 0x14172f410, {{234.0, 136.0}, {336.0, 18.0}}, value: /Users/runner/work... <AX element pid: 2769, token: 0QoAAAAAAABvY29jYwAAAAAAAAA=>
+          Group, 0x1417263c0, {{235.0, 171.0}, {244.0, 77.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jZAAAAAAAAAA=>
+            StaticText, 0x141726500, {{245.0, 181.0}, {75.0, 13.0}}, value: Available space <AX element pid: 2769, token: 0QoAAAAAAABvY29jcAAAAAAAAAA=>
+            StaticText, 0x1417276f0, {{245.0, 199.0}, {76.0, 21.0}}, value: 49.05 GB <AX element pid: 2769, token: 0QoAAAAAAABvY29jcQAAAAAAAAA=>
+            StaticText, 0x141727830, {{245.0, 225.0}, {123.0, 13.0}}, value: Observed on this v... <AX element pid: 2769, token: 0QoAAAAAAABvY29jcgAAAAAAAAA=>
+          Group, 0x141727b70, {{495.0, 171.0}, {245.0, 77.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jZQAAAAAAAAA=>
+            StaticText, 0x141727cb0, {{505.3, 181.0}, {70.0, 13.0}}, value: Files collected <AX element pid: 2769, token: 0QoAAAAAAABvY29jbQAAAAAAAAA=>
+            StaticText, 0x1417252e0, {{505.3, 199.0}, {11.0, 21.0}}, value: 2 <AX element pid: 2769, token: 0QoAAAAAAABvY29jbgAAAAAAAAA=>
+            StaticText, 0x141725420, {{505.3, 225.0}, {71.0, 13.0}}, value: Metadata only <AX element pid: 2769, token: 0QoAAAAAAABvY29jbwAAAAAAAAA=>
+          Group, 0x141725560, {{756.0, 171.0}, {244.0, 77.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jZgAAAAAAAAA=>
+            StaticText, 0x1417358a0, {{765.7, 181.0}, {99.0, 13.0}}, value: Selected logical s... <AX element pid: 2769, token: 0QoAAAAAAABvY29jcwAAAAAAAAA=>
+            StaticText, 0x1417359e0, {{765.7, 199.0}, {64.0, 21.0}}, value: Zero KB <AX element pid: 2769, token: 0QoAAAAAAABvY29jdAAAAAAAAAA=>
+            StaticText, 0x141735b20, {{765.7, 225.0}, {158.0, 13.0}}, value: Not a reclaimed-sp... <AX element pid: 2769, token: 0QoAAAAAAABvY29jdQAAAAAAAAA=>
+          TextField, 0x141729cb0, {{234.0, 265.0}, {321.0, 24.0}}, label: 'Search file names and relative paths', placeholderValue: 'Search file names and paths' <AX element pid: 2769, token: 0QoAAAAAAABvY29jeAAAAAAAAAA=>
+          StaticText, 0x141729df0, {{562.0, 269.0}, {26.0, 16.0}}, value: Size <AX element pid: 2769, token: 0QoAAAAAAABvY29jeQAAAAAAAAA=>
+          PopUpButton, 0x141729f30, {{595.0, 266.0}, {153.0, 22.0}}, value: Any size <AX element pid: 2769, token: 0QoAAAAAAABvY29jegAAAAAAAAA=>
+          StaticText, 0x14172a070, {{755.0, 269.0}, {35.0, 16.0}}, value: Order <AX element pid: 2769, token: 0QoAAAAAAABvY29jewAAAAAAAAA=>
+          PopUpButton, 0x14172a1b0, {{797.0, 266.0}, {204.0, 22.0}}, value: On disk, largest f... <AX element pid: 2769, token: 0QoAAAAAAABvY29jfAAAAAAAAAA=>
+          ScrollView, 0x14172db10, {{235.0, 306.0}, {765.0, 303.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jfQAAAAAAAAA=>
+            Outline, 0x14172dc50, {{234.0, 305.0}, {767.0, 305.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAA=>
+              OutlineRow, 0x14172dd90, {{235.0, 339.0}, {765.0, 40.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD//////////w==>
+                Cell, 0x14172ded0, {{251.0, 339.0}, {348.0, 40.0}}, Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD//////////4QAAAAAAAAA>
+                  Group, 0x14172e010, {{251.0, 339.0}, {348.0, 40.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD//////////4QAAAAAAAAAAAAAAAAAAAA=>
+                    StaticText, 0x14172e150, {{251.0, 343.0}, {345.0, 16.0}}, value: roomlet-ui-2c9a1a3... <AX element pid: 2769, token: 0QoAAAAAAABvY29jiQAAAAAAAAA=>
+                    StaticText, 0x14172e290, {{251.0, 362.0}, {295.0, 13.0}}, value: roomlet-ui-2c9a1a3... <AX element pid: 2769, token: 0QoAAAAAAABvY29jigAAAAAAAAA=>
+                Cell, 0x14172e3d0, {{616.0, 339.0}, {108.0, 40.0}}, Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD//////////4UAAAAAAAAA>
+                  Group, 0x14172e510, {{616.0, 339.0}, {108.0, 40.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD//////////4UAAAAAAAAAAAAAAAAAAAA=>
+                    StaticText, 0x14172e650, {{616.0, 351.0}, {29.0, 16.0}}, value: 4 KB <AX element pid: 2769, token: 0QoAAAAAAABvY29jiwAAAAAAAAA=>
+                Cell, 0x14172e790, {{741.0, 339.0}, {108.0, 40.0}}, Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD//////////4YAAAAAAAAA>
+                  Group, 0x14172e8d0, {{741.0, 339.0}, {108.0, 40.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD//////////4YAAAAAAAAAAAAAAAAAAAA=>
+                    StaticText, 0x14172ea10, {{741.0, 351.0}, {29.0, 16.0}}, value: 4 KB <AX element pid: 2769, token: 0QoAAAAAAABvY29jjAAAAAAAAAA=>
+                Cell, 0x14172eb50, {{866.0, 339.0}, {118.0, 40.0}}, Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD//////////4cAAAAAAAAA>
+                  Group, 0x14172ec90, {{866.0, 339.0}, {118.0, 40.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD//////////4cAAAAAAAAAAAAAAAAAAAA=>
+                    StaticText, 0x14172edd0, {{866.0, 351.0}, {114.0, 16.0}}, value: November 12, 2026 <AX element pid: 2769, token: 0QoAAAAAAABvY29jjQAAAAAAAAA=>
+              OutlineRow, 0x14172ef10, {{235.0, 379.0}, {765.0, 40.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD+/////////w==>
+                Cell, 0x14172f050, {{251.0, 379.0}, {348.0, 40.0}}, Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD+/////////4QAAAAAAAAA>
+                  Group, 0x141737690, {{251.0, 379.0}, {348.0, 40.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD+/////////4QAAAAAAAAAAAAAAAAAAAA=>
+                    StaticText, 0x1417377d0, {{251.0, 383.0}, {348.0, 16.0}}, value: roomlet-ui-2c9a1a3... <AX element pid: 2769, token: 0QoAAAAAAABvY29jjgAAAAAAAAA=>
+                    StaticText, 0x141737910, {{251.0, 402.0}, {292.0, 13.0}}, value: roomlet-ui-2c9a1a3... <AX element pid: 2769, token: 0QoAAAAAAABvY29jjwAAAAAAAAA=>
+                Cell, 0x141737a50, {{616.0, 379.0}, {108.0, 40.0}}, Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD+/////////4UAAAAAAAAA>
+                  Group, 0x141737b90, {{616.0, 379.0}, {108.0, 40.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD+/////////4UAAAAAAAAAAAAAAAAAAAA=>
+                    StaticText, 0x141737cd0, {{616.0, 391.0}, {54.0, 16.0}}, value: 64 bytes <AX element pid: 2769, token: 0QoAAAAAAABvY29jkAAAAAAAAAA=>
+                Cell, 0x141737e10, {{741.0, 379.0}, {108.0, 40.0}}, Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD+/////////4YAAAAAAAAA>
+                  Group, 0x141737f50, {{741.0, 379.0}, {108.0, 40.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD+/////////4YAAAAAAAAAAAAAAAAAAAA=>
+                    StaticText, 0x141738090, {{741.0, 391.0}, {29.0, 16.0}}, value: 4 KB <AX element pid: 2769, token: 0QoAAAAAAABvY29jkQAAAAAAAAA=>
+                Cell, 0x1417381d0, {{866.0, 379.0}, {118.0, 40.0}}, Keyboard Focused <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD+/////////4cAAAAAAAAA>
+                  Group, 0x141738310, {{866.0, 379.0}, {118.0, 40.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgwAAAAAAAAD+/////////4cAAAAAAAAAAAAAAAAAAAA=>
+                    StaticText, 0x14172fb10, {{866.0, 391.0}, {114.0, 16.0}}, value: November 12, 2026 <AX element pid: 2769, token: 0QoAAAAAAABvY29jkgAAAAAAAAA=>
+              TableColumn, 0x14172fc50, {{245.0, 334.0}, {363.0, 275.0}}, identifier: 'F42AD1B9-62B8-4E0B-B9F4-81900588E609', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jhAAAAAAAAAA=>
+              TableColumn, 0x14172fd90, {{608.0, 334.0}, {125.0, 275.0}}, identifier: 'B78FCD46-1661-420E-B9CF-3DFA6E31D49C', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jhQAAAAAAAAA=>
+              TableColumn, 0x14172fed0, {{733.0, 334.0}, {125.0, 275.0}}, identifier: '5C0C07D1-2D3E-4446-BBAA-7C2470BCFB4B', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jhgAAAAAAAAA=>
+              TableColumn, 0x141730010, {{858.0, 334.0}, {132.0, 275.0}}, identifier: '7C7B46A8-A743-4BE7-9194-6257F64DA1F2', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jhwAAAAAAAAA=>
+              Group, 0x141730150, {{235.0, 306.0}, {765.0, 28.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jiAAAAAAAAAA=>
+                Button, 0x141730290, {{245.0, 306.0}, {363.0, 28.0}}, title: 'File' <AX element pid: 2769, token: 0QoAAAAAAABvY29jiAAAAAAAAAAAAAAAAAAAAA==>
+                Button, 0x1417303d0, {{608.0, 306.0}, {125.0, 28.0}}, title: 'Logical Size' <AX element pid: 2769, token: 0QoAAAAAAABvY29jiAAAAAAAAAABAAAAAAAAAA==>
+                Button, 0x141730510, {{733.0, 306.0}, {125.0, 28.0}}, title: 'On Disk' <AX element pid: 2769, token: 0QoAAAAAAABvY29jiAAAAAAAAAACAAAAAAAAAA==>
+                Button, 0x141730650, {{858.0, 306.0}, {132.0, 28.0}}, title: 'Modified' <AX element pid: 2769, token: 0QoAAAAAAABvY29jiAAAAAAAAAADAAAAAAAAAA==>
+          StaticText, 0x141730790, {{235.0, 627.0}, {158.0, 13.0}}, value: 2 of 2 collected f... <AX element pid: 2769, token: 0QoAAAAAAABvY29jfgAAAAAAAAA=>
+          DisclosureTriangle, 0x1417258a0, {{213.0, 662.0}, {194.5, 16.0}}, label: 'Scan notes and exclusions', value: 0 <AX element pid: 2769, token: 0QoAAAAAAABvY29jfwAAAAAAAAA=>
+    Toolbar, 0x1417259e0, {{0.0, 25.0}, {1024.0, 52.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jLwAAAAAAAAA=>
+      Button, 0x141725b20, {{87.0, 25.0}, {42.0, 52.0}}, label: 'Hide Sidebar' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNwAAAAAAAAA=>
+        Button, 0x141725c60, {{91.0, 37.0}, {34.0, 28.0}}, label: 'Hide Sidebar' <AX element pid: 2769, token: 0QoAAAAAAABvY29jRAAAAAAAAAA=>
+      Button, 0x141725da0, {{810.0, 25.0}, {42.0, 52.0}}, label: 'Choose Folder' <AX element pid: 2769, token: 0QoAAAAAAABvY29jOAAAAAAAAAA=>
+        Button, 0x141725ee0, {{814.0, 37.0}, {34.0, 28.0}}, label: 'Choose Folder' <AX element pid: 2769, token: 0QoAAAAAAABvY29jSwAAAAAAAAA=>
+      Button, 0x141726020, {{852.0, 25.0}, {35.0, 52.0}}, label: 'Scan' <AX element pid: 2769, token: 0QoAAAAAAABvY29jOQAAAAAAAAA=>
+        Button, 0x1417336a0, {{856.0, 37.0}, {27.0, 28.0}}, label: 'Scan' <AX element pid: 2769, token: 0QoAAAAAAABvY29jSQAAAAAAAAA=>
+      Button, 0x1417337e0, {{887.0, 25.0}, {36.0, 52.0}}, label: 'Stop', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jOgAAAAAAAAA=>
+        Button, 0x141733920, {{891.0, 37.0}, {28.0, 28.0}}, label: 'Stop', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jRQAAAAAAAAA=>
+      Button, 0x141733a60, {{941.0, 25.0}, {39.0, 52.0}}, label: 'Refresh Space' <AX element pid: 2769, token: 0QoAAAAAAABvY29jOwAAAAAAAAA=>
+        Button, 0x141733ba0, {{945.0, 37.0}, {31.0, 28.0}}, label: 'Refresh Space' <AX element pid: 2769, token: 0QoAAAAAAABvY29jTAAAAAAAAAA=>
+      Button, 0x141733ce0, {{980.0, 25.0}, {36.0, 52.0}}, label: 'Review 0', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jPAAAAAAAAAA=>
+        Button, 0x141733e20, {{984.0, 37.0}, {28.0, 28.0}}, label: 'Review 0', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jSgAAAAAAAAA=>
+    Button, 0x141733f60, {{18.0, 43.0}, {16.0, 16.0}}, identifier: '_XCUI:CloseWindow' <AX element pid: 2769, token: 0QoAAAAAAABvY29jMAAAAAAAAAA=>
+    Button, 0x1417340a0, {{58.0, 43.0}, {16.0, 16.0}}, identifier: '_XCUI:FullScreenWindow' <AX element pid: 2769, token: 0QoAAAAAAABvY29jMQAAAAAAAAA=>
+      Group, 0x1417341e0, {{59.0, 43.0}, {14.0, 16.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jQgAAAAAAAAA=>
+        Group, 0x141734320, {{59.0, 43.0}, {14.0, 16.0}}, Disabled <AX element pid: 2882, token: QgsAANEKAABvY29jKgAAAAAAAAA=>
+    Button, 0x141734460, {{38.0, 43.0}, {16.0, 16.0}}, identifier: '_XCUI:MinimizeWindow' <AX element pid: 2769, token: 0QoAAAAAAABvY29jMgAAAAAAAAA=>
+    StaticText, 0x1417345a0, {{219.0, 25.0}, {591.0, 52.0}}, value: Roomlet <AX element pid: 2769, token: 0QoAAAAAAABvY29jKwAAAAAAAAAFAAAAAAAAAA==>
+  MenuBar, 0x1417346e0, {{0.0, 0.0}, {1024.0, 24.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jAgAAAAAAAAA=>
+    MenuBarItem, 0x141734820, {{10.0, 0.0}, {34.0, 24.0}}, title: 'Apple' <AX element pid: 2769, token: 0QoAAAAAAABvY29jAgAAAAAAAAAAAAAAAAAAAA==>
+      Menu, 0x141734960, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAA=>
+        MenuItem, 0x141734aa0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_aboutThisMacRequested:', title: 'About This Mac' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAAAAAAAAAAAA==>
+        MenuItem, 0x141734be0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_systemInformationRequested:', title: 'System Information' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAABAAAAAAAAAA==>
+        MenuItem, 0x141734d20, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAACAAAAAAAAAA==>
+        MenuItem, 0x141734e60, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_systemSettingsRequested:', title: 'System Settings…, 1 update' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAADAAAAAAAAAA==>
+        MenuItem, 0x141734fa0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_appStoreRequested:', title: 'App Store' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAEAAAAAAAAAA==>
+        MenuItem, 0x1417350e0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAFAAAAAAAAAA==>
+        MenuItem, 0x141729080, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentsRequested:', title: 'Recent Items' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAGAAAAAAAAAA==>
+          Menu, 0x1417291c0, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAA=>
+            MenuItem, 0x141729300, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Applications', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAAAAAAAAAAAAA==>
+            MenuItem, 0x141731310, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'Installer' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAABAAAAAAAAAA==>
+            MenuItem, 0x141731450, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'Show “Installer” in Finder' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAACAAAAAAAAAA==>
+            MenuItem, 0x141731590, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'Roomlet' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAADAAAAAAAAAA==>
+            MenuItem, 0x1417316d0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'Show “Roomlet” in Finder' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAAEAAAAAAAAAA==>
+            MenuItem, 0x141731810, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'System Settings' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAAFAAAAAAAAAA==>
+            MenuItem, 0x141731950, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'Show “System Settings” in Finder' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAAGAAAAAAAAAA==>
+            MenuItem, 0x141731a90, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAAHAAAAAAAAAA==>
+            MenuItem, 0x141731bd0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Documents', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAAIAAAAAAAAAA==>
+            MenuItem, 0x141731d10, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'AnkaGuestAddons.pkg' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAAJAAAAAAAAAA==>
+            MenuItem, 0x141731e50, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'Show “AnkaGuestAddons.pkg” in Finder' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAAKAAAAAAAAAA==>
+            MenuItem, 0x141731f90, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAALAAAAAAAAAA==>
+            MenuItem, 0x1417320d0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Servers', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAAMAAAAAAAAAA==>
+            MenuItem, 0x141732210, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAANAAAAAAAAAA==>
+            MenuItem, 0x141732350, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_clearRecentItemsRequested:', title: 'Clear Menu' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUQAAAAAAAAAOAAAAAAAAAA==>
+        MenuItem, 0x141732490, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAHAAAAAAAAAA==>
+        MenuItem, 0x1417325d0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_forceQuitPanelRequested:', title: 'Force Quit…' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAIAAAAAAAAAA==>
+        MenuItem, 0x141732710, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_forceQuitRequested:', title: 'Force Quit Roomlet' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAJAAAAAAAAAA==>
+        MenuItem, 0x141732850, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAKAAAAAAAAAA==>
+        MenuItem, 0x141732990, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_sleepRequested:', title: 'Sleep' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAALAAAAAAAAAA==>
+        MenuItem, 0x141732ad0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_restartRequested:', title: 'Restart…' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAMAAAAAAAAAA==>
+        MenuItem, 0x141732c10, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_restartNowRequested:', title: 'Restart' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAANAAAAAAAAAA==>
+        MenuItem, 0x141732d50, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_shutDownRequested:', title: 'Shut Down…' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAOAAAAAAAAAA==>
+        MenuItem, 0x141732e90, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_shutDownNowRequested:', title: 'Shut Down' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAPAAAAAAAAAA==>
+        MenuItem, 0x141732fd0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAQAAAAAAAAAA==>
+        MenuItem, 0x141733110, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_lockScreenRequested:', title: 'Lock Screen' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAARAAAAAAAAAA==>
+        MenuItem, 0x141730ab0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_logOutRequested:', title: 'Log Out Anka…' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAASAAAAAAAAAA==>
+        MenuItem, 0x141730bf0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_logOutNowRequested:', title: 'Log Out Anka' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAATAAAAAAAAAA==>
+        MenuItem, 0x141730d30, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jQwAAAAAAAAAUAAAAAAAAAA==>
+    MenuBarItem, 0x141730e70, {{44.0, 0.0}, {74.0, 24.0}}, title: 'Roomlet' <AX element pid: 2769, token: 0QoAAAAAAABvY29jAgAAAAAAAAABAAAAAAAAAA==>
+      Menu, 0x141730fb0, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jPQAAAAAAAAA=>
+        MenuItem, 0x14172c230, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'orderFrontStandardAboutPanel:', title: 'About Roomlet' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPQAAAAAAAAAAAAAAAAAAAA==>
+        MenuItem, 0x14172c370, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jPQAAAAAAAAABAAAAAAAAAA==>
+        MenuItem, 0x14172c4b0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Services' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPQAAAAAAAAACAAAAAAAAAA==>
+          Menu, 0x1417288d0, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jUAAAAAAAAAA=>
+            MenuItem, 0x141728a10, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'Activity Monitor' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUAAAAAAAAAAAAAAAAAAAAA==>
+            MenuItem, 0x141728b50, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'Allocations & Leaks' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUAAAAAAAAAABAAAAAAAAAA==>
+            MenuItem, 0x141728c90, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'File Activity' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUAAAAAAAAAACAAAAAAAAAA==>
+            MenuItem, 0x141727170, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'System Trace' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUAAAAAAAAAADAAAAAAAAAA==>
+            MenuItem, 0x1417272b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'Time Profile Active Application' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUAAAAAAAAAAEAAAAAAAAAA==>
+            MenuItem, 0x1417273f0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'Time Profile App Under Mouse' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUAAAAAAAAAAFAAAAAAAAAA==>
+            MenuItem, 0x14172b370, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'Time Profile Entire System' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUAAAAAAAAAAGAAAAAAAAAA==>
+            MenuItem, 0x14172b4b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'Toggle Instruments Recording' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUAAAAAAAAAAHAAAAAAAAAA==>
+            MenuItem, 0x14172b5f0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_configureServicesMenu:', title: 'Services Settings…' <AX element pid: 2769, token: 0QoAAAAAAABvY29jUAAAAAAAAAAIAAAAAAAAAA==>
+        MenuItem, 0x14172b730, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jPQAAAAAAAAADAAAAAAAAAA==>
+        MenuItem, 0x14172b870, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'hide:', title: 'Hide Roomlet' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPQAAAAAAAAAEAAAAAAAAAA==>
+        MenuItem, 0x14172b9b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'hideOtherApplications:', title: 'Hide Others' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPQAAAAAAAAAFAAAAAAAAAA==>
+        MenuItem, 0x14172baf0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'unhideAllApplications:', title: 'Show All', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jPQAAAAAAAAAGAAAAAAAAAA==>
+        MenuItem, 0x14172bc30, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jPQAAAAAAAAAHAAAAAAAAAA==>
+        MenuItem, 0x14172c910, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'terminate:', title: 'Quit Roomlet' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPQAAAAAAAAAIAAAAAAAAAA==>
+    MenuBarItem, 0x14172ca50, {{118.0, 0.0}, {42.0, 24.0}}, title: 'File' <AX element pid: 2769, token: 0QoAAAAAAABvY29jAgAAAAAAAAACAAAAAAAAAA==>
+      Menu, 0x14172cb90, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jNQAAAAAAAAA=>
+        MenuItem, 0x14172ccd0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Choose Folder…' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNQAAAAAAAAAAAAAAAAAAAA==>
+        MenuItem, 0x14172ce10, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNQAAAAAAAAABAAAAAAAAAA==>
+        MenuItem, 0x14172cf50, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'performClose:', title: 'Close' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNQAAAAAAAAACAAAAAAAAAA==>
+        MenuItem, 0x141738760, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'closeAll:', title: 'Close All' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNQAAAAAAAAADAAAAAAAAAA==>
+    MenuBarItem, 0x1417388a0, {{160.0, 0.0}, {44.0, 24.0}}, title: 'Edit' <AX element pid: 2769, token: 0QoAAAAAAABvY29jAgAAAAAAAAADAAAAAAAAAA==>
+      Menu, 0x1417389e0, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAA=>
+        MenuItem, 0x14173db70, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'undo:', title: 'Undo', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAAAAAAAAAAAAA==>
+        MenuItem, 0x14173dcb0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'redo:', title: 'Redo', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAABAAAAAAAAAA==>
+        MenuItem, 0x14173ddf0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAACAAAAAAAAAA==>
+        MenuItem, 0x14173df30, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'cut:', title: 'Cut', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAADAAAAAAAAAA==>
+        MenuItem, 0x14173e070, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'copy:', title: 'Copy', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAAEAAAAAAAAAA==>
+        MenuItem, 0x14173e1b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'paste:', title: 'Paste', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAAFAAAAAAAAAA==>
+        MenuItem, 0x14173e2f0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'delete:', title: 'Delete', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAAGAAAAAAAAAA==>
+        MenuItem, 0x14173e430, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'selectAll:', title: 'Select All', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAAHAAAAAAAAAA==>
+        MenuItem, 0x14173e570, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAAIAAAAAAAAAA==>
+        MenuItem, 0x14173e6b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_NSMenuItemAutoFillIdentifier', title: 'AutoFill' <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAAJAAAAAAAAAA==>
+          Menu, 0x14173e7f0, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jgAAAAAAAAAA=>
+            MenuItem, 0x14173e930, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_handleInsertFromContactsCommand:', title: 'Contact…', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgAAAAAAAAAAAAAAAAAAAAA==>
+            MenuItem, 0x14173ea70, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_handleInsertFromPasswordsCommand:', title: 'Passwords…', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgAAAAAAAAAABAAAAAAAAAA==>
+        MenuItem, 0x14173ebb0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'startDictation:', title: 'Start Dictation…' <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAAKAAAAAAAAAA==>
+        MenuItem, 0x14173ecf0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'orderFrontCharacterPalette:', title: 'Emoji & Symbols' <AX element pid: 2769, token: 0QoAAAAAAABvY29jMwAAAAAAAAALAAAAAAAAAA==>
+    MenuBarItem, 0x14173ee30, {{204.0, 0.0}, {50.0, 24.0}}, title: 'View' <AX element pid: 2769, token: 0QoAAAAAAABvY29jAgAAAAAAAAAEAAAAAAAAAA==>
+      Menu, 0x14173ef70, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jPwAAAAAAAAA=>
+        MenuItem, 0x14173f0b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'toggleTabBar:', title: 'Show Tab Bar' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPwAAAAAAAAAAAAAAAAAAAA==>
+        MenuItem, 0x14173f1f0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'toggleTabOverview:', title: 'Show All Tabs' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPwAAAAAAAAABAAAAAAAAAA==>
+        MenuItem, 0x14173f330, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jPwAAAAAAAAACAAAAAAAAAA==>
+        MenuItem, 0x14173f470, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'toggleFullScreen:', title: 'Enter Full Screen' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPwAAAAAAAAADAAAAAAAAAA==>
+    MenuBarItem, 0x14173f5b0, {{254.0, 0.0}, {88.0, 24.0}}, title: 'Workspace' <AX element pid: 2769, token: 0QoAAAAAAABvY29jAgAAAAAAAAAFAAAAAAAAAA==>
+      Menu, 0x14173f6f0, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jNgAAAAAAAAA=>
+        MenuItem, 0x14173f830, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Scan Selected Folder' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNgAAAAAAAAAAAAAAAAAAAA==>
+        MenuItem, 0x14173f970, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Stop After Current File', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNgAAAAAAAAABAAAAAAAAAA==>
+        MenuItem, 0x14173fab0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Refresh Available Space' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNgAAAAAAAAACAAAAAAAAAA==>
+        MenuItem, 0x14173fbf0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNgAAAAAAAAADAAAAAAAAAA==>
+        MenuItem, 0x14173fd30, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Review Selected Files…', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNgAAAAAAAAAEAAAAAAAAAA==>
+        MenuItem, 0x14173fe70, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Open Trash in Finder' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNgAAAAAAAAAFAAAAAAAAAA==>
+        MenuItem, 0x14173ffb0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Save Cleanup Report…', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNgAAAAAAAAAGAAAAAAAAAA==>
+    MenuBarItem, 0x1417400f0, {{342.0, 0.0}, {69.0, 24.0}}, title: 'Window' <AX element pid: 2769, token: 0QoAAAAAAABvY29jAgAAAAAAAAAGAAAAAAAAAA==>
+      Menu, 0x141740230, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAA=>
+        MenuItem, 0x141740370, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'performMiniaturize:', title: 'Minimize' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAAAAAAAAAAAA==>
+        MenuItem, 0x1417404b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'miniaturizeAll:', title: 'Minimize All' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAABAAAAAAAAAA==>
+        MenuItem, 0x1417405f0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'performZoom:', title: 'Zoom' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAACAAAAAAAAAA==>
+        MenuItem, 0x141740730, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'zoomAll:', title: 'Zoom All' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAADAAAAAAAAAA==>
+        MenuItem, 0x141740870, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomFill:', title: 'Fill' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAEAAAAAAAAAA==>
+        MenuItem, 0x1417409b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomCenter:', title: 'Center' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAFAAAAAAAAAA==>
+        MenuItem, 0x141740af0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAGAAAAAAAAAA==>
+        MenuItem, 0x141740c30, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Move & Resize' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAHAAAAAAAAAA==>
+          Menu, 0x141740d70, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAA=>
+            MenuItem, 0x141740eb0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Halves', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAAAAAAAAAAAA==>
+            MenuItem, 0x141740ff0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomLeft:', title: 'Left' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAABAAAAAAAAAA==>
+            MenuItem, 0x141741130, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomRight:', title: 'Right' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAACAAAAAAAAAA==>
+            MenuItem, 0x141741270, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomTop:', title: 'Top' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAADAAAAAAAAAA==>
+            MenuItem, 0x1417413b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomBottom:', title: 'Bottom' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAEAAAAAAAAAA==>
+            MenuItem, 0x1417414f0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAFAAAAAAAAAA==>
+            MenuItem, 0x141741630, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Quarters', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAGAAAAAAAAAA==>
+            MenuItem, 0x141741770, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomTopLeft:', title: 'Top Left' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAHAAAAAAAAAA==>
+            MenuItem, 0x1417418b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomTopRight:', title: 'Top Right' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAIAAAAAAAAAA==>
+            MenuItem, 0x1417419f0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomBottomLeft:', title: 'Bottom Left' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAJAAAAAAAAAA==>
+            MenuItem, 0x141741b30, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomBottomRight:', title: 'Bottom Right' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAKAAAAAAAAAA==>
+            MenuItem, 0x141741c70, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAALAAAAAAAAAA==>
+            MenuItem, 0x141741db0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Arrange', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAMAAAAAAAAAA==>
+            MenuItem, 0x141741ef0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomLeftAndRight:', title: 'Left & Right' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAANAAAAAAAAAA==>
+            MenuItem, 0x141742030, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomLeftThreeUp:', title: 'Left & Quarters' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAOAAAAAAAAAA==>
+            MenuItem, 0x141742170, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomRightAndLeft:', title: 'Right & Left' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAPAAAAAAAAAA==>
+            MenuItem, 0x1417422b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomRightThreeUp:', title: 'Right & Quarters' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAQAAAAAAAAAA==>
+            MenuItem, 0x1417423f0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomTopAndBottom:', title: 'Top & Bottom' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAARAAAAAAAAAA==>
+            MenuItem, 0x141742530, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomTopThreeUp:', title: 'Top & Quarters' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAASAAAAAAAAAA==>
+            MenuItem, 0x141742670, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomBottomAndTop:', title: 'Bottom & Top' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAATAAAAAAAAAA==>
+            MenuItem, 0x1417427b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomBottomThreeUp:', title: 'Bottom & Quarters' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAUAAAAAAAAAA==>
+            MenuItem, 0x1417428f0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomQuarters:', title: 'Quarters' <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAVAAAAAAAAAA==>
+            MenuItem, 0x141742a30, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAWAAAAAAAAAA==>
+            MenuItem, 0x141742b70, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomUntile:', title: 'Return to Previous Size', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jgQAAAAAAAAAXAAAAAAAAAA==>
+        MenuItem, 0x141742cb0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Full Screen Tile' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAIAAAAAAAAAA==>
+          Menu, 0x151626620, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29joAAAAAAAAAA=>
+            MenuItem, 0x151618880, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_tileLeft:', title: 'Left of Screen' <AX element pid: 2769, token: 0QoAAAAAAABvY29joAAAAAAAAAAAAAAAAAAAAA==>
+            MenuItem, 0x151618c50, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_tileRight:', title: 'Right of Screen' <AX element pid: 2769, token: 0QoAAAAAAABvY29joAAAAAAAAAABAAAAAAAAAA==>
+        MenuItem, 0x15162ba10, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAJAAAAAAAAAA==>
+        MenuItem, 0x15161cfa0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_removeWindowFromStageManagerSet:', title: 'Remove Window from Set', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAKAAAAAAAAAA==>
+        MenuItem, 0x15161cb80, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAALAAAAAAAAAA==>
+        MenuItem, 0x151615cf0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'arrangeInFront:', title: 'Bring All to Front' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAMAAAAAAAAAA==>
+        MenuItem, 0x151615e30, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'alternateArrangeInFront:', title: 'Arrange in Front' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAANAAAAAAAAAA==>
+        MenuItem, 0x1516243e0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAOAAAAAAAAAA==>
+        MenuItem, 0x151624520, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'selectPreviousTab:', title: 'Show Previous Tab', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAPAAAAAAAAAA==>
+        MenuItem, 0x1516182c0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'selectNextTab:', title: 'Show Next Tab', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAQAAAAAAAAAA==>
+        MenuItem, 0x151618400, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'moveTabToNewWindow:', title: 'Move Tab to New Window', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAARAAAAAAAAAA==>
+        MenuItem, 0x141742df0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'mergeAllWindows:', title: 'Merge All Windows', Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAASAAAAAAAAAA==>
+        MenuItem, 0x141742f30, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAATAAAAAAAAAA==>
+        MenuItem, 0x141743070, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAUAAAAAAAAAA==>
+        MenuItem, 0x1417431b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'makeKeyAndOrderFront:', title: 'Roomlet' <AX element pid: 2769, token: 0QoAAAAAAABvY29jNAAAAAAAAAAVAAAAAAAAAA==>
+    MenuBarItem, 0x1417432f0, {{411.0, 0.0}, {48.0, 24.0}}, title: 'Help' <AX element pid: 2769, token: 0QoAAAAAAABvY29jAgAAAAAAAAAHAAAAAAAAAA==>
+      Menu, 0x141743430, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jQQAAAAAAAAA=>
+        MenuItem, 0x141743570, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'showHelp:', title: 'Roomlet Help' <AX element pid: 2769, token: 0QoAAAAAAABvY29jQQAAAAAAAAAAAAAAAAAAAA==>
+  TouchBar, 0x1417436b0, {{80.0, 0.0}, {685.0, 30.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jLAAAAAAAAAA=>
+  MenuBar, 0x1417437f0, {{768.0, 0.0}, {38.0, 24.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jLQAAAAAAAAA=>
+    StatusItem, 0x141743930, {{768.0, 0.0}, {38.0, 24.0}}, title: 'internaldrive' <AX element pid: 2769, token: 0QoAAAAAAABvY29jLQAAAAAAAAAAAAAAAAAAAA==>
+      Menu, 0x141743a70, {{0.0, 768.0}, {0.0, 0.0}} <AX element pid: 2769, token: 0QoAAAAAAABvY29jPgAAAAAAAAA=>
+        MenuItem, 0x141743bb0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Open Roomlet' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPgAAAAAAAAAAAAAAAAAAAA==>
+        MenuItem, 0x141743cf0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jPgAAAAAAAAABAAAAAAAAAA==>
+        MenuItem, 0x141743e30, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Choose Folder…' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPgAAAAAAAAACAAAAAAAAAA==>
+        MenuItem, 0x141743f70, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Scan Selected Folder' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPgAAAAAAAAADAAAAAAAAAA==>
+        MenuItem, 0x1417440b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Refresh Available Space' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPgAAAAAAAAAEAAAAAAAAAA==>
+        MenuItem, 0x1417441f0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled <AX element pid: 2769, token: 0QoAAAAAAABvY29jPgAAAAAAAAAFAAAAAAAAAA==>
+        MenuItem, 0x141744330, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Quit Roomlet' <AX element pid: 2769, token: 0QoAAAAAAABvY29jPgAAAAAAAAAGAAAAAAAAAA==>

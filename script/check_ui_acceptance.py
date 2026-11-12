@@ -22,7 +22,7 @@ SOURCE = os.environ["ROOMLET_SOURCE_COMMIT"]
 assert re.fullmatch(r"[0-9a-f]{40}", SOURCE)
 assert platform.system() == "Darwin" and platform.machine() == "arm64"
 assert os.environ["GITHUB_REPOSITORY"] == "alvarovillalbaa/roomlet"
-assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci7"
+assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci8"
 assert os.environ["ROOMLET_PUBLIC_REPOSITORY"] == "true"
 repo = Path.cwd().resolve()
 parent = Path(os.environ["RUNNER_TEMP"]).resolve()
@@ -261,7 +261,13 @@ finally:
                     assert path.is_file() and not path.is_symlink()
                     data = path.read_bytes()
                     assert len(data) <= 4 * 1024 * 1024
-                    attachments.append({"file": "attachments/" + filename, "name": item["suggestedHumanReadableName"],
+                    name = item["suggestedHumanReadableName"]
+                    match = re.fullmatch(r"(01-empty|02-review|03-cleanup|04-keyboard-rescan|diagnostic-final|owned-trash|ui-observations)_[0-9]+_([A-F0-9-]{36})\.(png|json|accessibility)", name)
+                    canonical = None
+                    if match:
+                        assert str(uuid.UUID(match[2])).upper() == match[2]
+                        canonical = match[1] + "." + match[3]
+                    attachments.append({"file": "attachments/" + filename, "name": name, "canonicalName": canonical,
                                         "bytes": len(data), "sha256": sha(data)})
             report["attachments"] = attachments
         except BaseException as error:
@@ -337,9 +343,19 @@ finally:
         report["screenshots"] = captures
         if report.get("nativeTestCommandPassed"):
             for phase in ("01-empty", "02-review", "03-cleanup", "04-keyboard-rescan"):
-                assert len([row for row in captures if row["name"] == phase + ".png"]) == 1, "missing or ambiguous native phase: " + phase
+                assert len([row for row in captures if row["canonicalName"] == phase + ".png"]) == 1, "missing or ambiguous native phase: " + phase
+                assert len([row for row in report["attachments"] if row["canonicalName"] == phase + ".accessibility"]) == 1
+            native_json = {}
             for name in ("owned-trash.json", "ui-observations.json"):
-                assert len([row for row in report["attachments"] if row["name"] == name]) == 1
+                matches = [row for row in report["attachments"] if row["canonicalName"] == name]
+                assert len(matches) == 1
+                native_json[name] = json.loads((evidence / matches[0]["file"]).read_text())
+            actual_report = json.loads((evidence / "cleanup-report.json").read_text())
+            observation = native_json["ui-observations.json"]
+            assert observation["caseId"] == "RUI01" and observation["status"] == "passed" and observation["nativeReport"] == actual_report
+            binding = native_json["owned-trash.json"]
+            assert binding["nonce"] == nonce and binding["source"] == str(moved) and binding["destination"] == actual_report["items"][0]["destinationPath"]
+            report["nativeJSONAttachmentsMatchSavedReport"] = True
         packet_files = [path for path in evidence.rglob("*") if path.is_file()]
         packet_bytes = sum(path.stat().st_size for path in packet_files)
         report["evidenceBudget"] = {"files": len(packet_files), "bytesBeforeFinalReceipt": packet_bytes, "maximumBytes": 64 * 1024 * 1024}

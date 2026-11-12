@@ -106,3 +106,12 @@ name RoomletApp avoids its duplicate Swift package target name. Require one
 unchanged generated xctestrun with the exact Roomlet.app path and bundle ID,
 retain its original, and execute it directly. App bytes, case/actions, two-key
 entitlement guards and all fixture/Trash/cleanup/budget limits remain unchanged.
+
+[Activation7](../results/2026/11-12/native-ui-attempt-7.md) reached the actual
+folder panel and scan; its retained hierarchy identifies Outline/OutlineRow,
+not the queried Table/TableRow. The changed case uses that observed row kind
+with the same exact fixture names and adds a final diagnostic snapshot. Require
+the original four phase PNGs/hierarchies plus both native JSON attachments;
+map the observed counter/UUID export suffix strictly, retaining original names.
+Independently cross-check both JSON attachments against the actual saved report.
+No product change, privilege expansion, additional file or weakened assertion.
