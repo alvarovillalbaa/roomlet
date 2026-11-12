@@ -22,7 +22,7 @@ SOURCE = os.environ["ROOMLET_SOURCE_COMMIT"]
 assert re.fullmatch(r"[0-9a-f]{40}", SOURCE)
 assert platform.system() == "Darwin" and platform.machine() == "arm64"
 assert os.environ["GITHUB_REPOSITORY"] == "alvarovillalbaa/roomlet"
-assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci5"
+assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci7"
 assert os.environ["ROOMLET_PUBLIC_REPOSITORY"] == "true"
 repo = Path.cwd().resolve()
 parent = Path(os.environ["RUNNER_TEMP"]).resolve()
@@ -179,6 +179,26 @@ try:
     common = ["/usr/bin/xcodebuild", "-project", "Tests/RoomletAcceptance.xcodeproj", "-scheme", "RoomletAcceptance",
               "-configuration", "Debug", "-destination", "platform=macOS,arch=arm64", "-derivedDataPath", str(root / "derived")]
     run("build-for-testing", common + ["build-for-testing"], seconds=300, cwd=export)
+    run_files = list((root / "derived/Build/Products").glob("*.xctestrun"))
+    assert len(run_files) == 1
+    run_file = run_files[0]
+    run_data = run_file.read_bytes()
+    assert not run_file.is_symlink() and len(run_data) <= 1048576
+    (evidence / "build-for-testing.xctestrun.plist").write_bytes(run_data)
+    pending = [plistlib.loads(run_data)]
+    target_paths = []
+    while pending:
+        value = pending.pop()
+        if isinstance(value, dict):
+            if "UITargetAppPath" in value: target_paths.append(value["UITargetAppPath"])
+            pending.extend(value.values())
+        elif isinstance(value, list): pending.extend(value)
+    assert len(target_paths) == 1
+    target_path = target_paths[0].replace("__TESTROOT__", str(run_file.parent))
+    assert Path(target_path).is_absolute() and Path(target_path).resolve() == app.resolve()
+    assert plistlib.loads((app / "Contents/Info.plist").read_bytes())["CFBundleIdentifier"] == "com.alvarovillalbaa.Roomlet"
+    report["nativeTargetBinding"] = {"runFile": run_file.name, "sha256": sha(run_data), "appPath": target_path,
+                                     "bundleIdentifier": "com.alvarovillalbaa.Roomlet"}
     # Xcode adds testing exceptions even when base entitlement injection is off.
     # Exercise the actual app rights, using the same local signing input as packaging.
     run("production-signature", ["/usr/bin/codesign", "--force", "--sign", "-", "--entitlements", str(export / "Resources/Roomlet.entitlements"), str(app)])
@@ -186,7 +206,8 @@ try:
     assert plistlib.loads(entitlements) == {"com.apple.security.app-sandbox": True, "com.apple.security.files.user-selected.read-write": True}
     run("signature", ["/usr/bin/codesign", "--verify", "--strict", str(app)])
     report["appEntitlementsMatchProduction"] = True
-    run("native-ui", common + ["test-without-building", "-resultBundlePath", str(result_path),
+    run("native-ui", ["/usr/bin/xcodebuild", "test-without-building", "-xctestrun", str(run_file),
+        "-destination", "platform=macOS,arch=arm64", "-resultBundlePath", str(result_path),
         "-only-testing:RoomletAcceptance/RoomletAcceptance/testRUI01FolderScanReviewTrashReport",
         "-parallel-testing-enabled", "NO", "-test-timeouts-enabled", "YES",
         "-default-test-execution-time-allowance", "240", "-maximum-test-execution-time-allowance", "300"], seconds=480, cwd=export)

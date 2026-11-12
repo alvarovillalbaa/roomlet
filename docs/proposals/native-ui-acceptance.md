@@ -96,3 +96,13 @@ relaxation, additional fixture, old core case or preview build is introduced.
 
 Recorder API: [XCTAttachment screenshot initializer](https://developer.apple.com/documentation/xctest/xctattachment/init(screenshot:))
 and [typed data initializer](https://developer.apple.com/documentation/xctest/xctattachment/init(data:uniformtypeidentifier:)).
+
+[Activation5](../results/2026/11-12/native-ui-attempt-5.md) failed before any work
+because workflow template substitution changed the source environment key;
+activation6 corrected only that binding, preserving its negative original.
+[Activation6](../results/2026/11-12/native-ui-attempt-6.md) then compiled but
+resolved an app path without `.app` before RUI01. The changed Xcode-only target
+name RoomletApp avoids its duplicate Swift package target name. Require one
+unchanged generated xctestrun with the exact Roomlet.app path and bundle ID,
+retain its original, and execute it directly. App bytes, case/actions, two-key
+entitlement guards and all fixture/Trash/cleanup/budget limits remain unchanged.
