@@ -1,0 +1,282 @@
+Attributes: Application, 0x153714850, pid: 2256, title: 'Roomlet', Disabled
+Element subtree:
+ →Application, 0x153714850, pid: 2256, title: 'Roomlet', Disabled
+    Window (Main), 0x153725f50, {{0.0, 25.0}, {1024.0, 681.0}}, identifier: 'main-AppWindow-1', title: 'Roomlet', Disabled
+      Group, 0x153728a70, {{0.0, 25.0}, {1024.0, 681.0}}, Disabled
+        SplitGroup, 0x153728650, {{0.0, 25.0}, {1024.0, 681.0}}, identifier: 'main-AppWindow-1, SidebarNavigationSplitView', Disabled
+          Group, 0x153728230, {{0.0, 25.0}, {210.0, 681.0}}, Disabled
+            ScrollView, 0x153727e10, {{0.0, 77.0}, {210.0, 576.0}}, Disabled
+              Outline, 0x1537279f0, {{-1.0, 76.0}, {212.0, 578.0}}, label: 'Sidebar'
+                OutlineRow, 0x153726d90, {{0.0, 77.0}, {210.0, 19.0}}, Disabled
+                  Cell, 0x153726970, {{10.0, 77.0}, {190.0, 19.0}}, Keyboard Focused
+                    Group, 0x153725b30, {{14.0, 77.0}, {194.0, 19.0}}, Disabled
+                      StaticText, 0x153725710, {{14.0, 79.5}, {61.0, 14.0}}, label: 'Workspace'
+                OutlineRow, 0x153715d10, {{0.0, 96.0}, {210.0, 28.0}}, Selected, Disabled
+                  Cell, 0x1537290d0, {{10.0, 96.0}, {190.0, 28.0}}, Keyboard Focused, Selected
+                    StaticText, 0x1537271b0, {{20.0, 102.0}, {48.0, 16.1}}, value: Files
+                OutlineRow, 0x1537275d0, {{0.0, 124.0}, {210.0, 28.0}}, Disabled
+                  Cell, 0x1537252f0, {{10.0, 124.0}, {190.0, 28.0}}, Keyboard Focused
+                    StaticText, 0x153724ed0, {{18.0, 130.0}, {102.0, 16.0}}, value: Last Cleanup
+                OutlineRow, 0x153724ab0, {{0.0, 165.0}, {210.0, 19.0}}, Disabled
+                  Cell, 0x153724690, {{10.0, 165.0}, {190.0, 19.0}}, Keyboard Focused
+                    Group, 0x153724270, {{14.0, 165.0}, {194.0, 19.0}}, Disabled
+                      StaticText, 0x153715490, {{14.0, 167.5}, {86.0, 14.0}}, label: 'Selected Folder'
+                OutlineRow, 0x1537133b0, {{0.0, 184.0}, {210.0, 53.0}}, Disabled
+                  Cell, 0x1537165f0, {{10.0, 184.0}, {190.0, 53.0}}, Keyboard Focused
+                    StaticText, 0x153714430, {{19.0, 188.0}, {67.0, 16.0}}, value: fixtures
+                    StaticText, 0x153728e90, {{16.0, 207.0}, {171.0, 26.0}}, value: /Users/runner/work...
+                TableColumn, 0x153715ad0, {{10.0, 77.0}, {190.0, 576.0}}, identifier: 'ListColumn', Disabled
+            StaticText, 0x153726350, {{40.5, 677.0}, {129.0, 13.0}}, value: Local files. Your ...
+          Splitter, 0x153726490, {{210.0, 77.0}, {1.0, 629.0}}, value: 210, Disabled
+          Group, 0x1537265d0, {{211.0, 25.0}, {813.0, 681.0}}, Disabled
+            StaticText, 0x1537226f0, {{235.0, 101.0}, {94.0, 31.0}}, value: fixtures
+            StaticText, 0x153722830, {{234.0, 136.0}, {343.0, 18.0}}, value: /Users/runner/work...
+            Group, 0x153722970, {{235.0, 171.0}, {244.0, 77.0}}
+              StaticText, 0x153712d90, {{245.0, 181.0}, {75.0, 13.0}}, value: Available space
+              StaticText, 0x153712ed0, {{245.0, 199.0}, {76.0, 21.0}}, value: 49.06 GB
+              StaticText, 0x153713010, {{245.0, 225.0}, {123.0, 13.0}}, value: Observed on this v...
+            Group, 0x153729790, {{495.0, 171.0}, {245.0, 77.0}}
+              StaticText, 0x1537298d0, {{505.3, 181.0}, {70.0, 13.0}}, value: Files collected
+              StaticText, 0x153729a10, {{505.3, 199.0}, {11.0, 21.0}}, value: 2
+              StaticText, 0x153729b50, {{505.3, 225.0}, {71.0, 13.0}}, value: Metadata only
+            Group, 0x153729c90, {{756.0, 171.0}, {244.0, 77.0}}
+              StaticText, 0x153729dd0, {{765.7, 181.0}, {99.0, 13.0}}, value: Selected logical s...
+              StaticText, 0x153729f10, {{765.7, 199.0}, {38.0, 21.0}}, value: 4 KB
+              StaticText, 0x15372a050, {{765.7, 225.0}, {158.0, 13.0}}, value: Not a reclaimed-sp...
+            TextField, 0x15372a190, {{234.0, 265.0}, {321.0, 24.0}}, label: 'Search file names and relative paths', placeholderValue: 'Search file names and paths'
+            StaticText, 0x15372a2d0, {{562.0, 269.0}, {26.0, 16.0}}, value: Size
+            PopUpButton, 0x15372a410, {{595.0, 266.0}, {153.0, 22.0}}, value: Any size
+            StaticText, 0x15372a550, {{755.0, 269.0}, {35.0, 16.0}}, value: Order
+            PopUpButton, 0x15372a690, {{797.0, 266.0}, {204.0, 22.0}}, value: On disk, largest f...
+            ScrollView, 0x15372a7d0, {{235.0, 306.0}, {765.0, 303.0}}, Disabled
+              Outline, 0x15372a910, {{234.0, 305.0}, {767.0, 305.0}}, Keyboard Focused
+                OutlineRow, 0x15372aa50, {{235.0, 339.0}, {765.0, 40.0}}, Selected, Disabled
+                  Cell, 0x15372ab90, {{251.0, 339.0}, {348.0, 40.0}}, Keyboard Focused, Selected
+                    Group, 0x15372acd0, {{251.0, 339.0}, {348.0, 40.0}}, Disabled
+                      StaticText, 0x1537236a0, {{251.0, 343.0}, {348.0, 16.0}}, value: roomlet-ui-3f4126b...
+                      StaticText, 0x1537237e0, {{251.0, 362.0}, {286.0, 13.0}}, value: roomlet-ui-3f4126b...
+                  Cell, 0x153723920, {{616.0, 339.0}, {108.0, 40.0}}, Keyboard Focused, Selected
+                    Group, 0x153723a60, {{616.0, 339.0}, {108.0, 40.0}}, Disabled
+                      StaticText, 0x153723ba0, {{616.0, 351.0}, {29.0, 16.0}}, value: 4 KB
+                  Cell, 0x153723ce0, {{741.0, 339.0}, {108.0, 40.0}}, Keyboard Focused, Selected
+                    Group, 0x153717da0, {{741.0, 339.0}, {108.0, 40.0}}, Disabled
+                      StaticText, 0x153717ee0, {{741.0, 351.0}, {29.0, 16.0}}, value: 4 KB
+                  Cell, 0x153718020, {{866.0, 339.0}, {118.0, 40.0}}, Keyboard Focused, Selected
+                    Group, 0x153718160, {{866.0, 339.0}, {118.0, 40.0}}, Disabled
+                      StaticText, 0x1537182a0, {{866.0, 351.0}, {114.0, 16.0}}, value: November 12, 2026
+                OutlineRow, 0x1537183e0, {{235.0, 379.0}, {765.0, 40.0}}, Disabled
+                  Cell, 0x153718520, {{251.0, 379.0}, {348.0, 40.0}}, Keyboard Focused
+                    Group, 0x153718660, {{251.0, 379.0}, {348.0, 40.0}}, Disabled
+                      StaticText, 0x1537187a0, {{251.0, 383.0}, {348.0, 16.0}}, value: roomlet-ui-3f4126b...
+                      StaticText, 0x1537188e0, {{251.0, 402.0}, {283.0, 13.0}}, value: roomlet-ui-3f4126b...
+                  Cell, 0x153718a20, {{616.0, 379.0}, {108.0, 40.0}}, Keyboard Focused
+                    Group, 0x153718b60, {{616.0, 379.0}, {108.0, 40.0}}, Disabled
+                      StaticText, 0x153718ca0, {{616.0, 391.0}, {54.0, 16.0}}, value: 64 bytes
+                  Cell, 0x153718de0, {{741.0, 379.0}, {108.0, 40.0}}, Keyboard Focused
+                    Group, 0x153718f20, {{741.0, 379.0}, {108.0, 40.0}}, Disabled
+                      StaticText, 0x153719060, {{741.0, 391.0}, {29.0, 16.0}}, value: 4 KB
+                  Cell, 0x1537191a0, {{866.0, 379.0}, {118.0, 40.0}}, Keyboard Focused
+                    Group, 0x1537192e0, {{866.0, 379.0}, {118.0, 40.0}}, Disabled
+                      StaticText, 0x153719420, {{866.0, 391.0}, {114.0, 16.0}}, value: November 12, 2026
+                TableColumn, 0x153716050, {{245.0, 334.0}, {363.0, 275.0}}, identifier: '13C6ACAA-2B64-4F92-A173-19A70DDDBE7F', Disabled
+                TableColumn, 0x153716190, {{608.0, 334.0}, {125.0, 275.0}}, identifier: '427F3D81-8E90-4656-B6F0-34A4EA082D65', Disabled
+                TableColumn, 0x1537162d0, {{733.0, 334.0}, {125.0, 275.0}}, identifier: 'B4BE3136-A913-4E4B-ABEF-CB9D885E9E2B', Disabled
+                TableColumn, 0x1537170c0, {{858.0, 334.0}, {132.0, 275.0}}, identifier: 'DC34AA00-0D84-4EDC-983D-DD34B99E56E5', Disabled
+                Group, 0x153717200, {{235.0, 306.0}, {765.0, 28.0}}, Disabled
+                  Button, 0x1536108a0, {{245.0, 306.0}, {363.0, 28.0}}, title: 'File'
+                  Button, 0x153615c50, {{608.0, 306.0}, {125.0, 28.0}}, title: 'Logical Size'
+                  Button, 0x153627de0, {{733.0, 306.0}, {125.0, 28.0}}, title: 'On Disk'
+                  Button, 0x1536269b0, {{858.0, 306.0}, {132.0, 28.0}}, title: 'Modified'
+            StaticText, 0x153623c20, {{235.0, 627.0}, {157.0, 13.0}}, value: 2 of 2 collected f...
+            DisclosureTriangle, 0x15361c510, {{213.0, 662.0}, {194.5, 16.0}}, label: 'Scan notes and exclusions', value: 0
+      Toolbar, 0x15361c650, {{0.0, 25.0}, {1024.0, 52.0}}, Disabled
+        Button, 0x15362d740, {{87.0, 25.0}, {42.0, 52.0}}, label: 'Hide Sidebar'
+          Button, 0x15362d880, {{91.0, 37.0}, {34.0, 28.0}}, label: 'Hide Sidebar'
+        Button, 0x1536279c0, {{810.0, 25.0}, {42.0, 52.0}}, label: 'Choose Folder'
+          Button, 0x153627b00, {{814.0, 37.0}, {34.0, 28.0}}, label: 'Choose Folder'
+        Button, 0x15362d320, {{852.0, 25.0}, {35.0, 52.0}}, label: 'Scan'
+          Button, 0x15362d460, {{856.0, 37.0}, {27.0, 28.0}}, label: 'Scan'
+        Button, 0x15362e1a0, {{887.0, 25.0}, {36.0, 52.0}}, label: 'Stop', Disabled
+          Button, 0x15362e2e0, {{891.0, 37.0}, {28.0, 28.0}}, label: 'Stop', Disabled
+        Button, 0x15362db60, {{941.0, 25.0}, {39.0, 52.0}}, label: 'Refresh Space'
+          Button, 0x15362dca0, {{945.0, 37.0}, {31.0, 28.0}}, label: 'Refresh Space'
+        Button, 0x15361f7d0, {{980.0, 25.0}, {36.0, 52.0}}, label: 'Review 1'
+          Button, 0x15361f910, {{984.0, 37.0}, {28.0, 28.0}}, label: 'Review 1'
+      Button, 0x15361d590, {{18.0, 43.0}, {16.0, 16.0}}, identifier: '_XCUI:CloseWindow'
+      Button, 0x15361d6d0, {{58.0, 43.0}, {16.0, 16.0}}, identifier: '_XCUI:FullScreenWindow'
+        Group, 0x15361d810, {{59.0, 43.0}, {14.0, 16.0}}, Disabled
+          Group, 0x15361d950, {{59.0, 43.0}, {14.0, 16.0}}, Disabled
+      Button, 0x153625e50, {{38.0, 43.0}, {16.0, 16.0}}, identifier: '_XCUI:MinimizeWindow'
+      StaticText, 0x153625f90, {{219.0, 25.0}, {591.0, 52.0}}, value: Roomlet
+    MenuBar, 0x1536260d0, {{0.0, 0.0}, {1024.0, 24.0}}
+      MenuBarItem, 0x153626210, {{10.0, 0.0}, {34.0, 24.0}}, title: 'Apple'
+        Menu, 0x153626350, {{0.0, 768.0}, {0.0, 0.0}}
+          MenuItem, 0x153626490, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_aboutThisMacRequested:', title: 'About This Mac'
+          MenuItem, 0x1536265d0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_systemInformationRequested:', title: 'System Information'
+          MenuItem, 0x1536251b0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x1536252f0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_systemSettingsRequested:', title: 'System Settings…, 1 update'
+          MenuItem, 0x153625430, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_appStoreRequested:', title: 'App Store'
+          MenuItem, 0x153625570, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x1536256b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentsRequested:', title: 'Recent Items'
+            Menu, 0x1536257f0, {{0.0, 768.0}, {0.0, 0.0}}
+              MenuItem, 0x153625930, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Applications', Disabled
+              MenuItem, 0x153625a70, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'Installer'
+              MenuItem, 0x153620680, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'Show “Installer” in Finder'
+              MenuItem, 0x1536207c0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'Roomlet'
+              MenuItem, 0x153620900, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'Show “Roomlet” in Finder'
+              MenuItem, 0x153620a40, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'System Settings'
+              MenuItem, 0x153620b80, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'Show “System Settings” in Finder'
+              MenuItem, 0x153620cc0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+              MenuItem, 0x1548141c0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Documents', Disabled
+              MenuItem, 0x1548211e0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'AnkaGuestAddons.pkg'
+              MenuItem, 0x15482a020, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_recentItemRequested:', title: 'Show “AnkaGuestAddons.pkg” in Finder'
+              MenuItem, 0x154828540, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+              MenuItem, 0x154818ec0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Servers', Disabled
+              MenuItem, 0x154828b80, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+              MenuItem, 0x1548297e0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_clearRecentItemsRequested:', title: 'Clear Menu'
+          MenuItem, 0x154817c00, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x154815d20, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_forceQuitPanelRequested:', title: 'Force Quit…'
+          MenuItem, 0x15480c320, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_forceQuitRequested:', title: 'Force Quit Roomlet'
+          MenuItem, 0x15482cff0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x15482d130, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_sleepRequested:', title: 'Sleep'
+          MenuItem, 0x15482b0a0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_restartRequested:', title: 'Restart…'
+          MenuItem, 0x15482b1e0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_restartNowRequested:', title: 'Restart'
+          MenuItem, 0x15482b320, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_shutDownRequested:', title: 'Shut Down…'
+          MenuItem, 0x15482b460, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_shutDownNowRequested:', title: 'Shut Down'
+          MenuItem, 0x15482b5a0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x15482b6e0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_lockScreenRequested:', title: 'Lock Screen'
+          MenuItem, 0x15482b820, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_logOutRequested:', title: 'Log Out Anka…'
+          MenuItem, 0x15482b960, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_logOutNowRequested:', title: 'Log Out Anka'
+          MenuItem, 0x15482baa0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+      MenuBarItem, 0x15483a780, {{44.0, 0.0}, {74.0, 24.0}}, title: 'Roomlet'
+        Menu, 0x15483a8c0, {{0.0, 768.0}, {0.0, 0.0}}
+          MenuItem, 0x15483aa00, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'orderFrontStandardAboutPanel:', title: 'About Roomlet'
+          MenuItem, 0x15483ab40, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x15483ac80, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Services'
+            Menu, 0x15483adc0, {{0.0, 768.0}, {0.0, 0.0}}
+              MenuItem, 0x15483af00, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'Activity Monitor'
+              MenuItem, 0x15483b040, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'Allocations & Leaks'
+              MenuItem, 0x15482be40, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'File Activity'
+              MenuItem, 0x15482bf80, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'System Trace'
+              MenuItem, 0x15482c0c0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'Time Profile Active Application'
+              MenuItem, 0x15482c200, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'Time Profile App Under Mouse'
+              MenuItem, 0x15482c340, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'Time Profile Entire System'
+              MenuItem, 0x15482c480, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_processRequest:', title: 'Toggle Instruments Recording'
+              MenuItem, 0x15482c5c0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_configureServicesMenu:', title: 'Services Settings…'
+          MenuItem, 0x15482c700, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x15482c840, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'hide:', title: 'Hide Roomlet'
+          MenuItem, 0x15482c980, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'hideOtherApplications:', title: 'Hide Others'
+          MenuItem, 0x15482cac0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'unhideAllApplications:', title: 'Show All', Disabled
+          MenuItem, 0x15482cc00, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x154837ea0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'terminate:', title: 'Quit Roomlet'
+      MenuBarItem, 0x154837fe0, {{118.0, 0.0}, {42.0, 24.0}}, title: 'File'
+        Menu, 0x154838120, {{0.0, 768.0}, {0.0, 0.0}}
+          MenuItem, 0x154838260, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Choose Folder…'
+          MenuItem, 0x1548383a0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x1548384e0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'performClose:', title: 'Close'
+          MenuItem, 0x154838620, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'closeAll:', title: 'Close All'
+      MenuBarItem, 0x154838760, {{160.0, 0.0}, {44.0, 24.0}}, title: 'Edit'
+        Menu, 0x1548388a0, {{0.0, 768.0}, {0.0, 0.0}}
+          MenuItem, 0x1548389e0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'undo:', title: 'Undo', Disabled
+          MenuItem, 0x154838b20, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'redo:', title: 'Redo', Disabled
+          MenuItem, 0x154838c60, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x154838da0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'cut:', title: 'Cut', Disabled
+          MenuItem, 0x154838ee0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'copy:', title: 'Copy', Disabled
+          MenuItem, 0x154839020, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'paste:', title: 'Paste', Disabled
+          MenuItem, 0x154839160, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'delete:', title: 'Delete', Disabled
+          MenuItem, 0x1548392a0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'selectAll:', title: 'Select All', Disabled
+          MenuItem, 0x1548393e0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x154839520, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_NSMenuItemAutoFillIdentifier', title: 'AutoFill'
+            Menu, 0x154839660, {{0.0, 768.0}, {0.0, 0.0}}
+              MenuItem, 0x1548397a0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_handleInsertFromContactsCommand:', title: 'Contact…', Disabled
+              MenuItem, 0x1548398e0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_handleInsertFromPasswordsCommand:', title: 'Passwords…', Disabled
+          MenuItem, 0x154839a20, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'startDictation:', title: 'Start Dictation…'
+          MenuItem, 0x154826f40, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'orderFrontCharacterPalette:', title: 'Emoji & Symbols'
+      MenuBarItem, 0x154827080, {{204.0, 0.0}, {50.0, 24.0}}, title: 'View'
+        Menu, 0x1548271c0, {{0.0, 768.0}, {0.0, 0.0}}
+          MenuItem, 0x154827300, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'toggleTabBar:', title: 'Show Tab Bar'
+          MenuItem, 0x154839cc0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'toggleTabOverview:', title: 'Show All Tabs'
+          MenuItem, 0x154839e00, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x154839f40, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'toggleFullScreen:', title: 'Enter Full Screen'
+      MenuBarItem, 0x15483a080, {{254.0, 0.0}, {88.0, 24.0}}, title: 'Workspace'
+        Menu, 0x15483a1c0, {{0.0, 768.0}, {0.0, 0.0}}
+          MenuItem, 0x15483a300, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Scan Selected Folder'
+          MenuItem, 0x15483a440, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Stop After Current File', Disabled
+          MenuItem, 0x15482d5e0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Refresh Available Space'
+          MenuItem, 0x15482d720, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x15482d860, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Review Selected Files…', Disabled
+          MenuItem, 0x15482d9a0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Open Trash in Finder'
+          MenuItem, 0x15482dae0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Save Cleanup Report…', Disabled
+      MenuBarItem, 0x15482dc20, {{342.0, 0.0}, {69.0, 24.0}}, title: 'Window'
+        Menu, 0x15482dd60, {{0.0, 768.0}, {0.0, 0.0}}
+          MenuItem, 0x15482dea0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'performMiniaturize:', title: 'Minimize'
+          MenuItem, 0x15482dfe0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'miniaturizeAll:', title: 'Minimize All'
+          MenuItem, 0x15482e120, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'performZoom:', title: 'Zoom'
+          MenuItem, 0x15482e260, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'zoomAll:', title: 'Zoom All'
+          MenuItem, 0x15482e3a0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomFill:', title: 'Fill'
+          MenuItem, 0x15482e4e0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomCenter:', title: 'Center'
+          MenuItem, 0x15482e620, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x15482e760, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Move & Resize'
+            Menu, 0x15482e8a0, {{0.0, 768.0}, {0.0, 0.0}}
+              MenuItem, 0x15482e9e0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Halves', Disabled
+              MenuItem, 0x15482eb20, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomLeft:', title: 'Left'
+              MenuItem, 0x15482ec60, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomRight:', title: 'Right'
+              MenuItem, 0x15482eda0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomTop:', title: 'Top'
+              MenuItem, 0x153717340, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomBottom:', title: 'Bottom'
+              MenuItem, 0x153717480, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+              MenuItem, 0x1537175c0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Quarters', Disabled
+              MenuItem, 0x153717700, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomTopLeft:', title: 'Top Left'
+              MenuItem, 0x153717840, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomTopRight:', title: 'Top Right'
+              MenuItem, 0x153717980, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomBottomLeft:', title: 'Bottom Left'
+              MenuItem, 0x153717ac0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomBottomRight:', title: 'Bottom Right'
+              MenuItem, 0x15371d110, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+              MenuItem, 0x15371d250, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Arrange', Disabled
+              MenuItem, 0x15371d390, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomLeftAndRight:', title: 'Left & Right'
+              MenuItem, 0x153711ff0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomLeftThreeUp:', title: 'Left & Quarters'
+              MenuItem, 0x153712130, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomRightAndLeft:', title: 'Right & Left'
+              MenuItem, 0x153712270, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomRightThreeUp:', title: 'Right & Quarters'
+              MenuItem, 0x1537123b0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomTopAndBottom:', title: 'Top & Bottom'
+              MenuItem, 0x1537124f0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomTopThreeUp:', title: 'Top & Quarters'
+              MenuItem, 0x153712630, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomBottomAndTop:', title: 'Bottom & Top'
+              MenuItem, 0x153712770, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomBottomThreeUp:', title: 'Bottom & Quarters'
+              MenuItem, 0x153719f00, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomQuarters:', title: 'Quarters'
+              MenuItem, 0x15371a040, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+              MenuItem, 0x15371a180, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_zoomUntile:', title: 'Return to Previous Size', Disabled
+          MenuItem, 0x15371a2c0, {{0.0, 768.0}, {0.0, 0.0}}, title: 'Full Screen Tile'
+            Menu, 0x15371a400, {{0.0, 768.0}, {0.0, 0.0}}
+              MenuItem, 0x15371a540, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_tileLeft:', title: 'Left of Screen'
+              MenuItem, 0x15371e5d0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_tileRight:', title: 'Right of Screen'
+          MenuItem, 0x15371e710, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x15371e850, {{0.0, 768.0}, {0.0, 0.0}}, identifier: '_removeWindowFromStageManagerSet:', title: 'Remove Window from Set', Disabled
+          MenuItem, 0x15371e990, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x15371ead0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'arrangeInFront:', title: 'Bring All to Front'
+          MenuItem, 0x15371ec10, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'alternateArrangeInFront:', title: 'Arrange in Front'
+          MenuItem, 0x15371ed50, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x15371ee90, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'selectPreviousTab:', title: 'Show Previous Tab', Disabled
+          MenuItem, 0x15371efd0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'selectNextTab:', title: 'Show Next Tab', Disabled
+          MenuItem, 0x15371f110, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'moveTabToNewWindow:', title: 'Move Tab to New Window', Disabled
+          MenuItem, 0x15371f250, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'mergeAllWindows:', title: 'Merge All Windows', Disabled
+          MenuItem, 0x15371f390, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x15371f4d0, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x15371f610, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'makeKeyAndOrderFront:', title: 'Roomlet'
+      MenuBarItem, 0x15371f750, {{411.0, 0.0}, {48.0, 24.0}}, title: 'Help'
+        Menu, 0x15371f890, {{0.0, 768.0}, {0.0, 0.0}}
+          MenuItem, 0x15371f9d0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'showHelp:', title: 'Roomlet Help'
+    TouchBar, 0x15371fb10, {{80.0, 0.0}, {685.0, 30.0}}, Disabled
+    MenuBar, 0x15371fc50, {{768.0, 0.0}, {38.0, 24.0}}
+      StatusItem, 0x15371fd90, {{768.0, 0.0}, {38.0, 24.0}}, title: 'internaldrive'
+        Menu, 0x15371fed0, {{0.0, 768.0}, {0.0, 0.0}}
+          MenuItem, 0x153720010, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Open Roomlet'
+          MenuItem, 0x153720150, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x153720290, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Choose Folder…'
+          MenuItem, 0x1537203d0, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Scan Selected Folder'
+          MenuItem, 0x153720510, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Refresh Available Space'
+          MenuItem, 0x153720650, {{0.0, 768.0}, {0.0, 0.0}}, Disabled
+          MenuItem, 0x153720790, {{0.0, 768.0}, {0.0, 0.0}}, identifier: 'menuAction:', title: 'Quit Roomlet'
+Path to element:
+ →Application, 0x153714850, pid: 2256, title: 'Roomlet', Disabled
+Query chain:
+ →Find: Target Application 'com.alvarovillalbaa.Roomlet'
+  Output: {
+    Application, 0x153605150, pid: 2256, title: 'Roomlet', Disabled
+  }

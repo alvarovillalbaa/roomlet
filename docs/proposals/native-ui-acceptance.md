@@ -122,3 +122,8 @@ filename cell, records the resulting native screen/tree and requires one selecte
 before opening Review. A bounded lossless capsule of existing named attachments
 (at most2MiB originals) is included in the receipt, reserving4MiB within the same
 64MiB compact bound. No UI state injection, rights change or accepted-case replay.
+
+[Activation9](../results/2026/11-12/native-ui-attempt-9.md) verified exact one-file
+selection, then stopped at two nested Review1 toolbar buttons. The continuation
+adds firstMatch to those two queries for the same native action. Preserve the
+one-selected assertion, all remaining actions, app bytes, rights and bounds.
