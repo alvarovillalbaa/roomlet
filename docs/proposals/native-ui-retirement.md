@@ -24,3 +24,7 @@ The workflow lives only on qa/roomlet-ui-20261112-ci4. Its final control descend
 from inspector40738ce02efa5d55840a00cc1bc04ea4e55ef2e1 and the final evidence
 publication; checkout pins that publication. Observe terminal job evidence,
 retain original JSON/log and independently read back workflow/ref/main state.
+
+This scope [completed successfully](../results/2026/11-12/native-ui-retirement.md).
+All eight remaining exact controls are deleted and the workflow is disabled;
+retain its readback limits and do not automatically reactivate or repeat it.

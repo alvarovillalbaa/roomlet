@@ -121,3 +121,8 @@ its exact owned controls, with head/terminal/readback guards. The connected API
 cannot perform those lifecycle writes and local Git transport failed DNS.
 Publish reviewed source before activating the owned control; retain the actual
 retirement outcome. No app/data action, credential copying or paid service.
+
+The [retirement passed](docs/results/2026/11-12/native-ui-retirement.md): workflow
+disabled, all owned QA/work prefixes empty, main preserved. Keep this scope
+closed; local/GitHub tree identity does not imply equal commit IDs or a refreshed
+origin/main after the recorded local Git DNS failure.

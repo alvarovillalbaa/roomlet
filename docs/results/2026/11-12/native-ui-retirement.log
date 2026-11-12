@@ -1,0 +1,190 @@
+﻿2026-11-12T03:02:22.4535922Z Current runner version: '2.338.2'
+2026-11-12T03:02:22.4559501Z ##[group]Runner Image Provisioner
+2026-11-12T03:02:22.4560423Z Hosted Compute Agent
+2026-11-12T03:02:22.4560936Z Version: 20261028.624
+2026-11-12T03:02:22.4561452Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-12T03:02:22.4562141Z Build Date: 2026-10-28T21:51:42Z
+2026-11-12T03:02:22.4562725Z Worker ID: {fb24d190-59ce-4982-b4cb-a6eb0e184392}
+2026-11-12T03:02:22.4563351Z Region: westus2
+2026-11-12T03:02:22.4563886Z Cloud: Azure
+2026-11-12T03:02:22.4564362Z ##[endgroup]
+2026-11-12T03:02:22.4565740Z ##[group]Operating System
+2026-11-12T03:02:22.4566279Z Ubuntu
+2026-11-12T03:02:22.4566843Z 24.04.5
+2026-11-12T03:02:22.4567307Z LTS
+2026-11-12T03:02:22.4568040Z ##[endgroup]
+2026-11-12T03:02:22.4568573Z ##[group]Runner Image
+2026-11-12T03:02:22.4569100Z Image: ubuntu-24.04
+2026-11-12T03:02:22.4569601Z Version: 20261101.360.1
+2026-11-12T03:02:22.4570742Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-12T03:02:22.4572062Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-12T03:02:22.4572870Z ##[endgroup]
+2026-11-12T03:02:22.4573960Z ##[group]GITHUB_TOKEN Permissions
+2026-11-12T03:02:22.4575576Z Actions: write
+2026-11-12T03:02:22.4576066Z Contents: write
+2026-11-12T03:02:22.4576646Z Metadata: read
+2026-11-12T03:02:22.4577256Z ##[endgroup]
+2026-11-12T03:02:22.4579528Z Secret source: Actions
+2026-11-12T03:02:22.4580304Z Cache mode: write
+2026-11-12T03:02:22.4580968Z Prepare workflow directory
+2026-11-12T03:02:22.5034537Z Prepare all required actions
+2026-11-12T03:02:22.5074490Z Getting action download info
+2026-11-12T03:02:22.8499992Z Download action repository 'actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-11-12T03:02:23.4935811Z Complete job name: retire
+2026-11-12T03:02:23.5578801Z ##[group]Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+2026-11-12T03:02:23.5579798Z with:
+2026-11-12T03:02:23.5580226Z   ref: 028b8822e58ed1ab785cf7639a1226c68cf254ac
+2026-11-12T03:02:23.5580728Z   fetch-depth: 2
+2026-11-12T03:02:23.5581133Z   persist-credentials: false
+2026-11-12T03:02:23.5581580Z   clean: false
+2026-11-12T03:02:23.5581993Z   repository: alvarovillalbaa/roomlet
+2026-11-12T03:02:23.5585046Z   token: ***
+2026-11-12T03:02:23.5585444Z   ssh-strict: true
+2026-11-12T03:02:23.5585849Z   ssh-user: git
+2026-11-12T03:02:23.5586267Z   sparse-checkout-cone-mode: true
+2026-11-12T03:02:23.5586726Z   fetch-tags: false
+2026-11-12T03:02:23.5587128Z   show-progress: true
+2026-11-12T03:02:23.5587763Z   lfs: false
+2026-11-12T03:02:23.5588161Z   submodules: false
+2026-11-12T03:02:23.5588568Z   set-safe-directory: true
+2026-11-12T03:02:23.5589014Z   allow-unsafe-pr-checkout: false
+2026-11-12T03:02:23.5589668Z env:
+2026-11-12T03:02:23.5590218Z   ROOMLET_RETIREMENT_SOURCE: 028b8822e58ed1ab785cf7639a1226c68cf254ac
+2026-11-12T03:02:23.5590829Z   ROOMLET_PUBLIC_REPOSITORY: true
+2026-11-12T03:02:23.5591291Z ##[endgroup]
+2026-11-12T03:02:24.3028182Z Syncing repository: alvarovillalbaa/roomlet
+2026-11-12T03:02:24.3030311Z ##[group]Getting Git version info
+2026-11-12T03:02:24.3031126Z Working directory is '/home/runner/work/roomlet/roomlet'
+2026-11-12T03:02:24.3032342Z [command]/usr/bin/git version
+2026-11-12T03:02:24.3082438Z git version 2.56.0
+2026-11-12T03:02:24.3102046Z ##[endgroup]
+2026-11-12T03:02:24.3114991Z Temporarily overriding HOME='/home/runner/work/_temp/0aedcbe0-9ea5-4bdb-b8d0-3684bebbe1ef' before making global git config changes
+2026-11-12T03:02:24.3118136Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-12T03:02:24.3120698Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/roomlet/roomlet
+2026-11-12T03:02:24.3167044Z Deleting the contents of '/home/runner/work/roomlet/roomlet'
+2026-11-12T03:02:24.3170815Z ##[group]Determining repository object format
+2026-11-12T03:02:24.3173186Z ##[endgroup]
+2026-11-12T03:02:24.3175760Z ##[group]Initializing the repository
+2026-11-12T03:02:24.3178154Z [command]/usr/bin/git init /home/runner/work/roomlet/roomlet
+2026-11-12T03:02:24.3280345Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-12T03:02:24.3283363Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-12T03:02:24.3285955Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-12T03:02:24.3287693Z hint: call:
+2026-11-12T03:02:24.3288818Z hint:
+2026-11-12T03:02:24.3289962Z hint: 	git config --global init.defaultBranch <name>
+2026-11-12T03:02:24.3291308Z hint:
+2026-11-12T03:02:24.3292775Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-12T03:02:24.3295396Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-12T03:02:24.3297186Z hint:
+2026-11-12T03:02:24.3298642Z hint: 	git branch -m <name>
+2026-11-12T03:02:24.3299967Z hint:
+2026-11-12T03:02:24.3301407Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-12T03:02:24.3303560Z Initialized empty Git repository in /home/runner/work/roomlet/roomlet/.git/
+2026-11-12T03:02:24.3307933Z [command]/usr/bin/git remote add origin https://github.com/alvarovillalbaa/roomlet
+2026-11-12T03:02:24.3375153Z ##[endgroup]
+2026-11-12T03:02:24.3376772Z ##[group]Disabling automatic garbage collection
+2026-11-12T03:02:24.3378870Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-12T03:02:24.3414540Z ##[endgroup]
+2026-11-12T03:02:24.3416591Z ##[group]Setting up auth
+2026-11-12T03:02:24.3418048Z Removing SSH command configuration
+2026-11-12T03:02:24.3420035Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-12T03:02:24.3457132Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-12T03:02:24.6402883Z Removing HTTP extra header
+2026-11-12T03:02:24.6409618Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-12T03:02:24.6447345Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-12T03:02:24.6645589Z Removing includeIf entries pointing to credentials config files
+2026-11-12T03:02:24.6650609Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-12T03:02:24.6688348Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-12T03:02:24.6899020Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-12T03:02:24.6939729Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/roomlet/roomlet/.git.path /home/runner/work/_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config
+2026-11-12T03:02:24.6975643Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/roomlet/roomlet/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config
+2026-11-12T03:02:24.7013662Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config
+2026-11-12T03:02:24.7099636Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config
+2026-11-12T03:02:24.7132833Z ##[endgroup]
+2026-11-12T03:02:24.7134840Z ##[group]Fetching the repository
+2026-11-12T03:02:24.7140824Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=2 origin 028b8822e58ed1ab785cf7639a1226c68cf254ac
+2026-11-12T03:02:26.2087965Z From https://github.com/alvarovillalbaa/roomlet
+2026-11-12T03:02:26.2088804Z  * branch            028b8822e58ed1ab785cf7639a1226c68cf254ac -> FETCH_HEAD
+2026-11-12T03:02:26.2098764Z [command]/usr/bin/git rev-parse --verify --quiet 028b8822e58ed1ab785cf7639a1226c68cf254ac^{object}
+2026-11-12T03:02:26.2130153Z 028b8822e58ed1ab785cf7639a1226c68cf254ac
+2026-11-12T03:02:26.2134861Z ##[endgroup]
+2026-11-12T03:02:26.2139011Z ##[group]Determining the checkout info
+2026-11-12T03:02:26.2139530Z ##[endgroup]
+2026-11-12T03:02:26.2140751Z [command]/usr/bin/git sparse-checkout disable
+2026-11-12T03:02:26.2191393Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-12T03:02:26.2227052Z ##[group]Checking out the ref
+2026-11-12T03:02:26.2227971Z [command]/usr/bin/git checkout --progress --force 028b8822e58ed1ab785cf7639a1226c68cf254ac
+2026-11-12T03:02:26.2670090Z Note: switching to '028b8822e58ed1ab785cf7639a1226c68cf254ac'.
+2026-11-12T03:02:26.2670374Z 
+2026-11-12T03:02:26.2670569Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-12T03:02:26.2670955Z changes and commit them, and you can discard any commits you make in this
+2026-11-12T03:02:26.2671352Z state without impacting any branches by switching back to a branch.
+2026-11-12T03:02:26.2671570Z 
+2026-11-12T03:02:26.2671711Z If you want to create a new branch to retain commits you create, you may
+2026-11-12T03:02:26.2672068Z do so (now or later) by using -c with the switch command. Example:
+2026-11-12T03:02:26.2672263Z 
+2026-11-12T03:02:26.2672358Z   git switch -c <new-branch-name>
+2026-11-12T03:02:26.2672511Z 
+2026-11-12T03:02:26.2672607Z Or undo this operation with:
+2026-11-12T03:02:26.2672730Z 
+2026-11-12T03:02:26.2672811Z   git switch -
+2026-11-12T03:02:26.2672924Z 
+2026-11-12T03:02:26.2673334Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-12T03:02:26.2673579Z 
+2026-11-12T03:02:26.2673771Z HEAD is now at 028b882 docs: accept the real native workflow and prepare exact CI retirement
+2026-11-12T03:02:26.2683228Z ##[endgroup]
+2026-11-12T03:02:26.2727629Z [command]/usr/bin/git log -1 --format=%H
+2026-11-12T03:02:26.2756591Z 028b8822e58ed1ab785cf7639a1226c68cf254ac
+2026-11-12T03:02:26.2764196Z ##[group]Removing auth
+2026-11-12T03:02:26.2764517Z Removing SSH command configuration
+2026-11-12T03:02:26.2767120Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-12T03:02:26.2800504Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-12T03:02:26.2998883Z Removing HTTP extra header
+2026-11-12T03:02:26.3002454Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-12T03:02:26.3037285Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-12T03:02:26.3233323Z Removing includeIf entries pointing to credentials config files
+2026-11-12T03:02:26.3236190Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-12T03:02:26.3266106Z includeif.gitdir:/home/runner/work/roomlet/roomlet/.git.path
+2026-11-12T03:02:26.3266762Z includeif.gitdir:/home/runner/work/roomlet/roomlet/.git/worktrees/*.path
+2026-11-12T03:02:26.3267356Z includeif.gitdir:/github/workspace/.git.path
+2026-11-12T03:02:26.3267920Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-12T03:02:26.3274878Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/roomlet/roomlet/.git.path
+2026-11-12T03:02:26.3306799Z /home/runner/work/_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config
+2026-11-12T03:02:26.3316079Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/roomlet/roomlet/.git.path /home/runner/work/_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config
+2026-11-12T03:02:26.3353992Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/roomlet/roomlet/.git/worktrees/*.path
+2026-11-12T03:02:26.3381474Z /home/runner/work/_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config
+2026-11-12T03:02:26.3390191Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/roomlet/roomlet/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config
+2026-11-12T03:02:26.3429079Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-12T03:02:26.3458298Z /github/runner_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config
+2026-11-12T03:02:26.3464351Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config
+2026-11-12T03:02:26.3501958Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-12T03:02:26.3528062Z /github/runner_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config
+2026-11-12T03:02:26.3533875Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config
+2026-11-12T03:02:26.3570092Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-12T03:02:26.3767082Z Removing credentials config '/home/runner/work/_temp/git-credentials-42faf2d8-871d-46c6-a836-dc7f5ea0405e.config'
+2026-11-12T03:02:26.3774927Z ##[endgroup]
+2026-11-12T03:02:26.3950607Z ##[group]Run python3 -I -B -S script/retire_ui_acceptance.py
+2026-11-12T03:02:26.3951012Z [36;1mpython3 -I -B -S script/retire_ui_acceptance.py[0m
+2026-11-12T03:02:26.3973137Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-12T03:02:26.3973435Z env:
+2026-11-12T03:02:26.3973676Z   ROOMLET_RETIREMENT_SOURCE: 028b8822e58ed1ab785cf7639a1226c68cf254ac
+2026-11-12T03:02:26.3973989Z   ROOMLET_PUBLIC_REPOSITORY: true
+2026-11-12T03:02:26.3975960Z   GH_TOKEN: ***
+2026-11-12T03:02:26.3976143Z ##[endgroup]
+2026-11-12T03:02:41.9348444Z ROOMLET_NATIVE_UI_RETIREMENT={"schemaVersion":"roomlet-native-ui-retirement-v1","source":"028b8822e58ed1ab785cf7639a1226c68cf254ac","qaHead":"3895602c8b80c7991d9be1fd1fae72836bc69c09","run":43145450705,"status":"passed","requests":[{"method":"GET","path":"repos/alvarovillalbaa/roomlet/actions/runs?per_page=100","status":200,"exitCode":0,"stdoutBytes":274484,"stdoutSha256":"d34be789d7efaf95f94d9cccbf51bb48fca4eb4774b2d802de06d91c37aec4a7","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/main","status":200,"exitCode":0,"stdoutBytes":1735,"stdoutSha256":"3a103aa7dde9bc4467ac5568c40863fc61f607f0c2374e5fa05eff36c0360287","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci5","status":200,"exitCode":0,"stdoutBytes":1811,"stdoutSha256":"666355f68ad101c669ab0c4bfd9d00928d6a55f102ba115d26cb458d5eab22b0","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci7","status":200,"exitCode":0,"stdoutBytes":1811,"stdoutSha256":"07857aad77aef12bc957a28e6bfe4a0f941e465fd5f08bcf161ed05b6b9235b1","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci8","status":200,"exitCode":0,"stdoutBytes":1811,"stdoutSha256":"be7c625f499b7c331194a58ba4255a65169fd27f4847569f70eb9983d5a52384","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci9","status":200,"exitCode":0,"stdoutBytes":1810,"stdoutSha256":"2c82610bfdaf757206095d70f136c05c9a15f41e34d1a887dae702da77d1bafc","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci10","status":200,"exitCode":0,"stdoutBytes":1815,"stdoutSha256":"1ccd7803c065a39adbf150078856b09a4d03fdd84cbce99e6c0e1b01d3e71118","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci11","status":200,"exitCode":0,"stdoutBytes":1814,"stdoutSha256":"fc3694cd4fd91df08ebeaec5a1b5b03d3d1ac11b3e44245173ace1a66d5712b1","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/work/roomlet-native-ui-20261112","status":200,"exitCode":0,"stdoutBytes":1828,"stdoutSha256":"42dcb03b579c584776eafff1634bd0c1b243525d34b5e5557e8fdd1eb49909d0","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci4","status":200,"exitCode":0,"stdoutBytes":1813,"stdoutSha256":"b27a65cf78b6c1c8dda4351e1ca36e94fa06e5a273e8f4a9f6fd37f896e18565","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"PUT","path":"repos/alvarovillalbaa/roomlet/actions/workflows/415362445/disable","status":204,"exitCode":0,"stdoutBytes":1115,"stdoutSha256":"0d9778552643775f49acbba377fd9a00e3fe4aaec4cc6adda973435f01519bab","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/actions/workflows/415362445","status":200,"exitCode":0,"stdoutBytes":1888,"stdoutSha256":"5ebc505bb2c4a7135816aa0a50d72ff6f00d619b0723bbbd139532ca44e221b4","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci5","status":200,"exitCode":0,"stdoutBytes":1812,"stdoutSha256":"1e92998dbb8c073af96478c40a27f4fff143b213305dea57e26a5eb7b4c5f3f3","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"DELETE","path":"repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci5","status":204,"exitCode":0,"stdoutBytes":1116,"stdoutSha256":"97755f0fefeb21fa09b4785091eb2156eb1c22f603041a2d4ee73ef1c1348be5","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci7","status":200,"exitCode":0,"stdoutBytes":1812,"stdoutSha256":"1a947459d28dc90ca72c4f16caf4684b75998864c1ee664b36698b3d979ddd8d","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"DELETE","path":"repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci7","status":204,"exitCode":0,"stdoutBytes":1116,"stdoutSha256":"8817ea37b899ebc9b6403eee9f991412c83b576ca9deb36a3c88532497ceff99","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci8","status":200,"exitCode":0,"stdoutBytes":1811,"stdoutSha256":"47ab619cf42240c304d2ae1434c1d7b354c06d64fb205ffae294a53c720869f6","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"DELETE","path":"repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci8","status":204,"exitCode":0,"stdoutBytes":1115,"stdoutSha256":"89b98677c4755c4c0a36f6f0daa28c596fefe7a0f25247c2b37f4467e59bfad4","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci9","status":200,"exitCode":0,"stdoutBytes":1813,"stdoutSha256":"0c0397894bfd7596173042cb36de733eaca381205876bb223e76ba8f65597426","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"DELETE","path":"repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci9","status":204,"exitCode":0,"stdoutBytes":1117,"stdoutSha256":"4f02efcefa7282f7183dec70c52c4c41ed6b543c869ca10b5a94d2a11a4b7a5e","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci10","status":200,"exitCode":0,"stdoutBytes":1815,"stdoutSha256":"59164e9a25dfea56dcc31f34209b2c4b931d7f22b8acb4c64a91f2c1a339e0c2","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"DELETE","path":"repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci10","status":204,"exitCode":0,"stdoutBytes":1117,"stdoutSha256":"89941c5a3660547895301a44815700ccefc33cc3e4cf1be2c7d56a318408a871","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci11","status":200,"exitCode":0,"stdoutBytes":1815,"stdoutSha256":"7b3158ddb4527154aef986e8dca3e087863d868f17773161b864096010fb8c6e","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"DELETE","path":"repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci11","status":204,"exitCode":0,"stdoutBytes":1116,"stdoutSha256":"660aeef74ecc430ffc8c15830a8160c5b27382dfb4085c4f09e2f339ff962e3f","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/work/roomlet-native-ui-20261112","status":200,"exitCode":0,"stdoutBytes":1829,"stdoutSha256":"727d6ad2240e6769a29f5197e71d9fad04cf7123e76c7fea0a6fb69d7e3c0c48","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"DELETE","path":"repos/alvarovillalbaa/roomlet/git/refs/heads/work/roomlet-native-ui-20261112","status":204,"exitCode":0,"stdoutBytes":1118,"stdoutSha256":"8e654e9b049199b370f4f442b3d6b2e98264e60ee357421a20818fb35ee6bf20","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci4","status":200,"exitCode":0,"stdoutBytes":1812,"stdoutSha256":"096fa7c7d4c720df177cd19674af3cad90dd9ebb0439ed770a49eebe524c1e6c","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"DELETE","path":"repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci4","status":204,"exitCode":0,"stdoutBytes":1117,"stdoutSha256":"1361d7fa5a9b75f7d821c888deef7b4ba95f17dafdcc04586eaff0e3ba6149a8","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/matching-refs/heads/qa/roomlet-ui-20261112","status":200,"exitCode":0,"stdoutBytes":1411,"stdoutSha256":"28fd7f3120facb5bc84b7985659f292164761f6ec4b3014ad04d3ece3449087f","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/matching-refs/heads/work/roomlet-native-ui-20261112","status":200,"exitCode":0,"stdoutBytes":1412,"stdoutSha256":"ddc0b61dac8db16ab9f838da1007a13e0b73c048d06d9f09f03c28584b99b06d","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/main","status":200,"exitCode":0,"stdoutBytes":1735,"stdoutSha256":"8a2f1e274404c9e6111abff4bad52d51553eac70325facfc90d5ae0685907977","stderrBytes":0,"stderrSha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],"deleted":[{"branch":"qa/roomlet-ui-20261112-ci5","expectedHead":"e20c82b4e9be4f8a3ad1954e493a0366cd65aaa0"},{"branch":"qa/roomlet-ui-20261112-ci7","expectedHead":"152145769e9661a36cf269a0197178a172d38f98"},{"branch":"qa/roomlet-ui-20261112-ci8","expectedHead":"b724dfc88747b6218441b95ea0d7e9f4173ddd8b"},{"branch":"qa/roomlet-ui-20261112-ci9","expectedHead":"d70d9be49db243ad10e0344a1e92ae2c275cd8b3"},{"branch":"qa/roomlet-ui-20261112-ci10","expectedHead":"2526e6ff007d9acdacc57ebaa1a83489fa9c26ea"},{"branch":"qa/roomlet-ui-20261112-ci11","expectedHead":"1f088f9bdf1183a92c9b7c03c90b173ec8ec5c9a"},{"branch":"work/roomlet-native-ui-20261112","expectedHead":"028b8822e58ed1ab785cf7639a1226c68cf254ac"},{"branch":"qa/roomlet-ui-20261112-ci4","expectedHead":"3895602c8b80c7991d9be1fd1fae72836bc69c09"}],"appOrTestsReplayed":false,"mainMutated":false,"allOwnedHeadsAndTerminalRunsVerified":true,"workflowDisabled":true,"allOwnedRefsAbsent":true,"mainStillExact":true}
+2026-11-12T03:02:41.9544045Z Post job cleanup.
+2026-11-12T03:02:42.0257251Z [command]/usr/bin/git version
+2026-11-12T03:02:42.0296173Z git version 2.56.0
+2026-11-12T03:02:42.0332794Z Temporarily overriding HOME='/home/runner/work/_temp/00b0c383-c744-4913-931e-88d7549f3404' before making global git config changes
+2026-11-12T03:02:42.0333515Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-12T03:02:42.0337903Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/roomlet/roomlet
+2026-11-12T03:02:42.0371742Z Removing SSH command configuration
+2026-11-12T03:02:42.0377703Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-12T03:02:42.0448708Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-12T03:02:42.0681017Z Removing HTTP extra header
+2026-11-12T03:02:42.0687214Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-12T03:02:42.0724139Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-12T03:02:42.0962009Z Removing includeIf entries pointing to credentials config files
+2026-11-12T03:02:42.0969477Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-12T03:02:42.1010500Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-12T03:02:42.1362317Z Cleaning up orphan processes

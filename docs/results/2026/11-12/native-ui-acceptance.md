@@ -67,7 +67,8 @@ remain in Git:
 - Raw13910378722:982,375bytes, server SHA256
   `5d3abee90753a7ca7128bc85b134d5c6778eafe1703fea84b12bdda8f4321773`.
 
-Temporary-control retirement follows the [published scope](../../../proposals/native-ui-retirement.md).
+Temporary-control [retirement passed](native-ui-retirement.md): the workflow
+is disabled and every owned QA/work ref is absent. No accepted case was replayed.
 
 ## Limits
 

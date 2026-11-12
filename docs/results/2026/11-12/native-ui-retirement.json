@@ -1,0 +1,359 @@
+{
+  "schemaVersion": "roomlet-native-ui-retirement-v1",
+  "source": "028b8822e58ed1ab785cf7639a1226c68cf254ac",
+  "qaHead": "3895602c8b80c7991d9be1fd1fae72836bc69c09",
+  "run": 43145450705,
+  "status": "passed",
+  "requests": [
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/actions/runs?per_page=100",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 274484,
+      "stdoutSha256": "d34be789d7efaf95f94d9cccbf51bb48fca4eb4774b2d802de06d91c37aec4a7",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/main",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1735,
+      "stdoutSha256": "3a103aa7dde9bc4467ac5568c40863fc61f607f0c2374e5fa05eff36c0360287",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci5",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1811,
+      "stdoutSha256": "666355f68ad101c669ab0c4bfd9d00928d6a55f102ba115d26cb458d5eab22b0",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci7",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1811,
+      "stdoutSha256": "07857aad77aef12bc957a28e6bfe4a0f941e465fd5f08bcf161ed05b6b9235b1",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci8",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1811,
+      "stdoutSha256": "be7c625f499b7c331194a58ba4255a65169fd27f4847569f70eb9983d5a52384",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci9",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1810,
+      "stdoutSha256": "2c82610bfdaf757206095d70f136c05c9a15f41e34d1a887dae702da77d1bafc",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci10",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1815,
+      "stdoutSha256": "1ccd7803c065a39adbf150078856b09a4d03fdd84cbce99e6c0e1b01d3e71118",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci11",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1814,
+      "stdoutSha256": "fc3694cd4fd91df08ebeaec5a1b5b03d3d1ac11b3e44245173ace1a66d5712b1",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/work/roomlet-native-ui-20261112",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1828,
+      "stdoutSha256": "42dcb03b579c584776eafff1634bd0c1b243525d34b5e5557e8fdd1eb49909d0",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci4",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1813,
+      "stdoutSha256": "b27a65cf78b6c1c8dda4351e1ca36e94fa06e5a273e8f4a9f6fd37f896e18565",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "PUT",
+      "path": "repos/alvarovillalbaa/roomlet/actions/workflows/415362445/disable",
+      "status": 204,
+      "exitCode": 0,
+      "stdoutBytes": 1115,
+      "stdoutSha256": "0d9778552643775f49acbba377fd9a00e3fe4aaec4cc6adda973435f01519bab",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/actions/workflows/415362445",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1888,
+      "stdoutSha256": "5ebc505bb2c4a7135816aa0a50d72ff6f00d619b0723bbbd139532ca44e221b4",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci5",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1812,
+      "stdoutSha256": "1e92998dbb8c073af96478c40a27f4fff143b213305dea57e26a5eb7b4c5f3f3",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "DELETE",
+      "path": "repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci5",
+      "status": 204,
+      "exitCode": 0,
+      "stdoutBytes": 1116,
+      "stdoutSha256": "97755f0fefeb21fa09b4785091eb2156eb1c22f603041a2d4ee73ef1c1348be5",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci7",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1812,
+      "stdoutSha256": "1a947459d28dc90ca72c4f16caf4684b75998864c1ee664b36698b3d979ddd8d",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "DELETE",
+      "path": "repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci7",
+      "status": 204,
+      "exitCode": 0,
+      "stdoutBytes": 1116,
+      "stdoutSha256": "8817ea37b899ebc9b6403eee9f991412c83b576ca9deb36a3c88532497ceff99",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci8",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1811,
+      "stdoutSha256": "47ab619cf42240c304d2ae1434c1d7b354c06d64fb205ffae294a53c720869f6",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "DELETE",
+      "path": "repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci8",
+      "status": 204,
+      "exitCode": 0,
+      "stdoutBytes": 1115,
+      "stdoutSha256": "89b98677c4755c4c0a36f6f0daa28c596fefe7a0f25247c2b37f4467e59bfad4",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci9",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1813,
+      "stdoutSha256": "0c0397894bfd7596173042cb36de733eaca381205876bb223e76ba8f65597426",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "DELETE",
+      "path": "repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci9",
+      "status": 204,
+      "exitCode": 0,
+      "stdoutBytes": 1117,
+      "stdoutSha256": "4f02efcefa7282f7183dec70c52c4c41ed6b543c869ca10b5a94d2a11a4b7a5e",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci10",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1815,
+      "stdoutSha256": "59164e9a25dfea56dcc31f34209b2c4b931d7f22b8acb4c64a91f2c1a339e0c2",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "DELETE",
+      "path": "repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci10",
+      "status": 204,
+      "exitCode": 0,
+      "stdoutBytes": 1117,
+      "stdoutSha256": "89941c5a3660547895301a44815700ccefc33cc3e4cf1be2c7d56a318408a871",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci11",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1815,
+      "stdoutSha256": "7b3158ddb4527154aef986e8dca3e087863d868f17773161b864096010fb8c6e",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "DELETE",
+      "path": "repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci11",
+      "status": 204,
+      "exitCode": 0,
+      "stdoutBytes": 1116,
+      "stdoutSha256": "660aeef74ecc430ffc8c15830a8160c5b27382dfb4085c4f09e2f339ff962e3f",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/work/roomlet-native-ui-20261112",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1829,
+      "stdoutSha256": "727d6ad2240e6769a29f5197e71d9fad04cf7123e76c7fea0a6fb69d7e3c0c48",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "DELETE",
+      "path": "repos/alvarovillalbaa/roomlet/git/refs/heads/work/roomlet-native-ui-20261112",
+      "status": 204,
+      "exitCode": 0,
+      "stdoutBytes": 1118,
+      "stdoutSha256": "8e654e9b049199b370f4f442b3d6b2e98264e60ee357421a20818fb35ee6bf20",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-ui-20261112-ci4",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1812,
+      "stdoutSha256": "096fa7c7d4c720df177cd19674af3cad90dd9ebb0439ed770a49eebe524c1e6c",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "DELETE",
+      "path": "repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-ui-20261112-ci4",
+      "status": 204,
+      "exitCode": 0,
+      "stdoutBytes": 1117,
+      "stdoutSha256": "1361d7fa5a9b75f7d821c888deef7b4ba95f17dafdcc04586eaff0e3ba6149a8",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/matching-refs/heads/qa/roomlet-ui-20261112",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1411,
+      "stdoutSha256": "28fd7f3120facb5bc84b7985659f292164761f6ec4b3014ad04d3ece3449087f",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/matching-refs/heads/work/roomlet-native-ui-20261112",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1412,
+      "stdoutSha256": "ddc0b61dac8db16ab9f838da1007a13e0b73c048d06d9f09f03c28584b99b06d",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "GET",
+      "path": "repos/alvarovillalbaa/roomlet/git/ref/heads/main",
+      "status": 200,
+      "exitCode": 0,
+      "stdoutBytes": 1735,
+      "stdoutSha256": "8a2f1e274404c9e6111abff4bad52d51553eac70325facfc90d5ae0685907977",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "deleted": [
+    {
+      "branch": "qa/roomlet-ui-20261112-ci5",
+      "expectedHead": "e20c82b4e9be4f8a3ad1954e493a0366cd65aaa0"
+    },
+    {
+      "branch": "qa/roomlet-ui-20261112-ci7",
+      "expectedHead": "152145769e9661a36cf269a0197178a172d38f98"
+    },
+    {
+      "branch": "qa/roomlet-ui-20261112-ci8",
+      "expectedHead": "b724dfc88747b6218441b95ea0d7e9f4173ddd8b"
+    },
+    {
+      "branch": "qa/roomlet-ui-20261112-ci9",
+      "expectedHead": "d70d9be49db243ad10e0344a1e92ae2c275cd8b3"
+    },
+    {
+      "branch": "qa/roomlet-ui-20261112-ci10",
+      "expectedHead": "2526e6ff007d9acdacc57ebaa1a83489fa9c26ea"
+    },
+    {
+      "branch": "qa/roomlet-ui-20261112-ci11",
+      "expectedHead": "1f088f9bdf1183a92c9b7c03c90b173ec8ec5c9a"
+    },
+    {
+      "branch": "work/roomlet-native-ui-20261112",
+      "expectedHead": "028b8822e58ed1ab785cf7639a1226c68cf254ac"
+    },
+    {
+      "branch": "qa/roomlet-ui-20261112-ci4",
+      "expectedHead": "3895602c8b80c7991d9be1fd1fae72836bc69c09"
+    }
+  ],
+  "appOrTestsReplayed": false,
+  "mainMutated": false,
+  "allOwnedHeadsAndTerminalRunsVerified": true,
+  "workflowDisabled": true,
+  "allOwnedRefsAbsent": true,
+  "mainStillExact": true
+}
