@@ -11,9 +11,12 @@ fi
 [[ -f "$ROOMLET_BINARY" && -x "$ROOMLET_BINARY" ]] || { echo "A built Roomlet executable is required." >&2; exit 1; }
 ROOMLET_DIST="$ROOMLET_ROOT/dist"
 ROOMLET_APP="$ROOMLET_DIST/Roomlet.app"
-ROOMLET_PREVIEW_NAME="Roomlet-0.1.0-macos-universal.zip"
+ROOMLET_PREVIEW_NAME=""
 ROOMLET_PREVIEW_COMPLETE=0
 if [[ "$ROOMLET_PACKAGE_MODE" == --preview ]]; then
+  ROOMLET_PREVIEW_VERSION="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$ROOMLET_ROOT/Resources/Info.plist")"
+  [[ "$ROOMLET_PREVIEW_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "Invalid preview version." >&2; exit 1; }
+  ROOMLET_PREVIEW_NAME="Roomlet-$ROOMLET_PREVIEW_VERSION-macos-universal.zip"
   command -v python3 >/dev/null || { echo "Preview packaging requires Python 3's standard library." >&2; exit 1; }
   if pgrep -x Roomlet >/dev/null; then
     echo "Close Roomlet before replacing its app bundle. Existing work was left alone." >&2
@@ -91,7 +94,7 @@ chmod +x "$ROOMLET_STAGE/Roomlet.app/Contents/MacOS/Roomlet"
 /usr/bin/codesign --force --sign - --entitlements "$ROOMLET_ROOT/Resources/Roomlet.entitlements" "$ROOMLET_STAGE/Roomlet.app"
 /usr/bin/codesign --verify --strict "$ROOMLET_STAGE/Roomlet.app"
 if [[ "$ROOMLET_PACKAGE_MODE" == --preview ]]; then
-  [[ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$ROOMLET_STAGE/Roomlet.app/Contents/Info.plist")" == 0.1.0 ]] || { echo "Preview archive version does not match its bundle." >&2; exit 1; }
+  [[ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$ROOMLET_STAGE/Roomlet.app/Contents/Info.plist")" == "$ROOMLET_PREVIEW_VERSION" ]] || { echo "Preview archive version does not match its bundle." >&2; exit 1; }
   python3 - "$ROOMLET_STAGE/Roomlet.app" <<'PY'
 from pathlib import Path
 import stat

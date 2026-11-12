@@ -33,6 +33,7 @@ PRIOR = "docs/results/2026/11-08/preview-package-attempt-1"
 PRIOR_PINS = {".json": (18602, "41eba161a8abf6c1aed1fc14bd431a6611a05ee2d44e4196ff385d308994abd7"),
               ".log": (35643, "19fd9fc5a1cdce10d34101cb5ef630e2b6f7c07e19520fdf4cb7a4bf92758532")}
 ARCHIVE = "Roomlet-0.1.0-macos-universal.zip"
+APP_VERSION, APP_BUILD = "0.1.0", "1"
 PREFIX = b"ROOMLET_PREVIEW_PACKAGE_RESULT="
 MIB = 1024 ** 2
 MAX_STORAGE, MAX_STREAM, MAX_REPORT = 4096 * MIB, MIB, 16 * MIB
@@ -162,18 +163,21 @@ class Check:
         need(sorted(filter(None, self.git("ls-files", "--stage", "-z").split(b"\0"))) == sorted(index), "index_tree")
         index_sha = file_sha(self.checkout / ".git/index")
         if first:
-            need(self.git("rev-list", "--parents", "-n", "1", self.commit).decode().split() == [self.commit, BASE], "source_parent")
-            need(WORKFLOW not in vector and sum(row["bytes"] for row in vector.values()) < 8 * MIB, "inert_source_scope")
-            need(set(self.git("diff", "--name-only", PROTECTED_BASE, self.commit, "--", "Package.swift", "Sources", "Resources", "Tests", "script", ".codex/environments/environment.toml").decode().splitlines())
-                 == {"script/build_and_run.sh", "script/package_app.sh", CONTROLLER}, "accepted_app_inputs_changed")
-            need(self.git("diff", "--name-only", BASE, self.commit, "--", "Package.swift", "Sources", "Resources", "Tests", "script", ".codex/environments/environment.toml").decode().splitlines()
-                 == [CONTROLLER], "prior_app_or_helpers_changed")
-            self.source, self.index_sha = vector, index_sha
-            self.report.update(sourceCommit=self.commit, canonicalBaseCommit=BASE, protectedApplicationBaseCommit=PROTECTED_BASE,
-                               sourceVector=vector, indexSha256=index_sha)
-            self.prior_attempt()
+            self.admit_source(vector, index_sha)
         else:
             need(vector == self.source and index_sha == self.index_sha, "source_or_index_changed")
+
+    def admit_source(self, vector, index_sha):
+        need(self.git("rev-list", "--parents", "-n", "1", self.commit).decode().split() == [self.commit, BASE], "source_parent")
+        need(WORKFLOW not in vector and sum(row["bytes"] for row in vector.values()) < 8 * MIB, "inert_source_scope")
+        need(set(self.git("diff", "--name-only", PROTECTED_BASE, self.commit, "--", "Package.swift", "Sources", "Resources", "Tests", "script", ".codex/environments/environment.toml").decode().splitlines())
+             == {"script/build_and_run.sh", "script/package_app.sh", CONTROLLER}, "accepted_app_inputs_changed")
+        need(self.git("diff", "--name-only", BASE, self.commit, "--", "Package.swift", "Sources", "Resources", "Tests", "script", ".codex/environments/environment.toml").decode().splitlines()
+             == [CONTROLLER], "prior_app_or_helpers_changed")
+        self.source, self.index_sha = vector, index_sha
+        self.report.update(sourceCommit=self.commit, canonicalBaseCommit=BASE, protectedApplicationBaseCommit=PROTECTED_BASE,
+                           sourceVector=vector, indexSha256=index_sha)
+        self.prior_attempt()
 
     def prior_attempt(self):
         originals = {}
@@ -485,8 +489,8 @@ class Check:
                  and before["Contents/Resources/" + leaf]["sha256"] == self.source[source]["sha256"], "bundle_notice_source:" + leaf)
         need((app / "Contents/Resources/.roomlet-generated").read_bytes() == b"Roomlet generated build output\n", "generated_bundle_marker")
         plist = plistlib.loads((app / "Contents/Info.plist").read_bytes())
-        need(plist["CFBundleIdentifier"] == "com.alvarovillalbaa.Roomlet" and plist["CFBundleShortVersionString"] == "0.1.0"
-             and plist["CFBundleVersion"] == "1" and plist["LSMinimumSystemVersion"] == "15.0" and before["Contents/MacOS/Roomlet"]["mode"] & 0o111, "bundle_contract")
+        need(plist["CFBundleIdentifier"] == "com.alvarovillalbaa.Roomlet" and plist["CFBundleShortVersionString"] == APP_VERSION
+             and plist["CFBundleVersion"] == APP_BUILD and plist["LSMinimumSystemVersion"] == "15.0" and before["Contents/MacOS/Roomlet"]["mode"] & 0o111, "bundle_contract")
         self.run("plist", ["/usr/bin/plutil", "-lint", app / "Contents/Info.plist"])
         need(set(self.run("architectures", ["/usr/bin/lipo", "-archs", binary])[0].decode().split()) == {"arm64", "x86_64"}, "universal_architectures")
         for arch in ("arm64", "x86_64"):
@@ -532,7 +536,8 @@ class Check:
         self.report["effectiveEntitlements"]["extracted"] = self.effective_entitlements("extracted", self.root / "extract/Roomlet.app")
         distribution = canonical({"schemaVersion": 1, "kind": "roomlet.ad-hoc-preview", "sourceCommit": self.commit,
                                   "sourceVectorSha256": sha(canonical(self.source)), "toolchain": toolchain, "architectures": ["arm64", "x86_64"],
-                                  "minimumMacOS": "15.0", "signature": "ad-hoc", "bundleManifest": before,
+                                  "minimumMacOS": "15.0", "appVersion": APP_VERSION, "buildNumber": APP_BUILD,
+                                  "signature": "ad-hoc", "bundleManifest": before,
                                   "entitlementsSourceSha256": self.report["entitlementsSourceSha256"],
                                   "effectiveEntitlements": self.report["effectiveEntitlements"],
                                   "archive": {"name": ARCHIVE, "bytes": len(data), "sha256": sha(data)},

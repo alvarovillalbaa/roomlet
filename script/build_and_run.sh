@@ -13,6 +13,9 @@ fi
 ROOMLET_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOMLET_ROOT"
 if [[ "$ROOMLET_MODE" == --build-preview ]]; then
+  ROOMLET_PREVIEW_VERSION="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$ROOMLET_ROOT/Resources/Info.plist")"
+  [[ "$ROOMLET_PREVIEW_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "Invalid preview version." >&2; exit 1; }
+  ROOMLET_PREVIEW_NAME="Roomlet-$ROOMLET_PREVIEW_VERSION-macos-universal.zip"
   ROOMLET_BUILD_FLAGS=(--configuration release --build-system native --disable-local-rpath)
   if [[ -n "${ROOMLET_SWIFTPM_CACHE:-}" ]]; then
     if [[ "$ROOMLET_SWIFTPM_CACHE" != /* || ! -d "$ROOMLET_SWIFTPM_CACHE" || -L "$ROOMLET_SWIFTPM_CACHE" ]]; then
@@ -25,7 +28,7 @@ if [[ "$ROOMLET_MODE" == --build-preview ]]; then
     echo "Refusing an unsafe preview output directory." >&2
     exit 1
   fi
-  for ROOMLET_OUTPUT in "$ROOMLET_ROOT/dist/Roomlet-0.1.0-macos-universal.zip" "$ROOMLET_ROOT/dist/Roomlet-0.1.0-macos-universal.zip.sha256"; do
+  for ROOMLET_OUTPUT in "$ROOMLET_ROOT/dist/$ROOMLET_PREVIEW_NAME" "$ROOMLET_ROOT/dist/$ROOMLET_PREVIEW_NAME.sha256"; do
     if [[ -e "$ROOMLET_OUTPUT" || -L "$ROOMLET_OUTPUT" ]]; then
       echo "Preview output already exists; nothing was replaced: $ROOMLET_OUTPUT" >&2
       exit 1
@@ -72,7 +75,7 @@ fi
 ROOMLET_APP="$ROOMLET_ROOT/dist/Roomlet.app"
 case "$ROOMLET_MODE" in
   --build-only) echo "Build-only finished; the app was not launched." ;;
-  --build-preview) echo "Built a locally ad-hoc signed universal preview: $ROOMLET_ROOT/dist/Roomlet-0.1.0-macos-universal.zip" ;;
+  --build-preview) echo "Built a locally ad-hoc signed universal preview: $ROOMLET_ROOT/dist/$ROOMLET_PREVIEW_NAME" ;;
   --debug) lldb -- "$ROOMLET_APP/Contents/MacOS/Roomlet" ;;
   --logs)
     /usr/bin/open -n "$ROOMLET_APP"

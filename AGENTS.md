@@ -126,3 +126,18 @@ The [retirement passed](docs/results/2026/11-12/native-ui-retirement.md): workfl
 disabled, all owned QA/work prefixes empty, main preserved. Keep this scope
 closed; local/GitHub tree identity does not imply equal commit IDs or a refreshed
 origin/main after the recorded local Git DNS failure.
+
+## Current-app preview refresh — 2026-11-12
+
+Standing all-project approval covers the [new0.1.1/build2 preview scope](docs/proposals/preview-refresh.md):
+one20minute public macOS packaging job, then separately prepared publication
+of unchanged accepted ZIP/checksum/manifest at v0.1.1-preview.1. Preserve the
+older release and every old scope/receipt; no native/core/preview case replay.
+Only version metadata, source-derived archive naming, bundled guide, packaging
+profile/admission and docs change. App/core/Package/icon/production entitlements
+and old tests keep accepted bytes. Keep exactly the two existing sandbox keys.
+The source bound16MiB includes already-retained native evidence, while export
+contains only selected runtime inputs. All original process/storage/deadline/
+stream/hash/teardown controls remain. A failed local guard permits no local
+build, app, scan, Trash or installation. No paid signing, account, dependency,
+SDK/runtime download, model, Gatekeeper bypass or claimed fresh-Mac acceptance.

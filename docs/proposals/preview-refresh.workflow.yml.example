@@ -1,0 +1,34 @@
+# Inactive preparation; replace only the REVIEWED_COMMIT value.
+name: Temporary Roomlet preview refresh
+on:
+  push:
+    branches: [qa/roomlet-preview-refresh-20261112-1]
+    paths: [.github/workflows/preview-refresh.yml]
+permissions:
+  contents: read
+concurrency:
+  group: roomlet-preview-refresh-20261112
+  cancel-in-progress: false
+jobs:
+  package:
+    if: github.repository == 'alvarovillalbaa/roomlet' && github.event.repository.private == false && github.ref == 'refs/heads/qa/roomlet-preview-refresh-20261112-1'
+    runs-on: macos-15
+    timeout-minutes: 20
+    env:
+      CI: 'true'
+      SOURCE_COMMIT: REVIEWED_COMMIT
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - name: Record earliest job time
+        shell: bash
+        run: echo "ROOMLET_JOB_STARTED_MS=$(date +%s)000" >> "$GITHUB_ENV"
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ env.SOURCE_COMMIT }}
+          fetch-depth: 2
+          persist-credentials: false
+          clean: false
+      - name: Package current app without launch or tests
+        shell: bash
+        run: python3 -I -B -S Tests/ci/run-preview-refresh.py --source-commit "$SOURCE_COMMIT"
+
