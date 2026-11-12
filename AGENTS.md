@@ -147,3 +147,10 @@ uses one five-minute public Ubuntu job to publish the three accepted originals,
 verify anonymous downloads/unchanged old release, then disable415450805 and
 retire only the two exact task controls. Publish reviewed helper/evidence first;
 stop uncertain/rejected writes without retries or credential changes.
+
+The [0.1.1 package/publication completed](docs/results/2026/11-12/preview-refresh-publication.md):
+44 complete streams, three exact public/anonymous payloads, old release preserved,
+415450805 disabled and both exact controls absent. Native/core scopes were not
+replayed. Keep this refresh closed; physical/fresh-Mac/trusted distribution and
+Intel runtime remain separate. Do not alter the sealed guide of a published
+artifact without a new version and its own package evidence.

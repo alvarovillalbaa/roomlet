@@ -36,8 +36,8 @@ native signature checks locally. Bundled guide SHA256 is
 | ZIP.sha256 sidecar |100|89ade14e3f6a0b568242e602e94c9164b5affb007cd576203611126b465ad8ff|
 | Roomlet-preview-manifest.json |2837|bfc48019916e0c3b7bdeda1833c203e249ca432db1335a6aec72bfd8254c2ee4|
 
-Public publication/anonymous download and temporary-control retirement are
-[prepared separately](../../../proposals/preview-refresh-publication.md).
+Public publication/anonymous download and temporary-control
+[retirement passed](preview-refresh-publication.md), without another build/test.
 Existing0.1.0 assets remain unchanged. This ad-hoc preview does not establish
 fresh-Mac/Gatekeeper, trusted signing/notarization, Intel runtime, denied access,
 all providers, reclaimed space or complete product acceptance. Local guard

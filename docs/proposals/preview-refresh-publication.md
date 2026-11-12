@@ -31,3 +31,6 @@ create a second release blindly, or turn metadata into fresh-Mac proof.
 
 References: [GitHub releases API](https://docs.github.com/en/rest/releases/releases)
 and [release asset upload/download API](https://docs.github.com/en/rest/releases/assets).
+
+This scope [completed successfully](../results/2026/11-12/preview-refresh-publication.md).
+Preserve its accepted source/assets and retired controls; no unchanged rerun.

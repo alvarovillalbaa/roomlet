@@ -1,0 +1,190 @@
+﻿2026-11-12T03:27:08.3983926Z Current runner version: '2.338.2'
+2026-11-12T03:27:08.4009155Z ##[group]Runner Image Provisioner
+2026-11-12T03:27:08.4010035Z Hosted Compute Agent
+2026-11-12T03:27:08.4010711Z Version: 20261028.624
+2026-11-12T03:27:08.4011374Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-12T03:27:08.4012148Z Build Date: 2026-10-28T21:51:42Z
+2026-11-12T03:27:08.4012949Z Worker ID: {f92ed934-8505-4e00-8b33-051fc74d8b40}
+2026-11-12T03:27:08.4013654Z Region: westus2
+2026-11-12T03:27:08.4014228Z Cloud: Azure
+2026-11-12T03:27:08.4014786Z ##[endgroup]
+2026-11-12T03:27:08.4016930Z ##[group]Operating System
+2026-11-12T03:27:08.4017693Z Ubuntu
+2026-11-12T03:27:08.4018239Z 24.04.5
+2026-11-12T03:27:08.4018740Z LTS
+2026-11-12T03:27:08.4019327Z ##[endgroup]
+2026-11-12T03:27:08.4019926Z ##[group]Runner Image
+2026-11-12T03:27:08.4020992Z Image: ubuntu-24.04
+2026-11-12T03:27:08.4021594Z Version: 20261101.360.1
+2026-11-12T03:27:08.4022919Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-12T03:27:08.4024490Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-12T03:27:08.4025836Z ##[endgroup]
+2026-11-12T03:27:08.4027055Z ##[group]GITHUB_TOKEN Permissions
+2026-11-12T03:27:08.4029473Z Actions: write
+2026-11-12T03:27:08.4030157Z Contents: write
+2026-11-12T03:27:08.4030720Z Metadata: read
+2026-11-12T03:27:08.4031352Z ##[endgroup]
+2026-11-12T03:27:08.4033524Z Secret source: Actions
+2026-11-12T03:27:08.4034602Z Cache mode: write
+2026-11-12T03:27:08.4035835Z Prepare workflow directory
+2026-11-12T03:27:08.4652924Z Prepare all required actions
+2026-11-12T03:27:08.4699421Z Getting action download info
+2026-11-12T03:27:08.8254471Z Download action repository 'actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-11-12T03:27:09.0019457Z Complete job name: publish
+2026-11-12T03:27:09.0932741Z ##[group]Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+2026-11-12T03:27:09.0933869Z with:
+2026-11-12T03:27:09.0934386Z   ref: e98469392ebf33e06849b66a2a66ad3562f056d6
+2026-11-12T03:27:09.0934980Z   fetch-depth: 2
+2026-11-12T03:27:09.0935695Z   persist-credentials: false
+2026-11-12T03:27:09.0936208Z   clean: false
+2026-11-12T03:27:09.0936673Z   repository: alvarovillalbaa/roomlet
+2026-11-12T03:27:09.0940700Z   token: ***
+2026-11-12T03:27:09.0941142Z   ssh-strict: true
+2026-11-12T03:27:09.0941583Z   ssh-user: git
+2026-11-12T03:27:09.0942042Z   sparse-checkout-cone-mode: true
+2026-11-12T03:27:09.0942577Z   fetch-tags: false
+2026-11-12T03:27:09.0943025Z   show-progress: true
+2026-11-12T03:27:09.0943478Z   lfs: false
+2026-11-12T03:27:09.0943896Z   submodules: false
+2026-11-12T03:27:09.0944362Z   set-safe-directory: true
+2026-11-12T03:27:09.0944884Z   allow-unsafe-pr-checkout: false
+2026-11-12T03:27:09.0945808Z env:
+2026-11-12T03:27:09.0946382Z   SOURCE_COMMIT: e98469392ebf33e06849b66a2a66ad3562f056d6
+2026-11-12T03:27:09.0947039Z   ROOMLET_PUBLIC_REPOSITORY: true
+2026-11-12T03:27:09.0947561Z ##[endgroup]
+2026-11-12T03:27:09.3951951Z Syncing repository: alvarovillalbaa/roomlet
+2026-11-12T03:27:09.3953848Z ##[group]Getting Git version info
+2026-11-12T03:27:09.3954596Z Working directory is '/home/runner/work/roomlet/roomlet'
+2026-11-12T03:27:09.3956139Z [command]/usr/bin/git version
+2026-11-12T03:27:09.4070095Z git version 2.56.0
+2026-11-12T03:27:09.4114348Z ##[endgroup]
+2026-11-12T03:27:09.4128486Z Temporarily overriding HOME='/home/runner/work/_temp/1333190b-3a3c-4a0d-bafe-c8140e38dd81' before making global git config changes
+2026-11-12T03:27:09.4130761Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-12T03:27:09.4144993Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/roomlet/roomlet
+2026-11-12T03:27:09.4178782Z Deleting the contents of '/home/runner/work/roomlet/roomlet'
+2026-11-12T03:27:09.4185542Z ##[group]Determining repository object format
+2026-11-12T03:27:09.4188173Z ##[endgroup]
+2026-11-12T03:27:09.4189679Z ##[group]Initializing the repository
+2026-11-12T03:27:09.4194338Z [command]/usr/bin/git init /home/runner/work/roomlet/roomlet
+2026-11-12T03:27:09.4340264Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-12T03:27:09.4342433Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-12T03:27:09.4343813Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-12T03:27:09.4344967Z hint: call:
+2026-11-12T03:27:09.4345876Z hint:
+2026-11-12T03:27:09.4346794Z hint: 	git config --global init.defaultBranch <name>
+2026-11-12T03:27:09.4348084Z hint:
+2026-11-12T03:27:09.4349495Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-12T03:27:09.4350947Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-12T03:27:09.4352312Z hint:
+2026-11-12T03:27:09.4353107Z hint: 	git branch -m <name>
+2026-11-12T03:27:09.4353915Z hint:
+2026-11-12T03:27:09.4354961Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-12T03:27:09.4356521Z Initialized empty Git repository in /home/runner/work/roomlet/roomlet/.git/
+2026-11-12T03:27:09.4369061Z [command]/usr/bin/git remote add origin https://github.com/alvarovillalbaa/roomlet
+2026-11-12T03:27:09.4428575Z ##[endgroup]
+2026-11-12T03:27:09.4430001Z ##[group]Disabling automatic garbage collection
+2026-11-12T03:27:09.4431423Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-12T03:27:09.4479833Z ##[endgroup]
+2026-11-12T03:27:09.4481678Z ##[group]Setting up auth
+2026-11-12T03:27:09.4482742Z Removing SSH command configuration
+2026-11-12T03:27:09.4490094Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-12T03:27:09.4542979Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-12T03:27:09.5123593Z Removing HTTP extra header
+2026-11-12T03:27:09.5132084Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-12T03:27:09.5192428Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-12T03:27:09.5438838Z Removing includeIf entries pointing to credentials config files
+2026-11-12T03:27:09.5447000Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-12T03:27:09.5493486Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-12T03:27:09.5743847Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-12T03:27:09.5797930Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/roomlet/roomlet/.git.path /home/runner/work/_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config
+2026-11-12T03:27:09.5845085Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/roomlet/roomlet/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config
+2026-11-12T03:27:09.5898733Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config
+2026-11-12T03:27:09.5953440Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config
+2026-11-12T03:27:09.5990696Z ##[endgroup]
+2026-11-12T03:27:09.5999178Z ##[group]Fetching the repository
+2026-11-12T03:27:09.6000421Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=2 origin e98469392ebf33e06849b66a2a66ad3562f056d6
+2026-11-12T03:27:10.5961100Z From https://github.com/alvarovillalbaa/roomlet
+2026-11-12T03:27:10.5966880Z  * branch            e98469392ebf33e06849b66a2a66ad3562f056d6 -> FETCH_HEAD
+2026-11-12T03:27:10.5973945Z [command]/usr/bin/git rev-parse --verify --quiet e98469392ebf33e06849b66a2a66ad3562f056d6^{object}
+2026-11-12T03:27:10.6012314Z e98469392ebf33e06849b66a2a66ad3562f056d6
+2026-11-12T03:27:10.6019934Z ##[endgroup]
+2026-11-12T03:27:10.6021887Z ##[group]Determining the checkout info
+2026-11-12T03:27:10.6023643Z ##[endgroup]
+2026-11-12T03:27:10.6027071Z [command]/usr/bin/git sparse-checkout disable
+2026-11-12T03:27:10.6105033Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-12T03:27:10.6134084Z ##[group]Checking out the ref
+2026-11-12T03:27:10.6137576Z [command]/usr/bin/git checkout --progress --force e98469392ebf33e06849b66a2a66ad3562f056d6
+2026-11-12T03:27:10.6732799Z Note: switching to 'e98469392ebf33e06849b66a2a66ad3562f056d6'.
+2026-11-12T03:27:10.6733899Z 
+2026-11-12T03:27:10.6734541Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-12T03:27:10.6736345Z changes and commit them, and you can discard any commits you make in this
+2026-11-12T03:27:10.6737768Z state without impacting any branches by switching back to a branch.
+2026-11-12T03:27:10.6738534Z 
+2026-11-12T03:27:10.6739100Z If you want to create a new branch to retain commits you create, you may
+2026-11-12T03:27:10.6740393Z do so (now or later) by using -c with the switch command. Example:
+2026-11-12T03:27:10.6741202Z 
+2026-11-12T03:27:10.6741588Z   git switch -c <new-branch-name>
+2026-11-12T03:27:10.6742241Z 
+2026-11-12T03:27:10.6742683Z Or undo this operation with:
+2026-11-12T03:27:10.6743230Z 
+2026-11-12T03:27:10.6743570Z   git switch -
+2026-11-12T03:27:10.6744002Z 
+2026-11-12T03:27:10.6745409Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-12T03:27:10.6746680Z 
+2026-11-12T03:27:10.6747487Z HEAD is now at e984693 release: record accepted preview and prepare exact publication
+2026-11-12T03:27:10.6750951Z ##[endgroup]
+2026-11-12T03:27:10.6800350Z [command]/usr/bin/git log -1 --format=%H
+2026-11-12T03:27:10.6834525Z e98469392ebf33e06849b66a2a66ad3562f056d6
+2026-11-12T03:27:10.6845098Z ##[group]Removing auth
+2026-11-12T03:27:10.6847048Z Removing SSH command configuration
+2026-11-12T03:27:10.6849342Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-12T03:27:10.6894742Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-12T03:27:10.7136637Z Removing HTTP extra header
+2026-11-12T03:27:10.7141308Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-12T03:27:10.7186692Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-12T03:27:10.7422828Z Removing includeIf entries pointing to credentials config files
+2026-11-12T03:27:10.7427222Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-12T03:27:10.7463579Z includeif.gitdir:/home/runner/work/roomlet/roomlet/.git.path
+2026-11-12T03:27:10.7466782Z includeif.gitdir:/home/runner/work/roomlet/roomlet/.git/worktrees/*.path
+2026-11-12T03:27:10.7469266Z includeif.gitdir:/github/workspace/.git.path
+2026-11-12T03:27:10.7471205Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-12T03:27:10.7483575Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/roomlet/roomlet/.git.path
+2026-11-12T03:27:10.7515909Z /home/runner/work/_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config
+2026-11-12T03:27:10.7540185Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/roomlet/roomlet/.git.path /home/runner/work/_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config
+2026-11-12T03:27:10.7572627Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/roomlet/roomlet/.git/worktrees/*.path
+2026-11-12T03:27:10.7605433Z /home/runner/work/_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config
+2026-11-12T03:27:10.7616983Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/roomlet/roomlet/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config
+2026-11-12T03:27:10.7663644Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-12T03:27:10.7701530Z /github/runner_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config
+2026-11-12T03:27:10.7713620Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config
+2026-11-12T03:27:10.7757464Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-12T03:27:10.7790296Z /github/runner_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config
+2026-11-12T03:27:10.7799181Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config
+2026-11-12T03:27:10.7841525Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-12T03:27:10.8074183Z Removing credentials config '/home/runner/work/_temp/git-credentials-d5b11453-3cd8-41e2-9b7d-4b3612aa056d.config'
+2026-11-12T03:27:10.8082674Z ##[endgroup]
+2026-11-12T03:27:10.8331942Z ##[group]Run python3 -I -B -S script/publish_preview_refresh.py
+2026-11-12T03:27:10.8333848Z [36;1mpython3 -I -B -S script/publish_preview_refresh.py[0m
+2026-11-12T03:27:10.8360386Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-12T03:27:10.8361810Z env:
+2026-11-12T03:27:10.8362848Z   SOURCE_COMMIT: e98469392ebf33e06849b66a2a66ad3562f056d6
+2026-11-12T03:27:10.8364230Z   ROOMLET_PUBLIC_REPOSITORY: true
+2026-11-12T03:27:10.8374513Z   GH_TOKEN: ***
+2026-11-12T03:27:10.8375611Z ##[endgroup]
+2026-11-12T03:27:22.7487265Z ROOMLET_PREVIEW_PUBLICATION={"schemaVersion":"roomlet.preview-publication-v1","status":"passed","source":"e98469392ebf33e06849b66a2a66ad3562f056d6","packagedSource":"d7ba615aae33cb8a2d06a9c878278c6df59137a1","tag":"v0.1.1-preview.1","qaHead":"8d4d927e01d2611c7ac22701f594d1744140ab2b","run":43148287823,"requests":[{"method":"GET","path":"repos/alvarovillalbaa/roomlet/actions/runs?per_page=100","status":200,"bytes":299199,"sha256":"9ee37761c6f16f19b05997712b32777eb4d75d2a12c5e284bd82532c84d7a98f"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/main","status":200,"bytes":344,"sha256":"e6e1cfdc7414de7ab73ac97a20dfd73b894057ca7bb3ffcf4630297bd68cdd0f"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/work/roomlet-preview-refresh-20261112","status":200,"bytes":457,"sha256":"201a63269f944902afc2f23d9ab7030bf1da2d44c810b900f2578d7d8c2806aa"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-preview-refresh-20261112-1","status":200,"bytes":457,"sha256":"e183d767639167d9eeba5504a8940b71881d9245b9496376d14c837233534b58"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/releases?per_page=100","status":200,"bytes":8377,"sha256":"4b7972cff360a37fe33d85ffb94475d19dea8a67bc7d12c25ff30095b93e0da3"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/matching-refs/tags/v0.1.1-preview.1","status":200,"bytes":2,"sha256":"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/releases/438199648","status":200,"bytes":8375,"sha256":"48ddf44a39d767ef1c85918403faf1de9865261002b07b68a8a895b210ddac4d"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/tags/v0.1.0-preview.1","status":200,"bytes":381,"sha256":"22a14969649c2615ddc59f496d8f23d9504bb4b9d1de9c843da24526189ca33f"},{"method":"POST","path":"repos/alvarovillalbaa/roomlet/releases","status":201,"bytes":2581,"sha256":"6b57ae7acc0130b2d3db2b181227b9155210c04ed3135acf915727c3a95cca22"},{"method":"POST","path":"repos/alvarovillalbaa/roomlet/releases/442460895/assets?name=Roomlet-0.1.1-macos-universal.zip","status":201,"bytes":1693,"sha256":"be7f0fb8c662c24166d6d5cef4c2bd0f28e9d92c542353ddb0005a0bf58ac27d"},{"method":"POST","path":"repos/alvarovillalbaa/roomlet/releases/442460895/assets?name=Roomlet-0.1.1-macos-universal.zip.sha256","status":201,"bytes":1699,"sha256":"05db518e8c1f98f026dec563d1f17fc08afadb0ca36e5a736cd8bade0ddaf384"},{"method":"POST","path":"repos/alvarovillalbaa/roomlet/releases/442460895/assets?name=Roomlet-preview-manifest.json","status":201,"bytes":1684,"sha256":"a3dfba3f80eb6508095936e9b92908f21b80c0d9ec6c48f39af32caada2ef2e0"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/releases/442460895","status":200,"bytes":7659,"sha256":"95e40bee72b977c71356a4adfc1167212a8429b2fc722a437f7c8b2221b8630d"},{"method":"PATCH","path":"repos/alvarovillalbaa/roomlet/releases/442460895","status":200,"bytes":7776,"sha256":"8d40cbf804aeab2ab6c9e984afd15c4e33b85068857147efefcb5dae8ed306e4"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/releases/442460895","status":200,"bytes":7776,"sha256":"8d40cbf804aeab2ab6c9e984afd15c4e33b85068857147efefcb5dae8ed306e4"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/tags/v0.1.1-preview.1","status":200,"bytes":381,"sha256":"fce146b6d128056299ca4dc2e39ca9ebd42fc7af188f9b9fe66c564e118c2c2d"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/releases/438199648","status":200,"bytes":8375,"sha256":"48ddf44a39d767ef1c85918403faf1de9865261002b07b68a8a895b210ddac4d"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/tags/v0.1.0-preview.1","status":200,"bytes":381,"sha256":"22a14969649c2615ddc59f496d8f23d9504bb4b9d1de9c843da24526189ca33f"},{"method":"GET","url":"https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.1-preview.1/Roomlet-0.1.1-macos-universal.zip","authenticated":false,"bytes":528861,"sha256":"80d6562af841510c095acd5541c55aa70fea21c988c5864689777272dbd71c20"},{"method":"GET","url":"https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.1-preview.1/Roomlet-0.1.1-macos-universal.zip.sha256","authenticated":false,"bytes":100,"sha256":"89ade14e3f6a0b568242e602e94c9164b5affb007cd576203611126b465ad8ff"},{"method":"GET","url":"https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.1-preview.1/Roomlet-preview-manifest.json","authenticated":false,"bytes":2837,"sha256":"bfc48019916e0c3b7bdeda1833c203e249ca432db1335a6aec72bfd8254c2ee4"},{"method":"PUT","path":"repos/alvarovillalbaa/roomlet/actions/workflows/415450805/disable","status":204,"bytes":0,"sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/actions/workflows/415450805","status":200,"bytes":555,"sha256":"67e2658462a09476277cf15142405520055e1f060cc9e1b67f263c2273af8450"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/work/roomlet-preview-refresh-20261112","status":200,"bytes":457,"sha256":"201a63269f944902afc2f23d9ab7030bf1da2d44c810b900f2578d7d8c2806aa"},{"method":"DELETE","path":"repos/alvarovillalbaa/roomlet/git/refs/heads/work/roomlet-preview-refresh-20261112","status":204,"bytes":0,"sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/qa/roomlet-preview-refresh-20261112-1","status":200,"bytes":457,"sha256":"e183d767639167d9eeba5504a8940b71881d9245b9496376d14c837233534b58"},{"method":"DELETE","path":"repos/alvarovillalbaa/roomlet/git/refs/heads/qa/roomlet-preview-refresh-20261112-1","status":204,"bytes":0,"sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/matching-refs/heads/qa/roomlet-preview-refresh-20261112","status":200,"bytes":2,"sha256":"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/matching-refs/heads/work/roomlet-preview-refresh-20261112","status":200,"bytes":2,"sha256":"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"},{"method":"GET","path":"repos/alvarovillalbaa/roomlet/git/ref/heads/main","status":200,"bytes":344,"sha256":"e6e1cfdc7414de7ab73ac97a20dfd73b894057ca7bb3ffcf4630297bd68cdd0f"}],"assets":[{"id":737905066,"name":"Roomlet-0.1.1-macos-universal.zip","size":528861,"digest":"sha256:80d6562af841510c095acd5541c55aa70fea21c988c5864689777272dbd71c20","browser_download_url":"https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.1-preview.1/Roomlet-0.1.1-macos-universal.zip"},{"id":737905099,"name":"Roomlet-0.1.1-macos-universal.zip.sha256","size":100,"digest":"sha256:89ade14e3f6a0b568242e602e94c9164b5affb007cd576203611126b465ad8ff","browser_download_url":"https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.1-preview.1/Roomlet-0.1.1-macos-universal.zip.sha256"},{"id":737905129,"name":"Roomlet-preview-manifest.json","size":2837,"digest":"sha256:bfc48019916e0c3b7bdeda1833c203e249ca432db1335a6aec72bfd8254c2ee4","browser_download_url":"https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.1-preview.1/Roomlet-preview-manifest.json"}],"deletedRefs":[{"branch":"work/roomlet-preview-refresh-20261112","expectedHead":"e98469392ebf33e06849b66a2a66ad3562f056d6"},{"branch":"qa/roomlet-preview-refresh-20261112-1","expectedHead":"8d4d927e01d2611c7ac22701f594d1744140ab2b"}],"appOrTestsReplayed":false,"mainMutated":false,"acceptedReceiptSha256":"301c1079e46b34e4e1898ace8d7db9df0f4d0e7ce74c0996a5a27ed65d64eea9","releaseId":442460895,"releasePublished":true,"draftUploadedAssets":[{"id":737905066,"name":"Roomlet-0.1.1-macos-universal.zip","size":528861,"digest":"sha256:80d6562af841510c095acd5541c55aa70fea21c988c5864689777272dbd71c20","browser_download_url":"https://github.com/alvarovillalbaa/roomlet/releases/download/untagged-f6eb86e87d2252e03342/Roomlet-0.1.1-macos-universal.zip"},{"id":737905099,"name":"Roomlet-0.1.1-macos-universal.zip.sha256","size":100,"digest":"sha256:89ade14e3f6a0b568242e602e94c9164b5affb007cd576203611126b465ad8ff","browser_download_url":"https://github.com/alvarovillalbaa/roomlet/releases/download/untagged-f6eb86e87d2252e03342/Roomlet-0.1.1-macos-universal.zip.sha256"},{"id":737905129,"name":"Roomlet-preview-manifest.json","size":2837,"digest":"sha256:bfc48019916e0c3b7bdeda1833c203e249ca432db1335a6aec72bfd8254c2ee4","browser_download_url":"https://github.com/alvarovillalbaa/roomlet/releases/download/untagged-f6eb86e87d2252e03342/Roomlet-preview-manifest.json"}],"releaseURL":"https://github.com/alvarovillalbaa/roomlet/releases/tag/v0.1.1-preview.1","publishedAt":"2026-11-12T03:27:17Z","tagHead":"d7ba615aae33cb8a2d06a9c878278c6df59137a1","oldReleaseAndTagUnchanged":true,"anonymousDownloadsVerified":true,"workflowDisabled":true,"ownedRefsAbsent":true,"mainStillExact":true}
+2026-11-12T03:27:22.7704827Z Post job cleanup.
+2026-11-12T03:27:22.8696319Z [command]/usr/bin/git version
+2026-11-12T03:27:22.8740599Z git version 2.56.0
+2026-11-12T03:27:22.8787804Z Temporarily overriding HOME='/home/runner/work/_temp/afdc108d-57ca-4376-a422-ed50c276280c' before making global git config changes
+2026-11-12T03:27:22.8789727Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-12T03:27:22.8793867Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/roomlet/roomlet
+2026-11-12T03:27:22.8831485Z Removing SSH command configuration
+2026-11-12T03:27:22.8838921Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-12T03:27:22.8878417Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-12T03:27:22.9210877Z Removing HTTP extra header
+2026-11-12T03:27:22.9219789Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-12T03:27:22.9279900Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-12T03:27:22.9556686Z Removing includeIf entries pointing to credentials config files
+2026-11-12T03:27:22.9567355Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-12T03:27:22.9632004Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-12T03:27:23.0113605Z Cleaning up orphan processes

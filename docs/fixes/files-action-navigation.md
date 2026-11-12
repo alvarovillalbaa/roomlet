@@ -14,7 +14,8 @@ completion observation continues to show Last Cleanup.
 
 This changes navigation only. Scan workers, cancellation, security scopes,
 metadata/selection validation and the native Trash boundary retain their code.
-The published preview is the previous tested edition and is not rebuilt here.
+The initial repair kept the previous public preview intact; the later0.1.1
+package recorded below includes the accepted navigation code.
 
 Source parsing and `git diff --check` passed. Storage Guard reported0.2GiB free
 against34GiB required, blocking a local build, app launch and native checks.
@@ -26,3 +27,8 @@ then passed atcdb66c7a: same-folder selection opens Files, and Command-R from
 cleared Last Cleanup opens Files and rescans with empty selection. Its inspected
 PNG shows only the kept64byte file. Multiwindow/menu-bar paths, physical devices
 and fresh installation remain unverified.
+
+The [0.1.1 preview](https://github.com/alvarovillalbaa/roomlet/releases/tag/v0.1.1-preview.1)
+now includes this accepted navigation code. Its separate
+[packaging/publication record](../results/2026/11-12/preview-refresh-publication.md)
+preserves the distinction between carried UI evidence and the new universal build.

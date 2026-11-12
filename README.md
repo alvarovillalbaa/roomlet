@@ -15,16 +15,17 @@ entitlement guards match production. All four required PNGs were inspected.
 This generated-folder case does not establish complete access enforcement or
 fresh installation; all ten failed activations remain preserved.
 Current source also [repairs Files navigation for folder and scan actions](docs/fixes/files-action-navigation.md).
-Its separate [app-only native compilation passed](docs/results/2026/11-12/files-navigation-build.md);
-the public preview below retains its earlier tested bytes.
-A separate [universal preview packaging scope](docs/proposals/preview-package-checks.md)
-now [passed its fresh packaging run](docs/results/2026/11-08/preview-package-attempt-2.md):
+Its separate [app-only native compilation passed](docs/results/2026/11-12/files-navigation-build.md).
+The refreshed0.1.1 preview includes that navigation repair.
+The [current universal preview scope](docs/proposals/preview-refresh.md)
+[passed native packaging](docs/results/2026/11-12/preview-refresh-package.md):
 both Release architectures, signed sandbox metadata and ZIP round-trip checks.
-The [developer preview is public](https://github.com/alvarovillalbaa/roomlet/releases/tag/v0.1.0-preview.1).
-Download the [universal ZIP](https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.0-preview.1/Roomlet-0.1.0-macos-universal.zip),
-[checksum](https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.0-preview.1/Roomlet-0.1.0-macos-universal.zip.sha256)
-and [manifest](https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.0-preview.1/Roomlet-preview-manifest.json).
-All three server sizes/digests match the passing originals. See
+The [0.1.1 developer preview is public](https://github.com/alvarovillalbaa/roomlet/releases/tag/v0.1.1-preview.1).
+Download the [universal ZIP](https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.1-preview.1/Roomlet-0.1.1-macos-universal.zip),
+[checksum](https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.1-preview.1/Roomlet-0.1.1-macos-universal.zip.sha256)
+and [manifest](https://github.com/alvarovillalbaa/roomlet/releases/download/v0.1.1-preview.1/Roomlet-preview-manifest.json).
+All three server pins and anonymous downloads match the accepted originals.
+The older0.1.0 release is unchanged. See
 [distribution status](docs/distribution.md) and the self-contained
 [preview guide](docs/preview-setup.md).
 
@@ -109,7 +110,8 @@ establish those claims. No certificate, Apple account or paid enrollment was cre
 - [Actual native workflow, inspected screenshots and retained failures](docs/results/2026/11-12/native-ui-acceptance.md)
 - [Universal preview scope and distribution](docs/distribution.md)
 - [Passed universal preview packaging and preserved failure](docs/results/2026/11-08/preview-package-attempt-2.md)
-- [Verified public release record](docs/results/2026/11-08/preview-package-publication.json)
+- [Original0.1.0 public release record](docs/results/2026/11-08/preview-package-publication.json)
+- [Current0.1.1 publication and anonymous-download verification](docs/results/2026/11-12/preview-refresh-publication.md)
 - [Bundled preview guide](docs/preview-setup.md)
 - [Initial implementation receipt](docs/results/2026/10-27/initial-source.md)
 - [Icon source and resource wiring](docs/results/2026/10-28/app-icon.md)
