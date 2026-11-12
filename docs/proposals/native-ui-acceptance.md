@@ -67,3 +67,8 @@ selects macOS arm64, matching this original scope. Preserve all failure original
 carry no UI pass. Application code/resources/Package/entitlements, generated
 data bounds and the RUI01 assertions remain unchanged. Repeat only this
 unfinished native workflow, with all original teardown and evidence controls.
+
+[Attempt2](../results/2026/11-12/native-ui-attempt-2.md) compiled the actual app,
+then failed three test-query spellings. The changed continuation uses Apple's
+documented `tableRows` property. Preserve that failure and rerun only RUI01;
+the native actions, assertions, data/Trash bounds and teardown are unchanged.

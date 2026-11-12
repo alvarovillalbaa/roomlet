@@ -22,7 +22,7 @@ SOURCE = os.environ["ROOMLET_SOURCE_COMMIT"]
 assert re.fullmatch(r"[0-9a-f]{40}", SOURCE)
 assert platform.system() == "Darwin" and platform.machine() == "arm64"
 assert os.environ["GITHUB_REPOSITORY"] == "alvarovillalbaa/roomlet"
-assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci2"
+assert os.environ["GITHUB_REF"] == "refs/heads/qa/roomlet-ui-20261112-ci3"
 assert os.environ["ROOMLET_PUBLIC_REPOSITORY"] == "true"
 repo = Path.cwd().resolve()
 parent = Path(os.environ["RUNNER_TEMP"]).resolve()

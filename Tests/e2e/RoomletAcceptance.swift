@@ -51,9 +51,9 @@ final class RoomletAcceptance: XCTestCase {
         let scan = app.buttons["Scan Folder"]
         XCTAssertTrue(scan.waitForExistence(timeout: 15))
         scan.click()
-        let row = app.tables.rows.containing(.staticText, identifier: movedName).firstMatch
+        let row = app.tables.tableRows.containing(.staticText, identifier: movedName).firstMatch
         XCTAssertTrue(row.waitForExistence(timeout: 20))
-        XCTAssertTrue(app.tables.rows.containing(.staticText, identifier: keptName).firstMatch.exists)
+        XCTAssertTrue(app.tables.tableRows.containing(.staticText, identifier: keptName).firstMatch.exists)
         XCTAssertTrue(app.staticTexts["2 of 2 collected files · 0 selected"].exists)
         row.click()
         app.buttons["Review 1"].click()
@@ -104,7 +104,7 @@ final class RoomletAcceptance: XCTestCase {
         app.staticTexts["Last Cleanup"].click()
         XCTAssertTrue(app.staticTexts["No cleanup yet"].waitForExistence(timeout: 10))
         app.typeKey("r", modifierFlags: .command)
-        XCTAssertTrue(app.tables.rows.containing(.staticText, identifier: keptName).firstMatch.waitForExistence(timeout: 20))
+        XCTAssertTrue(app.tables.tableRows.containing(.staticText, identifier: keptName).firstMatch.waitForExistence(timeout: 20))
         XCTAssertFalse(app.staticTexts["No cleanup yet"].exists)
         XCTAssertTrue(app.staticTexts["1 of 1 collected files · 0 selected"].exists)
         try record("04-keyboard-rescan")
