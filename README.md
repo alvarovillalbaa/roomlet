@@ -1,5 +1,9 @@
 # Roomlet
 
+<!-- project-family:start -->
+> **Project family:** [OS Apps](https://github.com/alvarovillalbaa#os-apps) · **Area:** macOS
+<!-- project-family:end -->
+
 Last updated: 2026-11-12
 
 A native Mac utility for finding large local files, reviewing what to remove,
